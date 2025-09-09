@@ -1,0 +1,60 @@
+/* Contact Page Styles */
+@import "tailwindcss";
+
+.contact-wrapper {
+  @apply bg-gray-50 min-h-screen py-32;
+}
+
+.contact-container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.contact-breadcrumb {
+  @apply text-sm text-gray-500 mb-6;
+}
+
+.contact-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+/* Left Section Cards */
+.contact-card {
+  @apply bg-white shadow-md rounded-lg p-6;
+}
+
+.contact-icon {
+  @apply w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white text-lg font-bold;
+}
+
+.contact-title {
+  @apply font-semibold text-gray-800 mb-1;
+}
+
+.contact-sub {
+  @apply text-sm text-gray-500 mb-1;
+}
+
+.contact-text {
+  @apply text-sm text-gray-800;
+}
+
+/* Form Section */
+.contact-form {
+  @apply bg-white shadow-md rounded-lg p-6 space-y-6;
+}
+
+.contact-input-group {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+}
+
+.contact-input {
+  @apply border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-orange-400 outline-none;
+}
+
+.contact-textarea {
+  @apply w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-orange-400 outline-none;
+}
+
+.contact-btn {
+  @apply bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 transition;
+}

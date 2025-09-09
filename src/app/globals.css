@@ -1,26 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  font-weight: 100;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+}
+footer {
+  background-color: #000000;
+  color: #fafafa;
+  height: 440px;
+}
+/* Wrapper */
+.home-wrapper {
+  @apply flex flex-col min-h-screen py-[184px];
+}
+
+/* Container */
+.homepage {
+  @apply flex flex-col min-h-screen bg-gray-50 py-32; 
+}
+
+/* Header Section */
+.hero {
+  @apply max-w-7xl mx-auto flex gap-10 py-10 px-6;
+}
+.categories {
+  @apply flex flex-col gap-4 text-sm font-medium w-[217px] h-[344px];
+}
+.categories a {
+  @apply hover:text-[#FFA500] transition;
+}
+.hero-divider {
+  @apply border-l-2 border-gray-300;
+}
+.hero-img {
+  @apply rounded-lg w-[892px]  h-[344px] object-cover;
+}
+
+/* Flash Sales */
+.flashsale-wrapper {
+  @apply w-full bg-white py-10;
+}
+.flashsale-header {
+  @apply flex flex-col md:flex-row md:items-center justify-between mb-8 gap-10;
+}
+.flashsale-title {
+  @apply flex flex-col;
+}
+.flashsale-title p {
+  @apply text-[#FFA500] font-semibold;
+}
+.flashsale-title h2 {
+  @apply font-bold text-2xl md:text-3xl;
+}
+.flashsale-timer {
+  @apply flex gap-4;
+}
+.timebox {
+  @apply flex flex-col items-center;
+}
+.timebox-value {
+  @apply text-lg font-bold;
+}
+.timebox-label {
+  @apply text-xs text-gray-500;
+}
+.flashsale-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6;
+}
+.flashsale-card {
+  @apply relative bg-[#FDFBD44A] rounded-lg shadow hover:shadow-lg transition p-4;
+}
+.discount-badge {
+  @apply absolute top-3 left-3 bg-[#FFA500] text-white text-xs px-2 py-1 rounded;
+}
+.wishlist-btn {
+  @apply absolute top-3 right-3 text-gray-600 hover:text-red-500;
+}
+.product-img {
+  @apply w-full h-40 object-contain mb-3;
+}
+.addcart-btn {
+  @apply w-full bg-black text-white py-2 flex justify-center items-center gap-2 text-sm 
+         hover:bg-gray-800 transition cursor-pointer;
+}
+.product-title {
+  @apply font-medium text-sm mb-2;
+}
+.price-wrapper {
+  @apply flex items-center gap-2 mb-2;
+}
+.price-current {
+  @apply text-[#FFA500] font-bold;
+}
+.price-old {
+  @apply text-gray-400 line-through text-sm;
+}
+.rating-wrapper {
+  @apply flex items-center gap-1 text-[#FFA500] text-sm;
+}
+.rating-count {
+  @apply text-gray-600 text-xs ml-2;
 }

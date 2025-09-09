@@ -1,0 +1,56 @@
+/* Section */
+@import "tailwindcss";
+
+.newarrival-section {
+  @apply py-12;
+}
+
+.newarrival-wrapper {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+.newarrival-subtitle {
+  @apply text-[#FF8400] text-sm font-semibold mb-2 flex items-center gap-2;
+}
+
+.newarrival-title {
+  @apply text-2xl font-bold mb-8;
+}
+
+/* Grid */
+.newarrival-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.newarrival-large {
+  @apply relative rounded-lg overflow-hidden;
+}
+
+.newarrival-small-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-6;
+}
+
+/* Card */
+.newarrival-card {
+  @apply relative rounded-lg overflow-hidden;
+}
+
+.newarrival-img {
+  @apply w-full h-full object-cover;
+}
+
+.newarrival-overlay {
+  @apply absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white;
+}
+
+.newarrival-card-title {
+  @apply text-lg font-semibold mb-2;
+}
+
+.newarrival-card-subtitle {
+  @apply text-sm mb-4;
+}
+
+.newarrival-btn {
+  @apply underline font-medium hover:text-[#FF8400] transition;
+}

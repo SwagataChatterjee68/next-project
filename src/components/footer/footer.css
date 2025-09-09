@@ -1,0 +1,54 @@
+/* footer.css */
+@import "tailwindcss";
+
+.footer-top {
+  @apply grid md:grid-cols-3 gap-6 py-10 max-w-6xl mx-auto text-center;
+}
+
+.footer-top-box {
+  @apply flex flex-col items-center justify-center p-6 border rounded-md bg-white;
+}
+
+.footer-top-title {
+  @apply font-semibold mt-3 text-base;
+}
+
+.footer-top-text {
+  @apply text-sm text-gray-600;
+}
+
+.footer {
+  @apply bg-black text-white px-6 py-10;
+}
+
+.footer-grid {
+  @apply mx-auto max-w-6xl grid md:grid-cols-5 gap-10 py-10;
+}
+
+.footer-title {
+  @apply font-semibold mb-4;
+}
+
+.footer-subscribe {
+  @apply flex mt-3 border border-white;
+}
+
+.footer-input {
+  @apply p-2 rounded-l-md text-sm w-full outline-none bg-transparent;
+}
+
+.footer-button {
+  @apply px-4 text-white font-medium text-medium;
+}
+
+.footer-list {
+  @apply space-y-2 text-sm flex flex-col gap-2;
+}
+
+.footer-apps {
+  @apply flex flex-col gap-2;
+}
+
+.footer-social {
+  @apply flex gap-4 mt-2;
+}

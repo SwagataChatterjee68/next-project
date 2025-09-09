@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+.login-page {
+  @apply min-h-screen bg-white text-black;
+}
+
+.login-container {
+  @apply flex max-w-7xl mx-auto p-20;
+}
+
+.left-side {
+  @apply hidden md:flex w-1/2 relative;
+}
+
+.left-side img {
+  @apply w-xl object-cover;
+}
+
+.right-side {
+  @apply flex flex-col w-full md:w-1/2 px-8 md:px-16 py-20;
+}
+
+.title {
+  @apply text-3xl font-bold mb-4;
+}
+
+.enter-details-btn {
+  @apply w-full flex gap-2 mb-10;
+}
+
+.form-input {
+  @apply w-full py-2 border-b-2 outline-none border-b-[#27242442] mb-6;
+}
+
+.error-text {
+  @apply text-red-500 text-sm mt-1;
+}
+
+.submit-container {
+  @apply flex justify-between items-center;
+}
+
+.submit-btn {
+  @apply w-32 font-light bg-[#FF8400] py-4 rounded hover:bg-orange-500;
+}
+
+.forgot-password {
+  @apply text-[#FFA500];
+}

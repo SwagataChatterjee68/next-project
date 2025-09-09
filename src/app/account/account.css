@@ -1,0 +1,65 @@
+
+@import "tailwindcss";
+
+.page-container {
+  @apply max-w-6xl mx-auto px-6 py-32;
+}
+
+.breadcrumb {
+  @apply text-sm text-gray-500 mb-6;
+}
+
+.breadcrumb-current {
+  @apply text-black;
+}
+
+.sidebar {
+  @apply w-full md:w-1/4 border rounded-lg p-4;
+}
+
+.sidebar-title {
+  @apply text-lg font-semibold mb-4;
+}
+
+.sidebar-link {
+  @apply cursor-pointer hover:text-orange-500 text-sm;
+}
+
+.sidebar-link-active {
+  @apply text-orange-500 font-medium cursor-pointer text-sm;
+}
+
+/* Profile Form Layout */
+.profile-wrapper {
+  @apply flex justify-center py-10 bg-gray-100 min-h-screen;
+}
+
+.profile-card {
+  @apply bg-white w-full max-w-3xl shadow-md rounded-lg p-8;
+}
+
+.profile-title {
+  @apply text-xl font-semibold text-red-500 mb-6;
+}
+
+/* Form fields */
+.form-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.form-label {
+  @apply block text-sm font-medium mb-2;
+}
+
+.form-input {
+  @apply w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-orange-400 outline-none;
+}
+
+/* Buttons */
+.btn-cancel {
+  @apply px-4 py-2 rounded-md border border-gray-400 text-gray-600 hover:bg-gray-100;
+}
+
+.btn-save {
+  @apply px-6 py-2 rounded-md bg-orange-500 text-white hover:bg-orange-600;
+}

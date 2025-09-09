@@ -1,0 +1,31 @@
+/* --- Container --- */
+@import "tailwindcss";
+.category-section {
+  @apply max-w-7xl mx-auto px-4;
+}
+.category-wrapper {
+  @apply mb-10 ;
+}
+.category-title {
+  @apply text-lg font-bold mb-4;
+}
+.category-grid {
+  @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-10;
+}
+
+/* --- Card --- */
+.category-card {
+  @apply flex flex-col items-center justify-center border rounded-md py-10 px-4 cursor-pointer transition;
+}
+.category-card-active {
+  @apply bg-[#FF8400] text-white border-orange-500;
+}
+.category-card-hover {
+  @apply hover:border-orange-500;
+}
+.category-icon {
+  @apply text-4xl;
+}
+.category-name {
+  @apply mt-2 text-sm font-medium;
+}

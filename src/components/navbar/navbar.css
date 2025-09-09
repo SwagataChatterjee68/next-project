@@ -1,0 +1,60 @@
+
+@import "tailwindcss";
+
+.topbar {
+  @apply bg-black text-white text-sm flex items-center justify-center relative py-2;
+}
+.topbar-text {
+  @apply text-center text-xs sm:text-sm;
+}
+.topbar-highlight {
+  @apply font-semibold underline cursor-pointer;
+}
+.topbar-lang {
+  @apply absolute right-6 cursor-pointer flex items-center space-x-1;
+}
+
+/* --- Main Navbar --- */
+.mainNav {
+  @apply flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-white;
+}
+.logo {
+  @apply text-lg font-bold;
+}
+.nav-links {
+  @apply hidden md:flex space-x-8 text-gray-800 font-medium;
+}
+.nav-link {
+  @apply cursor-pointer hover:text-black transition;
+}
+.nav-link-active {
+  @apply cursor-pointer border-b-2 border-black;
+}
+
+/* --- Search + Icons --- */
+.search-box {
+  @apply hidden md:flex items-center bg-yellow-100 rounded-md px-3 py-2 w-64;
+}
+.search-input {
+  @apply bg-transparent outline-none flex-1 text-sm;
+}
+.icon-btn {
+  @apply relative text-xl cursor-pointer hover:text-yellow-500 transition;
+}
+.cart-icon {
+  @apply text-2xl;
+}
+.badge {
+  @apply absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center;
+}
+
+/* --- Mobile --- */
+.mobile-toggle {
+  @apply md:hidden text-2xl;
+}
+.mobile-menu {
+  @apply md:hidden bg-white p-4 space-y-4 text-gray-800 font-medium;
+}
+.mobile-search {
+  @apply flex items-center bg-yellow-100 rounded-md px-3 py-2;
+}

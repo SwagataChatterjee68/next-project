@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Section */
+.products-section {
+  @apply py-12;
+}
+.products-wrapper {
+  @apply max-w-7xl mx-auto px-4;
+}
+.products-header {
+  @apply flex items-center justify-between mb-8;
+}
+.products-title {
+  @apply text-2xl font-bold;
+}
+.products-subtitle {
+  @apply text-[#FF8400] text-sm font-semibold mb-2 flex items-center gap-2;
+}
+
+/* Grid */
+.products-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10;
+}
+
+/* Card */
+.product-card {
+  @apply bg-[#FDFBD44A] relative rounded-lg shadow p-4 transition hover:shadow-lg flex flex-col items-center text-center;
+}
+.product-img {
+  @apply w-full h-40 object-contain mb-4;
+}
+.product-name {
+  @apply font-medium text-sm mb-2;
+}
+.product-price {
+  @apply text-[#FF8400] font-bold;
+}
+.product-oldprice {
+  @apply text-gray-400 line-through text-sm ml-2;
+}
+
+/* Rating */
+.product-rating {
+  @apply flex items-center justify-center gap-1 text-[#FFA500] text-sm mt-1;
+}
+.product-reviews {
+  @apply text-gray-600 text-xs ml-2;
+}
+
+/* Buttons */
+.product-btn {
+  @apply absolute inset-0 bg-black/80 flex items-center justify-center text-white font-medium opacity-0 hover:opacity-100 transition rounded-lg;
+}
+.action-btn {
+  @apply absolute top-3 right-3 flex flex-col gap-2;
+}
+.icon-btn {
+  @apply bg-white p-2 rounded-full shadow hover:bg-gray-100 text-gray-600;
+}
+
+/* View All */
+.view-all-btn {
+  @apply bg-[#FF8400] text-white px-6 py-3 rounded font-medium hover:bg-orange-600 transition block mx-auto;
+}

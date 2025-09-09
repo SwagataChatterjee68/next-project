@@ -1,103 +1,108 @@
+"use client";
+import Link from "next/link";
+import { useState } from "react";
+import { FaHeart, FaStar } from "react-icons/fa";
+import { FiHeart } from "react-icons/fi";
+import { useCart } from "@/context/CartContext";
+import { useWishlist } from "@/context/WishlistContext";
+import FlashSale from "@/components/flashSale/FlashSale";
+import Category from "@/components/category/Category";
+import BestSeller from "@/components/bestSeller/BestSeller";
 import Image from "next/image";
+import { RiCustomerServiceLine } from "react-icons/ri";
+import MusicBanner from "@/components/musicBanner/MusicBanner";
+import Products from "@/components/products/Products";
+import NewArrival from "@/components/newArrival/newArrival";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const categories = [
+    "Woman’s Fashion",
+    "Men’s Fashion",
+    "Electronics",
+    "Home & Lifestyle",
+    "Medicine",
+    "Sports & Outdoor",
+    "Baby's & Toys",
+    "Groceries & Pets",
+    "Health & Beauty",
+  ];
+  const [current, setCurrent] = useState(0);
+  const { addToCart } = useCart();
+  const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const images = ["/header.png", "/header2.avif", "/images/img3.jpg"];
+  const products = [
+    {
+      id: 1,
+      title: "HAVIT HV-G92 Gamepad",
+      price: 120,
+      oldPrice: 160,
+      discount: "-40%",
+      rating: 4,
+      reviews: 88,
+      img: "saleproduct1.png",
+    },
+    {
+      id: 2,
+      title: "AK-900 Wired Keyboard",
+      price: 960,
+      oldPrice: 1160,
+      discount: "-35%",
+      rating: 4,
+      reviews: 75,
+      img: "saleproduct2.png",
+    },
+    {
+      id: 3,
+      title: "IPS LCD Gaming Monitor",
+      price: 370,
+      oldPrice: 400,
+      discount: "-30%",
+      rating: 5,
+      reviews: 99,
+      img: "/saleproduct3.png",
+    },
+    {
+      id: 4,
+      title: "S-Series Comfort Chair",
+      price: 375,
+      oldPrice: 400,
+      discount: "-25%",
+      rating: 5,
+      reviews: 99,
+      img: "/saleproduct4.png",
+    },
+  ];
+
+  return (
+    <div className="homepage">
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="categories">
+          {categories.map((cat, i) => (
+            <Link href="/" key={i}>
+              {cat}
+            </Link>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="hero-divider"></div>
+        <img src={images[current]} alt="hero" className="hero-img" />
+      </section>
+
+      {/* Flash Sale */}
+      <FlashSale />
+      <div className="product-section">
+        <Category />
+        <BestSeller />
+        <MusicBanner />
+        <Products />
+        <NewArrival />
+      </div>
+
+      {/* Banner */}
+
+      {/* <MusicBanner /> */}
+     
     </div>
   );
 }

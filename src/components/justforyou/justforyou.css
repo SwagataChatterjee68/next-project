@@ -1,0 +1,73 @@
+/* justforyou.css */
+@import "tailwindcss";
+.section {
+  @apply max-w-7xl mx-auto px-6 py-10;
+}
+
+.section-header {
+  @apply flex justify-between items-center mb-8;
+}
+
+.section-header-left {
+  @apply flex items-center gap-2;
+}
+
+.section-header-bar {
+  @apply w-1.5 h-6 bg-orange-500;
+}
+
+.section-header-title {
+  @apply text-lg font-semibold;
+}
+
+.section-header-btn {
+  @apply border px-5 py-2 rounded transition hover:bg-black hover:text-white;
+}
+
+.products-grid {
+  @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6;
+}
+
+.product-card {
+  @apply bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden;
+}
+
+.product-img-wrapper {
+  @apply relative;
+}
+
+.product-discount {
+  @apply absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded;
+}
+
+.product-eye {
+  @apply absolute top-2 right-2 bg-white rounded-full p-1 shadow hover:bg-gray-100;
+}
+
+.product-img {
+  @apply w-full h-40 object-contain;
+}
+
+.product-cart-btn {
+  @apply w-full cursor-pointer bg-black text-white py-2 flex justify-center items-center gap-2 text-sm hover:bg-gray-800 transition;
+}
+
+.product-info {
+  @apply p-3;
+}
+
+.product-title {
+  @apply font-medium text-sm;
+}
+
+.product-price {
+  @apply text-orange-600 font-bold;
+}
+
+.product-rating {
+  @apply flex items-center text-yellow-500 text-sm mt-1;
+}
+
+.product-reviews {
+  @apply text-gray-600 text-xs ml-2;
+}

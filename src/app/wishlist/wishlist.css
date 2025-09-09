@@ -1,0 +1,62 @@
+/* wishlist.css */
+@import "tailwindcss";
+/* Section Wrapper */
+.wishlist-section {
+  @apply max-w-7xl mx-auto px-6 py-32;
+}
+
+/* Header */
+.wishlist-header {
+  @apply flex justify-between items-center mb-6;
+}
+.wishlist-title {
+  @apply text-xl font-semibold;
+}
+.move-all-btn {
+  @apply text-sm px-4 py-2 border rounded hover:bg-gray-100 transition cursor-pointer;
+}
+
+/* Grid */
+.wishlist-grid {
+  @apply grid gap-6 sm:grid-cols-2 md:grid-cols-4;
+}
+
+/* Wishlist Card */
+.wishlist-card {
+  @apply relative rounded-lg overflow-hidden shadow hover:shadow-lg transition bg-white;
+}
+.discount-badge {
+  @apply absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded;
+}
+.remove-btn {
+  @apply absolute top-2 right-2 bg-white rounded-full shadow p-2 hover:bg-gray-200 transition cursor-pointer;
+}
+.product-img {
+  @apply w-full h-48 object-contain bg-white;
+}
+.add-to-cart-btn {
+  @apply w-full cursor-pointer bg-black text-white py-2 flex justify-center items-center gap-2 text-sm hover:bg-gray-800 transition;
+}
+.card-info {
+  @apply p-4 text-center;
+}
+.card-title {
+  @apply text-sm font-medium;
+}
+.card-price {
+  @apply text-red-600 font-semibold mt-1;
+}
+.empty-text {
+  @apply text-gray-600;
+}
+
+/* Just For You Section */
+.just-for-you {
+  @apply flex justify-between items-center mt-12 mb-6;
+}
+.just-for-you-title {
+  @apply flex items-center gap-2 text-orange-500 font-semibold;
+}
+.see-all-btn {
+  @apply border px-4 py-2 rounded hover:bg-gray-100 transition;
+}

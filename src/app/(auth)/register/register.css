@@ -1,0 +1,58 @@
+
+@import "tailwindcss";
+
+.auth-container {
+  @apply min-h-screen bg-white text-black;
+}
+
+.auth-wrapper {
+  @apply flex max-w-7xl mx-auto p-20;
+}
+
+.auth-image {
+  @apply hidden md:flex w-1/2 relative;
+}
+
+.auth-image img {
+  @apply w-[640px] h-[784px] object-cover;
+}
+
+.auth-form {
+  @apply flex flex-col md:w-1/2 px-8 md:px-16 py-20;
+}
+
+.auth-title {
+  @apply text-3xl font-semibold mb-6 text-[48px] text-center;
+}
+
+.auth-google {
+  @apply w-full py-4 shadow-md rounded-md flex items-center justify-center gap-2 mb-4;
+}
+
+.auth-divider {
+  @apply text-center text-gray-400 mb-6;
+}
+
+.auth-label {
+  @apply block text-sm font-semibold text-gray-700 mb-2;
+}
+
+.auth-input {
+  @apply w-full rounded-2xl shadow px-4 py-4 outline-none mb-6;
+}
+
+.auth-error {
+  @apply text-red-500 text-sm mt-1;
+}
+
+.auth-submit {
+  @apply w-full bg-[#FF8400] text-white py-2 rounded-md hover:bg-orange-500;
+}
+
+.auth-footer {
+  @apply mt-4 text-sm text-gray-600 text-center;
+}
+
+.auth-link {
+  @apply text-orange-600 font-medium;
+}

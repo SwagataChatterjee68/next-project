@@ -1,0 +1,40 @@
+
+@import "tailwindcss";
+.music-banner {
+  @apply bg-black max-w-7xl mx-auto px-4 text-white flex flex-col md:flex-row items-center justify-between rounded-lg px-8 py-10 mb-12;
+}
+
+/* Left Side */
+.music-text-wrapper {
+  @apply flex-1 mb-6 md:mb-0;
+}
+.music-category {
+  @apply text-[#FF8400] text-sm font-semibold mb-3;
+}
+.music-heading {
+  @apply text-2xl md:text-4xl font-bold leading-snug mb-6;
+}
+
+/* Countdown */
+.music-countdown {
+  @apply flex gap-4 mb-6;
+}
+.music-count {
+  @apply bg-white text-black rounded-full w-16 h-16 flex flex-col items-center justify-center text-xs font-semibold;
+}
+.music-count span {
+  @apply text-base font-bold;
+}
+
+/* Button */
+.music-btn {
+  @apply bg-[#FF8400] text-white px-6 py-3 rounded font-medium hover:bg-orange-600 transition;
+}
+
+/* Right Side */
+.music-img {
+  @apply flex-1 flex items-center justify-center;
+}
+.music-img img {
+  @apply w-[568px] h-[330px] object-contain;
+}

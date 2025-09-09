@@ -1,0 +1,53 @@
+/* --- Section --- */
+@import "tailwindcss";
+.bestseller-section {
+  @apply w-full bg-gray-50 py-10;
+}
+.bestseller-wrapper {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+/* --- Header --- */
+.bestseller-header {
+  @apply flex items-center justify-between mb-6;
+}
+.bestseller-title {
+  @apply text-lg font-bold;
+}
+.bestseller-btn {
+  @apply bg-[#FF8400] text-white px-4 py-2 rounded hover:bg-orange-600;
+}
+
+/* --- Product Grid --- */
+.bestseller-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6;
+}
+
+/* --- Product Card --- */
+.bestseller-card {
+  @apply relative bg-[#FDFBD44A] rounded-lg shadow hover:shadow-lg transition p-4;
+}
+.bestseller-wishlist {
+  @apply absolute top-3 right-3 text-gray-600 hover:text-red-500;
+}
+.bestseller-img {
+  @apply w-full h-40 object-contain mb-3;
+}
+.bestseller-title-text {
+  @apply font-medium text-sm mb-2;
+}
+.bestseller-price-row {
+  @apply flex items-center gap-2 mb-2;
+}
+.bestseller-price {
+  @apply text-[#FFA500] font-bold;
+}
+.bestseller-oldprice {
+  @apply text-gray-400 line-through text-sm;
+}
+.bestseller-rating {
+  @apply flex items-center gap-1 text-[#FFA500] text-sm;
+}
+.bestseller-reviews {
+  @apply text-gray-600 text-xs ml-2;
+}
