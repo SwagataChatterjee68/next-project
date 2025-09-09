@@ -1,6 +1,4 @@
 @import "tailwindcss";
-
-
 .footer-wrapper {
   @apply w-full py-10;
 }

@@ -18,8 +18,8 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
 
-      
-      
+
+
       {/* --- Top Black Bar --- */}
       <div className="topbar">
         <p className="topbar-text">
@@ -41,33 +41,34 @@ export default function Navbar() {
           <Link href="/contact" className="nav-link">Contact</Link>
           <Link href="/about" className="nav-link">About</Link>
           <Link href="/register" className="nav-link-active">Sign Up</Link>
+          <div className="flex items-center gap-4 cursor-pointer">
+            <div className="search-box">
+              <input
+                type="text"
+                placeholder="What are you looking for?"
+                className="search-input"
+              />
+              <FiSearch className="text-gray-700" />
+            </div>
+
+            <Link href="/wishlist" className="icon-btn">
+              <FaRegHeart />
+              {wishlistCount > 0 && <span className="badge">{wishlistCount}</span>}
+            </Link>
+
+            <Link href="/cart" className="icon-btn">
+              <IoCartOutline className="cart-icon" />
+              {cartCount > 0 && <span className="badge">{cartCount}</span>}
+            </Link>
+
+            <Link href="/account" className="icon-btn">
+              <FaRegUser />
+            </Link>
+          </div>
+
         </ul>
 
         {/* Search + Icons */}
-        <div className="flex items-center gap-4 cursor-pointer">
-          <div className="search-box">
-            <input
-              type="text"
-              placeholder="What are you looking for?"
-              className="search-input"
-            />
-            <FiSearch className="text-gray-700" />
-          </div>
-
-          <Link href="/wishlist" className="icon-btn">
-            <FaRegHeart />
-            {wishlistCount > 0 && <span className="badge">{wishlistCount}</span>}
-          </Link>
-
-          <Link href="/cart" className="icon-btn">
-            <IoCartOutline className="cart-icon" />
-            {cartCount > 0 && <span className="badge">{cartCount}</span>}
-          </Link>
-
-          <Link href="/account" className="icon-btn">
-            <FaRegUser />
-          </Link>
-        </div>
 
         {/* Mobile Hamburger */}
         <button
@@ -101,8 +102,8 @@ export default function Navbar() {
           </div>
         </div>
       )}
-        
-     
+
+
     </header>
   );
 }
