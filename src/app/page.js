@@ -13,6 +13,7 @@ import { RiCustomerServiceLine } from "react-icons/ri";
 import MusicBanner from "@/components/musicBanner/MusicBanner";
 import Products from "@/components/products/Products";
 import NewArrival from "@/components/newArrival/newArrival";
+import InfoSection from "@/components/infoSection/Info";
 
 export default function Home() {
   const categories = [
@@ -97,11 +98,8 @@ export default function Home() {
         <MusicBanner />
         <Products />
         <NewArrival />
+        <InfoSection/>
       </div>
-
-      {/* Banner */}
-
-      {/* <MusicBanner /> */}
      
     </div>
   );

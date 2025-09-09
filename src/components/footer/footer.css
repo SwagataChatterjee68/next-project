@@ -1,44 +1,30 @@
-/* footer.css */
 @import "tailwindcss";
 
-.footer-top {
-  @apply grid md:grid-cols-3 gap-6 py-10 max-w-6xl mx-auto text-center;
-}
 
-.footer-top-box {
-  @apply flex flex-col items-center justify-center p-6 border rounded-md bg-white;
+.footer-wrapper {
+  @apply w-full py-10;
 }
-
-.footer-top-title {
-  @apply font-semibold mt-3 text-base;
+.footer-container{
+  @apply max-w-7xl mx-auto px-4;
 }
-
-.footer-top-text {
-  @apply text-sm text-gray-600;
-}
-
-.footer {
-  @apply bg-black text-white px-6 py-10;
-}
-
 .footer-grid {
-  @apply mx-auto max-w-6xl grid md:grid-cols-5 gap-10 py-10;
+  @apply mx-auto px-10 py-20 grid md:grid-cols-5 gap-20;
 }
 
 .footer-title {
   @apply font-semibold mb-4;
 }
 
-.footer-subscribe {
+.footer-input-wrapper {
   @apply flex mt-3 border border-white;
 }
 
 .footer-input {
-  @apply p-2 rounded-l-md text-sm w-full outline-none bg-transparent;
+  @apply p-2 rounded-l-md text-sm w-full outline-none;
 }
 
-.footer-button {
-  @apply px-4 text-white font-medium text-medium;
+.footer-btn {
+  @apply px-4 text-white font-medium text-sm;
 }
 
 .footer-list {
@@ -49,6 +35,6 @@
   @apply flex flex-col gap-2;
 }
 
-.footer-social {
-  @apply flex gap-4 mt-2;
+.footer-socials {
+  @apply flex gap-4;
 }
