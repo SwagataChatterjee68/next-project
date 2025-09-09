@@ -1,7 +1,5 @@
 /* styles/globals.css */
 @import "tailwindcss";
-
-
   .info-section {
     @apply flex flex-col max-w-7xl mx-auto px-4 md:flex-row justify-around items-center gap-6 py-10 ;
   }

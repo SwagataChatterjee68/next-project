@@ -1,18 +1,23 @@
 "use client";
 import { FaStar, FaHeart } from "react-icons/fa";
-import { FiHeart } from "react-icons/fi";
+import { useRouter } from "next/navigation";
+import { FiHeart, FiEye } from "react-icons/fi";
 import { useCart } from "@/context/CartContext";
 import { useState, useEffect } from "react";
 import { useWishlist } from "@/context/WishlistContext";
 import "./flashSale.css"; // import your css file
 
 const FlashSale = () => {
+  const router = useRouter();
   const [timeLeft, setTimeLeft] = useState({
     days: 3,
     hours: 23,
     minutes: 19,
     seconds: 56,
   });
+  const handleClick = (item) => {
+    router.push(`/product/${item.slug}`);
+  };
 
   // Countdown Timer
   useEffect(() => {
@@ -45,10 +50,50 @@ const FlashSale = () => {
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
 
   const product = [
-    { id: 1, title: "HAVIT HV-G92 Gamepad", price: 120, oldPrice: 160, discount: "-40%", rating: 4, reviews: 88, img: "saleproduct1.png" },
-    { id: 2, title: "AK-900 Wired Keyboard", price: 960, oldPrice: 1160, discount: "-35%", rating: 4, reviews: 75, img: "saleproduct2.png" },
-    { id: 3, title: "IPS LCD Gaming Monitor", price: 370, oldPrice: 400, discount: "-30%", rating: 5, reviews: 99, img: "/saleproduct3.png" },
-    { id: 4, title: "S-Series Comfort Chair", price: 375, oldPrice: 400, discount: "-25%", rating: 5, reviews: 99, img: "/saleproduct4.png" },
+    {
+      id: 1,
+      title: "HAVIT HV-G92 Gamepad",
+      price: 120,
+      oldPrice: 160,
+      discount: "-40%",
+      rating: 4,
+      reviews: 88,
+      img: "saleproduct1.png",
+      slug: "havit-hv-g92-gamepad",   // ✅ Add slug
+    },
+    {
+      id: 2,
+      title: "AK-900 Wired Keyboard",
+      price: 960,
+      oldPrice: 1160,
+      discount: "-35%",
+      rating: 4,
+      reviews: 75,
+      img: "saleproduct2.png",
+      slug: "ak-900-wired-keyboard",   // ✅ Add slug
+    },
+    {
+      id: 3,
+      title: "IPS LCD Gaming Monitor",
+      price: 370,
+      oldPrice: 400,
+      discount: "-30%",
+      rating: 5,
+      reviews: 99,
+      img: "/saleproduct3.png",
+      slug: "ips-lcd-gaming-monitor",   // ✅ Add slug
+    },
+    {
+      id: 4,
+      title: "S-Series Comfort Chair",
+      price: 375,
+      oldPrice: 400,
+      discount: "-25%",
+      rating: 5,
+      reviews: 99,
+      img: "/saleproduct4.png",
+      slug: "s-series-comfort-chair",   // ✅ Add slug
+    },
   ];
 
   function TimeBox({ label, value }) {
@@ -92,19 +137,26 @@ const FlashSale = () => {
                 <span className="discount-badge">{item.discount}</span>
 
                 {/* Wishlist Button */}
-                <button
-                  onClick={() =>
-                    isWishlisted ? removeFromWishlist(item.id) : addToWishlist(item)
-                  }
-                  className="wishlist-btn"
-                >
-                  {isWishlisted ? (
-                    <FaHeart size={18} className="text-red-500" />
-                  ) : (
-                    <FiHeart size={18} />
-                  )}
-                </button>
-
+                <div className="action-btn">
+                  <button
+                    onClick={() =>
+                      isWishlisted
+                        ? removeFromWishlist(item.id)
+                        : addToWishlist(item)
+                    }
+                    className="icon-btn"
+                  >
+                    {isWishlisted ? (
+                      <FaHeart className="text-red-500" />
+                    ) : (
+                      <FiHeart />
+                    )}
+                  </button>
+                  {/* ✅ pass item here */}
+                  <button onClick={() => handleClick(item)} className="icon-btn">
+                    <FiEye />
+                  </button>
+                </div>
                 {/* Image */}
                 <img src={item.img} alt={item.title} className="product-img" />
                 <button onClick={() => addToCart(item)} className="addcart-btn">

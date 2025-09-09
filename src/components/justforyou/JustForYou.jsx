@@ -10,7 +10,7 @@ export default function JustForYou() {
 
   const products = [
     {
-      id: 1,
+      id: 17,
       title: "RGB Liquid CPU Cooler",
       price: 750,
       rating: 5,
@@ -19,7 +19,7 @@ export default function JustForYou() {
       discount: "-35%",
     },
     {
-      id: 2,
+      id: 18,
       title: "RGB Liquid CPU Cooler",
       price: 750,
       rating: 5,
@@ -27,7 +27,7 @@ export default function JustForYou() {
       img: "/saleproduct3.png",
     },
     {
-      id: 3,
+      id: 19,
       title: "RGB Liquid CPU Cooler",
       price: 750,
       rating: 5,
@@ -35,7 +35,7 @@ export default function JustForYou() {
       img: "/saleproduct1.png",
     },
     {
-      id: 4,
+      id: 20,
       title: "RGB Liquid CPU Cooler",
       price: 750,
       rating: 5,

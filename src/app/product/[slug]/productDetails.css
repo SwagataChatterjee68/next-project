@@ -1,0 +1,55 @@
+.product-page {
+  @apply max-w-6xl mx-auto px-6 py-10;
+}
+
+.product-container {
+  @apply grid md:grid-cols-2 gap-12;
+}
+
+.main-img {
+  @apply w-full h-[400px] object-contain rounded-lg border;
+}
+
+.thumbnail {
+  @apply w-20 h-20 object-cover rounded-lg cursor-pointer border;
+}
+
+.thumbnail-active {
+  @apply border-2 border-black;
+}
+
+.thumbnail-inactive {
+  @apply border-gray-300;
+}
+
+.product-title {
+  @apply text-2xl font-semibold;
+}
+
+.product-reviews {
+  @apply text-sm text-gray-600;
+}
+
+.product-stock {
+  @apply text-green-600 ml-2 font-medium;
+}
+
+.product-price {
+  @apply text-2xl font-bold text-gray-900;
+}
+
+.product-desc {
+  @apply text-sm text-gray-700 leading-relaxed;
+}
+
+.qty-wrapper {
+  @apply flex items-center border rounded-lg;
+}
+
+.qty-btn {
+  @apply px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded;
+}
+
+.buy-btn {
+  @apply bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors;
+}

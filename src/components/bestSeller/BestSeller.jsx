@@ -1,5 +1,5 @@
 import React from "react";
-import { FiHeart } from "react-icons/fi";
+import { FiHeart,FiEye } from "react-icons/fi";
 import { FaHeart, FaStar } from "react-icons/fa";
 import { useWishlist } from "@/context/WishlistContext";
 import "./bestSeller.css"; // adjust path if needed
@@ -63,21 +63,26 @@ const BestSeller = () => {
             return (
               <div key={item.id} className="bestseller-card">
                 {/* Wishlist Button */}
-                <button
-                  onClick={() =>
-                    isWishlisted
-                      ? removeFromWishlist(item.id)
-                      : addToWishlist(item)
-                  }
-                  className="bestseller-wishlist"
-                >
-                  {isWishlisted ? (
-                    <FaHeart size={18} className="text-red-500" />
-                  ) : (
-                    <FiHeart size={18} />
-                  )}
-                </button>
-
+                <div className="action-btn">
+                  <button
+                    onClick={() =>
+                      isWishlisted
+                        ? removeFromWishlist(item.id)
+                        : addToWishlist(item)
+                    }
+                    className="icon-btn"
+                  >
+                    {isWishlisted ? (
+                      <FaHeart className="text-red-500" />
+                    ) : (
+                      <FiHeart />
+                    )}
+                  </button>
+                  {/* ✅ pass item here */}
+                  <button onClick={() => handleClick(item)} className="icon-btn">
+                    <FiEye />
+                  </button>
+                </div>
                 {/* Image */}
                 <img
                   src={item.img}

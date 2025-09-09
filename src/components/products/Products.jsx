@@ -4,86 +4,92 @@ import { FaStar, FaHeart } from "react-icons/fa";
 import { FiHeart, FiEye } from "react-icons/fi";
 import { useCart } from "@/context/CartContext";
 import { useWishlist } from "@/context/WishlistContext";
+import { useRouter } from "next/navigation";
 import "./products.css";
 
 const Products = () => {
+  const router = useRouter();
   const { addToCart } = useCart();
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
 
   const productList = [
     {
-      id: 1,
-      name: "Breed Dry Dog Food",
+      id: 9,
+      title: "Breed Dry Dog Food",
       price: 100,
-      oldPrice: null,
       rating: 3,
       reviews: 35,
       img: "/dogfood.jpg",
+      slug: "breed-dry-dog-food",
     },
     {
-      id: 2,
-      name: "CANON EOS DSLR Camera",
+      id: 10,
+      title: "CANON EOS DSLR Camera",
       price: 360,
-      oldPrice: null,
       rating: 5,
       reviews: 95,
       img: "/camera.png",
+      slug: "canon-eos-dslr-camera",
     },
     {
-      id: 3,
-      name: "ASUS FHD Gaming Laptop",
+      id: 11,
+      title: "ASUS FHD Gaming Laptop",
       price: 700,
-      oldPrice: null,
       rating: 5,
       reviews: 325,
       img: "/laptop.png",
+      slug: "asus-fhd-gaming-laptop",
     },
     {
-      id: 4,
-      name: "Curology Product Set",
+      id: 12,
+      title: "Curology Product Set",
       price: 500,
-      oldPrice: null,
       rating: 4,
       reviews: 145,
       img: "/curology.png",
+      slug: "curology-product-set",
     },
     {
-      id: 5,
-      name: "Kids Toy Car",
+      id: 13,
+      title: "Kids Toy Car",
       price: 100,
-      oldPrice: null,
       rating: 3,
       reviews: 35,
       img: "/car.png",
+      slug: "kids-toy-car",
     },
     {
-      id: 6,
-      name: "Football Shoes",
+      id: 14,
+      title: "Football Shoes",
       price: 360,
-      oldPrice: null,
       rating: 5,
       reviews: 95,
       img: "/shoes.png",
+      slug: "football-shoes",
     },
     {
-      id: 7,
-      name: "Gaming Laptop",
+      id: 15,
+      title: "Gaming Laptop",
       price: 700,
-      oldPrice: null,
       rating: 5,
       reviews: 325,
       img: "/gaminglaptop.png",
+      slug: "gaming-laptop",
     },
     {
-      id: 8,
-      name: "Gaming Controller",
+      id: 16,
+      title: "Gaming Controller",
       price: 500,
-      oldPrice: null,
       rating: 4,
       reviews: 145,
       img: "/gamepad.png",
+      slug: "gaming-controller",
     },
   ];
+
+  const handleClick = (item) => {
+    router.push(`/product/${item.slug}`);
+  };
 
   return (
     <section className="products-section">
@@ -117,15 +123,16 @@ const Products = () => {
                       <FiHeart />
                     )}
                   </button>
-                  <button className="icon-btn">
+                  {/* ✅ pass item here */}
+                  <button onClick={() => handleClick(item)} className="icon-btn">
                     <FiEye />
                   </button>
                 </div>
 
                 {/* Product Image */}
-                <img src={item.img} alt={item.name} className="product-img" />
+                <img src={item.img} alt={item.title} className="product-img" />
 
-                {/* Add To Cart Button (same style as FlashSale) */}
+                {/* Add To Cart Button */}
                 <button
                   onClick={() => addToCart(item)}
                   className="addcart-btn"
@@ -134,12 +141,9 @@ const Products = () => {
                 </button>
 
                 {/* Info */}
-                <h3 className="product-name">{item.name}</h3>
+                <h3 className="product-name">{item.title}</h3>
                 <div className="flex justify-center items-center gap-2">
                   <p className="product-price">${item.price}</p>
-                  {item.oldPrice && (
-                    <p className="product-oldprice">${item.oldPrice}</p>
-                  )}
                 </div>
 
                 {/* Rating */}
