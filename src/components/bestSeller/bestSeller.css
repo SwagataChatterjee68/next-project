@@ -28,7 +28,7 @@
   @apply relative bg-[#FDFBD44A] rounded-lg shadow hover:shadow-lg transition p-4;
 }
 .bestseller-wishlist {
-  @apply absolute top-3 right-3 text-gray-600 hover:text-red-500;
+  @apply absolute top-3 right-3 text-gray-600 hover:text-red-500 cursor-pointer;
 }
 .bestseller-img {
   @apply w-full h-40 object-contain mb-3;
