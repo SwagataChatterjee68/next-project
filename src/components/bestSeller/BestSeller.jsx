@@ -3,8 +3,10 @@ import { FiHeart,FiEye } from "react-icons/fi";
 import { FaHeart, FaStar } from "react-icons/fa";
 import { useWishlist } from "@/context/WishlistContext";
 import "./bestSeller.css"; // adjust path if needed
+import { useRouter } from "next/navigation";
 
 const BestSeller = () => {
+  const router=useRouter();
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
 
   const bestSelling = [
@@ -16,6 +18,7 @@ const BestSeller = () => {
       rating: 5,
       reviews: 65,
       img: "/bestselling1.png",
+      slug: "the-north-coat"
     },
     {
       id: 6,
@@ -25,6 +28,7 @@ const BestSeller = () => {
       rating: 5,
       reviews: 65,
       img: "/bestselling2.png",
+      slug: "gucci-duffle-bag"
     },
     {
       id: 7,
@@ -33,6 +37,7 @@ const BestSeller = () => {
       oldPrice: 170,
       rating: 5,
       reviews: 65,
+      slug: "rgb-liquid-cpu-cooler-160",
       img: "/bestselling3.png",
     },
     {
@@ -42,9 +47,13 @@ const BestSeller = () => {
       oldPrice: 400,
       rating: 5,
       reviews: 65,
+      slug: "small-bookshelf",
       img: "/bestselling4.png",
     },
   ];
+  const handleClick = (item) => {
+    router.push(`/product/${item.slug}`);
+  };
 
   return (
     <section className="bestseller-section">

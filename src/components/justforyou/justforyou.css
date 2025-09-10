@@ -13,7 +13,7 @@
 }
 
 .section-header-bar {
-  @apply w-1.5 h-6 bg-orange-500;
+  @apply w-1.5 h-6 bg-orange-500 cursor-pointer;
 }
 
 .section-header-title {
