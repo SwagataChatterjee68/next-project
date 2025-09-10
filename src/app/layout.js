@@ -5,6 +5,7 @@ import { CartProvider } from "@/context/CartContext";
 import { WishlistProvider } from "@/context/WishlistContext";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import { Poppins , Inter} from 'next/font/google'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -11,7 +11,7 @@ const Category = () => {
         { id: 1, name: "Phones", icon: <IoIosPhonePortrait /> },
         { id: 2, name: "Computers", icon: <HiOutlineComputerDesktop /> },
         { id: 3, name: "SmartWatch", icon: <TbDeviceWatchStats /> },
-        { id: 4, name: "Camera", icon: <AiOutlineCamera />, active: true },
+        { id: 4, name: "Camera", icon: <AiOutlineCamera /> },
         { id: 5, name: "HeadPhones", icon: <CiHeadphones /> },
         { id: 6, name: "Gaming", icon: <LuGamepad /> },
     ];
@@ -24,7 +24,7 @@ const Category = () => {
                     {category.map((cat) => (
                         <div
                             key={cat.id}
-                            className={`category-card ${cat.active ? "category-card-active" : "category-card-hover"
+                            className={`category-card ${ "category-card-hover"
                                 }`}
                         >
                             <span className="category-icon">{cat.icon}</span>

@@ -1,111 +1,111 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { useParams } from "next/navigation";
+import { useState, useEffect } from 'react';
+import { useParams } from 'next/navigation';
+import { products } from '@/data/products';
 import "./productDetails.css";
 
-const products = [
-  {
-    id: 21,
-    name: "Havic HV G-92 Gamepad",
-    price: 192,
-    images: ["/gamepad1.png", "/gamepad2.png", "/gamepad3.png", "/gamepad4.png"],
-    description:
-      "PlayStation 5 Controller Skin High quality vinyl with air channel adhesive...",
-    reviews: 150,
-    stock: "In Stock",
-    slug: "havic-hv-g92-gamepad",
-  },
-  {
-    id: 22,
-    name: "Gucci Duffle Bag",
-    price: 960,
-    images: ["/bag1.png", "/bag2.png"],
-    description: "Luxury Gucci bag, perfect for travel or style lovers.",
-    reviews: 95,
-    stock: "Limited Stock",
-    slug: "gucci-duffle-bag",
-  },
-];
-
 export default function ProductPage() {
-  const { slug } = useParams();
-  const product = products.find((p) => p.slug === slug);
+  const params = useParams();
+  const { slug } = params;
 
-  const [selectedImage, setSelectedImage] = useState(
-    product?.images[0] || ""
-  );
+  const [product, setProduct] = useState(null);
+  const [selectedImage, setSelectedImage] = useState('');
   const [quantity, setQuantity] = useState(1);
+  const [relatedItems, setRelatedItems] = useState([]);
 
-  if (!product) {
-    return (
-      <p className="text-center text-red-500 py-10">
-        Product not found
-      </p>
-    );
-  }
+  useEffect(() => {
+    if (!slug) return;
+    const foundProduct = products.find((p) => p.slug === slug);
+    if (foundProduct) {
+      setProduct(foundProduct);
+      setSelectedImage(foundProduct.images[0]);
+      setRelatedItems(products.filter((p) => p.slug !== slug));
+    } else {
+      setProduct(null);
+    }
+  }, [slug]);
+
+  if (!product) return <div className="not-found">Product not found</div>;
 
   return (
     <div className="product-page">
-      <div className="product-container">
+      <div className="container">
         {/* Left: Images */}
-        <div className="flex gap-6">
-          {/* Thumbnails */}
-          <div className="flex flex-col gap-3">
+        <div className="images-section">
+          <div className="thumbnails">
             {product.images.map((img) => (
               <img
                 key={img}
                 src={img}
                 alt="thumbnail"
-                className={`thumbnail ${
-                  selectedImage === img
-                    ? "thumbnail-active"
-                    : "thumbnail-inactive"
-                }`}
+                className={`thumb-img ${selectedImage === img ? 'active' : ''}`}
                 onClick={() => setSelectedImage(img)}
               />
             ))}
           </div>
-
-          {/* Main Image */}
-          <div className="flex-1">
-            <img src={selectedImage} alt="product" className="main-img" />
+          <div className="main-image-wrapper">
+            <img src={selectedImage} alt={product.title} className="main-img" />
           </div>
         </div>
 
         {/* Right: Details */}
-        <div className="space-y-4">
-          <h1 className="product-title">{product.name}</h1>
-          <p className="product-reviews">
-            ⭐⭐⭐⭐⭐ ({product.reviews}){" "}
-            <span className="product-stock">{product.stock}</span>
+        <div className="details-section">
+          <h1 className="product-title">{product.title}</h1>
+          <p className="rating">
+            ⭐⭐⭐⭐⭐ ({product.reviews} Reviews){' '}
+            <span className={product.stock ? 'in-stock' : 'out-stock'}>
+              {product.stock ? 'In Stock' : 'Out of Stock'}
+            </span>
           </p>
 
-          <p className="product-price">${product.price}</p>
-          <p className="product-desc">{product.description}</p>
+          <p className="price">${product.price.toFixed(2)}</p>
+          <p className="desc">{product.description}</p>
 
-          {/* Quantity & Buy Button */}
-          <div className="flex items-center gap-4 mt-3">
-            <div className="qty-wrapper">
-              <button
-                onClick={() =>
-                  setQuantity(quantity > 1 ? quantity - 1 : 1)
-                }
-                className="qty-btn"
-              >
-                -
-              </button>
-              <span className="px-4">{quantity}</span>
-              <button
-                onClick={() => setQuantity(quantity + 1)}
-                className="qty-btn"
-              >
-                +
-              </button>
+          <div className="colors">
+            <h3>Colours:</h3>
+            <div className="color-options">
+              <span className="color-circle blue"></span>
+              <span className="color-circle red"></span>
             </div>
+          </div>
 
+          <div className="sizes">
+            <h3>Size:</h3>
+            <div className="size-options">
+              {['XS', 'S', 'M', 'L', 'XL'].map((size) => (
+                <button key={size} className="size-btn">{size}</button>
+              ))}
+            </div>
+          </div>
+
+          <div className="quantity-buy">
+            <div className="qty-box">
+              <button onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)} className="qty-btn">-</button>
+              <span className="qty-value">{quantity}</span>
+              <button onClick={() => setQuantity(quantity + 1)} className="qty-btn">+</button>
+            </div>
             <button className="buy-btn">Buy Now</button>
           </div>
+        </div>
+      </div>
+
+      {/* Related Items */}
+      <div className="related-section">
+        <h2>Related Items</h2>
+        <div className="related-grid">
+          {products.map((item) => (
+            <div key={item.id} className="related-card">
+              {item.oldPrice && <span className="discount-badge">-{Math.round(((item.oldPrice - item.price) / item.oldPrice) * 100)}%</span>}
+              <img src={item.img} alt={item.title} className="related-img" />
+              <h3 className="related-title">{item.title}</h3>
+              <p className="related-price">
+                ${item.price} {item.oldPrice && <span className="old-price">${item.oldPrice}</span>}
+              </p>
+              <p className="related-rating">⭐⭐⭐⭐⭐ ({item.reviews})</p>
+              <button className="cart-btn">Add To Cart</button>
+            </div>
+          ))}
         </div>
       </div>
     </div>

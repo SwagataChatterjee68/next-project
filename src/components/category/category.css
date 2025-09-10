@@ -18,13 +18,13 @@
   @apply flex flex-col items-center justify-center border rounded-md py-10 px-4 cursor-pointer transition;
 }
 .category-card-active {
-  @apply bg-[#FF8400] text-white border-orange-500;
+  @apply bg-[#FF8400] ;
 }
 .category-card-hover {
-  @apply hover:border-orange-500;
+  @apply hover:bg-[#FF8400] hover:text-white;
 }
 .category-icon {
-  @apply text-4xl;
+  @apply text-4xl ;
 }
 .category-name {
   @apply mt-2 text-sm font-medium;

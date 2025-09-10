@@ -22,6 +22,7 @@ export default function ProductCard({ image, title, price, discount }) {
         />
       </div>
 
+
       {/* Product Info */}
       <div className="p-3 text-center">
         <h3 className="text-sm font-medium">{title}</h3>

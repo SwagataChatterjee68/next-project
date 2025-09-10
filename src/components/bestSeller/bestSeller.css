@@ -15,7 +15,7 @@
   @apply text-lg font-bold;
 }
 .bestseller-btn {
-  @apply bg-[#FF8400] text-white px-4 py-2 rounded hover:bg-orange-600;
+  @apply bg-[#FF8400] text-white px-4 py-2 rounded hover:bg-orange-600 cursor-pointer;
 }
 
 /* --- Product Grid --- */

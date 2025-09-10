@@ -5,7 +5,7 @@ import { FiHeart, FiEye } from "react-icons/fi";
 import { useCart } from "@/context/CartContext";
 import { useState, useEffect } from "react";
 import { useWishlist } from "@/context/WishlistContext";
-import "./flashSale.css"; // import your css file
+import "./flashSale.css"; 
 
 const FlashSale = () => {
   const router = useRouter();
