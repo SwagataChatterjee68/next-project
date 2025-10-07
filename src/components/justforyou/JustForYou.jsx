@@ -45,46 +45,46 @@ export default function JustForYou() {
   ];
 
   return (
-    <section className="section">
+    <section className="section-just-for-you">
       {/* Header */}
-      <div className="section-header">
-        <div className="section-header-left">
-          <div className="section-header-bar"></div>
-          <h2 className="section-header-title">Just For You</h2>
+      <div className="section-header-just-for-you">
+        <div className="section-header-left-just-for-you">
+          <div className="section-header-bar-just-for-you"></div>
+          <h2 className="section-header-title-just-for-you">Just For You</h2>
         </div>
-        <button className="section-header-btn">See All</button>
+        <button className="section-header-btn-just-for-you">See All</button>
       </div>
 
       {/* Product Grid */}
-      <div className="products-grid">
+      <div className="products-grid-just-for-you">
         {products.map((item) => (
-          <div key={item.id} className="product-card">
+          <div key={item.id} className="product-card-just-for-you">
             {/* Image */}
-            <div className="product-img-wrapper">
-              {item.discount && (
-                <span className="product-discount">{item.discount}</span>
-              )}
-              <button className="product-eye">
-                <FiEye size={16} />
-              </button>
-              <img src={item.img} alt={item.title} className="product-img" />
-              <button
-                onClick={() => addToCart(item)}
-                className="product-cart-btn"
-              >
+            <div className="product-img-wrapper-just-for-you">
+              <div className="product-img-top-just-for-you">
+                {item.discount && <span className="product-discount-just-for-you">{item.discount}</span>}
+                <button className="product-eye-just-for-you">
+                  <FiEye size={16} />
+                </button>
+              </div>
+
+              <img src={item.img} alt={item.title} className="product-img-just-for-you" />
+
+              <button onClick={() => addToCart(item)} className="product-cart-btn-just-for-you">
                 <BsCartPlus className="text-2xl" /> Add To Cart
               </button>
             </div>
 
+
             {/* Info */}
-            <div className="product-info">
-              <h3 className="product-title">{item.title}</h3>
-              <p className="product-price">${item.price}</p>
-              <div className="product-rating">
+            <div className="product-info-just-for-you">
+              <h3 className="product-title-just-for-you">{item.title}</h3>
+              <p className="product-price-just-for-you">${item.price}</p>
+              <div className="product-rating-just-for-you">
                 {Array.from({ length: item.rating }).map((_, i) => (
                   <FaStar key={i} />
                 ))}
-                <span className="product-reviews">({item.reviews})</span>
+                <span className="product-reviews-just-for-you">({item.reviews})</span>
               </div>
             </div>
           </div>

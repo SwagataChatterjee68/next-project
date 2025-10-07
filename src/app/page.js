@@ -77,30 +77,30 @@ export default function Home() {
 
   return (
     <div className="homepage">
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="categories">
-          {categories.map((cat, i) => (
-            <Link href="/" key={i}>
-              {cat}
-            </Link>
-          ))}
-        </div>
-        <div className="hero-divider"></div>
-        <img src={images[current]} alt="hero" className="hero-img" />
-      </section>
 
-      {/* Flash Sale */}
-      <FlashSale />
-      <div className="product-section">
+      <div className="wrapper">
+        <section className="hero">
+          <div className="categories">
+            {categories.map((cat, i) => (
+              <Link href="/" key={i}>
+                {cat}
+              </Link>
+            ))}
+          </div>
+          <div className="hero-divider"></div>
+          <img src={images[current]} alt="hero" className="hero-img" />
+        </section>
+
+        {/* Flash Sale */}
+        <FlashSale />
         <Category />
         <BestSeller />
         <MusicBanner />
         <Products />
         <NewArrival />
-        <InfoSection/>
+        <InfoSection />
       </div>
-     
+
     </div>
   );
 }

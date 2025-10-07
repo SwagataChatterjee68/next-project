@@ -1,12 +1,12 @@
 import React from "react";
-import { FiHeart,FiEye } from "react-icons/fi";
+import { FiHeart, FiEye } from "react-icons/fi";
 import { FaHeart, FaStar } from "react-icons/fa";
 import { useWishlist } from "@/context/WishlistContext";
 import "./bestSeller.css"; // adjust path if needed
 import { useRouter } from "next/navigation";
 
 const BestSeller = () => {
-  const router=useRouter();
+  const router = useRouter();
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
 
   const bestSelling = [
@@ -57,7 +57,11 @@ const BestSeller = () => {
 
   return (
     <section className="bestseller-section">
-      <div className="bestseller-wrapper">
+      <div className="wrapper">
+        <div className="header">
+          <div className="section-header-bar"></div>
+          <p>This Month</p>
+        </div>
         {/* Header */}
         <div className="bestseller-header">
           <h2 className="bestseller-title">Best Selling Products</h2>

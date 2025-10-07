@@ -6,14 +6,17 @@ const NewArrival = () => {
     return (
         <section className="newarrival-section">
             {/* Header */}
-            <div className="newarrival-wrapper">
-                <p className="newarrival-subtitle">Featured</p>
+            <div className="wrapper">
+                <div className="header">
+                    <div className="section-header-bar"></div>
+                    <p>Featured</p>
+                </div>
                 <h2 className="newarrival-title">New Arrival</h2>
 
                 {/* Grid */}
                 <div className="newarrival-grid">
                     {/* Large PlayStation Card */}
-                    <div className="newarrival-large h-[400px]">
+                    <div className="newarrival-large h-[600px]">
                         <img
                             src="/play.png"
                             alt="PlayStation 5"
@@ -31,7 +34,7 @@ const NewArrival = () => {
                     {/* Right Side Small Grid */}
                     <div className="newarrival-small-grid">
                         {/* Women's Collections */}
-                        <div className="newarrival-card h-[190px] sm:col-span-2">
+                        <div className="newarrival-card h-[286px] sm:col-span-2">
                             <img
                                 src="/women.png"
                                 alt="Women's Collections"
@@ -47,7 +50,7 @@ const NewArrival = () => {
                         </div>
 
                         {/* Speakers */}
-                        <div className="newarrival-card h-[190px]">
+                        <div className="newarrival-card h-[284px]">
                             <img
                                 src="/speakers.png"
                                 alt="Speakers"
@@ -63,7 +66,7 @@ const NewArrival = () => {
                         </div>
 
                         {/* Perfume */}
-                        <div className="newarrival-card h-[190px]">
+                        <div className="newarrival-card h-[284px]">
                             <img
                                 src="/perfume.png"
                                 alt="Perfume"

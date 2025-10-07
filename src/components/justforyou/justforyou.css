@@ -1,73 +1,73 @@
 /* justforyou.css */
 @import "tailwindcss";
-.section {
+.section-just-for-you {
   @apply max-w-7xl mx-auto px-6 py-10;
 }
 
-.section-header {
+.section-header-just-for-you {
   @apply flex justify-between items-center mb-8;
 }
 
-.section-header-left {
+.section-header-left-just-for-you {
   @apply flex items-center gap-2;
 }
 
-.section-header-bar {
+.section-header-bar-just-for-you {
   @apply w-1.5 h-6 bg-orange-500 cursor-pointer;
 }
 
-.section-header-title {
+.section-header-title-just-for-you {
   @apply text-lg font-semibold;
 }
 
-.section-header-btn {
+.section-header-btn-just-for-you {
   @apply border px-5 py-2 rounded transition hover:bg-black hover:text-white;
 }
 
-.products-grid {
+.products-grid-just-for-you {
   @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6;
 }
 
-.product-card {
+.product-card-just-for-you {
   @apply bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden;
 }
 
-.product-img-wrapper {
+.product-img-wrapper-just-for-you {
   @apply relative;
 }
 
-.product-discount {
-  @apply absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded;
+.product-discount-just-for-you {
+  @apply absolute top-2 left-2 bg-[#FF4000] text-white text-xs px-2 py-1 rounded;
 }
 
-.product-eye {
+.product-eye-just-for-you {
   @apply absolute top-2 right-2 bg-white rounded-full p-1 shadow hover:bg-gray-100;
 }
 
-.product-img {
-  @apply w-full h-40 object-contain;
+.product-img-just-for-you {
+  @apply w-full h-40 object-contain bg-[#FDFBD44A];
 }
 
-.product-cart-btn {
+.product-cart-btn-just-for-you {
   @apply w-full cursor-pointer bg-black text-white py-2 flex justify-center items-center gap-2 text-sm hover:bg-gray-800 transition;
 }
 
-.product-info {
+.product-info-just-for-you {
   @apply p-3;
 }
 
-.product-title {
+.product-title-just-for-you {
   @apply font-medium text-sm;
 }
 
-.product-price {
-  @apply text-orange-600 font-bold;
+.product-price-just-for-you {
+  @apply text-[#DB4444]  font-bold;
 }
 
-.product-rating {
+.product-rating-just-for-you {
   @apply flex items-center text-yellow-500 text-sm mt-1;
 }
 
-.product-reviews {
+.product-reviews-just-for-you {
   @apply text-gray-600 text-xs ml-2;
 }

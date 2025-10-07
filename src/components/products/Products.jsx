@@ -94,9 +94,12 @@ const Products = () => {
   return (
     <section className="products-section">
       <div className="products-wrapper">
+        <div className="header">
+          <div className="section-header-bar"></div>
+          <p>Our Products</p>
+        </div>
         {/* Header */}
         <div className="mb-4">
-          <p className="products-subtitle">Our Products</p>
           <h2 className="products-title">Explore Our Products</h2>
         </div>
 

@@ -35,13 +35,13 @@ export default function CartPage() {
           <tbody>
             {cart.map((item) => (
               <tr key={item.id}>
-                <td className="product-cell">
-                  <div className="product-info">
-                    <div className="product-img-wrapper">
-                      <img src={item.img} alt={item.title} className="product-img" />
+                <td className="product-cell-cart">
+                  <div className="product-info-cart">
+                    <div className="product-img-wrapper-cart">
+                      <img src={item.img} alt={item.title} className="product-img-cart" />
                       <button
                         onClick={() => removeFromCart(item.id)}
-                        className="remove-btn"
+                        className="remove-btn-cart"
                       >
                         <IoIosClose />
                       </button>
@@ -58,7 +58,7 @@ export default function CartPage() {
                     onChange={(e) =>
                       updateQuantity(item.id, parseInt(e.target.value))
                     }
-                    className="quantity-input"
+                    className="quantity-input-cart"
                   />
                 </td>
                 <td>${item.price * item.quantity}</td>
@@ -71,13 +71,13 @@ export default function CartPage() {
       {/* Actions + Totals */}
       <div className="cart-actions">
         {/* Left Actions */}
-        <div className="left-actions">
-          <button onClick={handleClick} className="return-btn">
+        <div className="left-actions-cart">
+          <button onClick={handleClick} className="return-btn-cart">
             Return To Shop
           </button>
-          <div className="coupon-box">
+          <div className="coupon-box-cart">
             <input type="text" placeholder="Coupon Code" />
-            <button className="apply-btn">Apply Coupon</button>
+            <button className="apply-btn-cart">Apply Coupon</button>
           </div>
          
         </div>
@@ -85,19 +85,19 @@ export default function CartPage() {
         {/* Right Cart Totals */}
         <div className="cart-total">
           <h3>Cart Total</h3>
-          <div className="total-row">
+          <div className="total-row-cart">
             <span>Subtotal</span>
             <span>${subtotal}</span>
           </div>
-          <div className="total-row">
+          <div className="total-row-cart">
             <span>Shipping</span>
             <span className="free">Free</span>
           </div>
-          <div className="total-row total">
+          <div className="total-row-cart total">
             <span>Total</span>
             <span>${subtotal}</span>
           </div>
-          <button className="checkout-btn">Proceed To Checkout</button>
+          <button className="checkout-btn-cart">Proceed To Checkout</button>
         </div>
       </div>
     </div>

@@ -1,4 +1,3 @@
-/* Contact Page Styles */
 @import "tailwindcss";
 
 .contact-wrapper {
@@ -16,8 +15,6 @@
 .contact-grid {
   @apply grid grid-cols-1 md:grid-cols-3 gap-8;
 }
-
-/* Left Section Cards */
 .contact-card {
   @apply bg-white shadow-md rounded-lg p-6;
 }
@@ -38,7 +35,7 @@
   @apply text-sm text-gray-800;
 }
 
-/* Form Section */
+
 .contact-form {
   @apply bg-white shadow-md rounded-lg p-6 space-y-6;
 }

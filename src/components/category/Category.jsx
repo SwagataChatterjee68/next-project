@@ -17,14 +17,20 @@ const Category = () => {
     ];
 
     return (
+
         <section className="category-section">
+
             <div className="category-wrapper">
+                <div className="header">
+                    <div className="section-header-bar"></div>
+                    <p>Categories</p>
+                </div>
                 <h2 className="category-title">Browse By Category</h2>
                 <div className="category-grid">
                     {category.map((cat) => (
                         <div
                             key={cat.id}
-                            className={`category-card ${ "category-card-hover"
+                            className={`category-card ${"category-card-hover"
                                 }`}
                         >
                             <span className="category-icon">{cat.icon}</span>

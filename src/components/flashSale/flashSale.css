@@ -4,71 +4,101 @@
   @apply w-full bg-gray-50 py-10;
 }
 
-.flashsale-container {
-  @apply max-w-7xl mx-auto px-4;
-}
-
-/* Header */
 .flashsale-header {
   @apply flex flex-col md:flex-row md:items-center gap-20 mb-8;
 }
+
 .flashsale-title p {
   @apply text-[#FFA500] font-semibold;
 }
+.timebox-value::after {
+  @apply ml-1 text-[#FFA500];
+  content: ':';
+}
+
+.timebox:last-child .timebox-value::after {
+  content: '';  
+}
 .flashsale-title h2 {
-  @apply font-bold text-2xl md:text-3xl;
+  @apply font-bold md:text-3xl;
 }
+
 .flashsale-timer {
-  @apply flex gap-4 mt-4 md:mt-0;
+  @apply flex gap-8 ;
 }
-.title-with-timer {
-  @apply flex items-center gap-10;
+
+.title-with-timer-flashsale {
+  @apply flex gap-20 items-center;
 }
+
+.title-with-timer-flashsale h2 {
+  @apply text-[36px] font-semibold;
+}
+
 .timebox {
   @apply flex flex-col items-center;
 }
-.timebox-value {
-  @apply text-lg font-bold;
-}
+
 .timebox-label {
-  @apply text-xs text-gray-500 ;
+  @apply text-[12px] font-medium text-[#000000]  ;
 }
 
-/* Product Grid */
+.timebox-value {
+  @apply text-lg font-bold text-[32px] ;
+}
+
 .flashsale-grid {
   @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6;
 }
+
 .flashsale-card {
-  @apply relative bg-[#FDFBD44A] rounded-lg shadow hover:shadow-lg transition p-4;
+  @apply relative   rounded-lg shadow hover:shadow-lg transition p-4;
 }
-.discount-badge {
+
+.discount-badge-flashsale {
   @apply absolute top-3 left-3 bg-[#FFA500] text-white text-xs px-2 py-1 rounded;
 }
-.wishlist-btn {
+
+.wishlist-btn-flashsale {
   @apply absolute top-3 right-3 text-gray-600 hover:text-red-500 cursor-pointer;
 }
-.product-img {
-  @apply w-full h-40 object-contain mb-3;
+
+.product-img-flashsale {
+  @apply w-full h-40 object-contain mb-3 bg-[#FDFBD44A];
 }
-.addcart-btn {
-  @apply w-full bg-black text-white py-2 flex justify-center items-center gap-2 text-sm 
-         hover:bg-gray-800 transition cursor-pointer;
+
+.addcart-btn-flashsale {
+  @apply w-full bg-black text-white py-2 flex justify-center items-center gap-2 text-sm hover:bg-gray-800 transition cursor-pointer;
 }
-.product-title {
+
+.product-title-flashsale {
   @apply font-medium text-sm mb-2;
 }
-.price-wrapper {
+
+.price-wrapper-flashsale {
   @apply flex items-center gap-2 mb-2;
 }
-.price-current {
+
+.price-current-flashsale {
   @apply text-[#FFA500] font-bold;
 }
-.price-old {
+
+.price-old-flashsale {
   @apply text-gray-400 line-through text-sm;
 }
-.rating-wrapper {
+
+.rating-wrapper-flashsale {
   @apply flex items-center gap-1 text-[#FFA500] text-sm;
 }
-.rating-count {
+
+.rating-count-flashsale {
   @apply text-gray-600 text-xs ml-2;
+}
+
+.section-header-bar {
+  @apply w-[20px] h-[40px] rounded-[4px] bg-[#FFA500] cursor-pointer;
+}
+
+.header {
+  @apply flex items-center gap-2 mb-4
 }

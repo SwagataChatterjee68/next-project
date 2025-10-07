@@ -22,7 +22,7 @@ export default function WishlistPage() {
         <div className="wishlist-header">
           <h2 className="wishlist-title">Wishlist ({wishlist.length})</h2>
           {wishlist.length > 0 && (
-            <button onClick={handleMoveAllToBag} className="move-all-btn">
+            <button onClick={handleMoveAllToBag} className="move-all-btn-wishlist">
               Move All To Bag
             </button>
           )}
@@ -35,38 +35,38 @@ export default function WishlistPage() {
               <div key={item.id} className="wishlist-card">
                 {/* Discount Badge */}
                 {item.discount && (
-                  <span className="discount-badge">{item.discount}</span>
+                  <span className="discount-badge-wishlist">{item.discount}</span>
                 )}
 
                 {/* Remove button */}
                 <button
                   onClick={() => removeFromWishlist(item.id)}
-                  className="remove-btn"
+                  className="remove-btn-wishlist"
                 >
                   <FaTrash className="text-gray-600 text-sm" />
                 </button>
 
                 {/* Product Image */}
-                <img src={item.img} alt={item.title} className="product-img" />
+                <img src={item.img} alt={item.title} className="product-img-wishlist" />
 
                 {/* Add To Cart */}
                 <button
                   onClick={() => addToCart(item)}
-                  className="add-to-cart-btn"
+                  className="add-to-cart-btn-wishlist"
                 >
                   <BsCartPlus className="text-2xl" /> Add To Cart
                 </button>
 
                 {/* Info */}
-                <div className="card-info">
-                  <h3 className="card-title">{item.title}</h3>
-                  <p className="card-price">${item.price}</p>
+                <div className="card-info-wishlist">
+                  <h3 className="card-title-wishlist">{item.title}</h3>
+                  <p className="card-price-wishlist">${item.price}</p>
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <p className="empty-text">Your wishlist is empty.</p>
+          <p className="empty-text-wishlist">Your wishlist is empty.</p>
         )}
       </section>
        <JustForYou />

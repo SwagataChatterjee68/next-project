@@ -9,12 +9,8 @@
   @apply max-w-7xl mx-auto px-4;
 }
 
-.newarrival-subtitle {
-  @apply text-[#FF8400] text-sm font-semibold mb-2 flex items-center gap-2;
-}
-
 .newarrival-title {
-  @apply text-2xl font-bold mb-8;
+  @apply text-[36px] font-semibold mb-4;
 }
 
 /* Grid */
@@ -52,5 +48,5 @@
 }
 
 .newarrival-btn {
-  @apply underline font-medium hover:text-[#FF8400] transition;
+  @apply underline font-medium hover:text-[#FF8400] transition text-left;
 }

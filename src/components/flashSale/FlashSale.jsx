@@ -5,7 +5,7 @@ import { FiHeart, FiEye } from "react-icons/fi";
 import { useCart } from "@/context/CartContext";
 import { useState, useEffect } from "react";
 import { useWishlist } from "@/context/WishlistContext";
-import "./flashSale.css"; 
+import "./flashSale.css";
 
 const FlashSale = () => {
   const router = useRouter();
@@ -96,29 +96,34 @@ const FlashSale = () => {
     },
   ];
 
-  function TimeBox({ label, value }) {
-    return (
-      <div className="timebox">
-        <span className="timebox-value">{String(value).padStart(2, "0")}</span>
-        <span className="timebox-label">{label}</span>
-      </div>
-    );
-  }
+  function TimeBox({ label, value, showColon }) {
+  return (
+    <div className="timebox">
+      <span className="timebox-label">
+        {label}{showColon && ":"}
+      </span>
+      <span className="timebox-value">{String(value).padStart(2, "0")}</span>
+    </div>
+  );
+}
 
   return (
     <section className="flashsale-section">
-      <div className="flashsale-container">
+      <div className="wrapper">
         {/* Header */}
         <div className="flashsale-header">
           <div className="flashsale-title">
-            <p>Today’s</p>
-            <div className="title-with-timer">
+            <div className="header">
+              <div className="section-header-bar"></div>
+              <p>Today’s</p>
+            </div>
+            <div className="title-with-timer-flashsale">
               <h2>Flash Sales</h2>
               <div className="flashsale-timer">
-                <TimeBox label="Days" value={timeLeft.days} />
-                <TimeBox label="Hours" value={timeLeft.hours} />
-                <TimeBox label="Minutes" value={timeLeft.minutes} />
-                <TimeBox label="Seconds" value={timeLeft.seconds} />
+                <TimeBox label="Days " value={timeLeft.days} />
+                <TimeBox label="Hours " value={timeLeft.hours} />
+                <TimeBox label="Minutes " value={timeLeft.minutes} />
+                <TimeBox label="Seconds " value={timeLeft.seconds} />
               </div>
             </div>
 
@@ -134,17 +139,17 @@ const FlashSale = () => {
             return (
               <div key={item.id} className="flashsale-card">
                 {/* Discount Badge */}
-                <span className="discount-badge">{item.discount}</span>
+                <span className="discount-badge-flashsale">{item.discount}</span>
 
                 {/* Wishlist Button */}
-                <div className="action-btn">
+                <div className="action-btn-flashsale">
                   <button
                     onClick={() =>
                       isWishlisted
                         ? removeFromWishlist(item.id)
                         : addToWishlist(item)
                     }
-                    className="icon-btn"
+                    className="icon-btn-flashsale"
                   >
                     {isWishlisted ? (
                       <FaHeart className="text-red-500" />
@@ -153,27 +158,27 @@ const FlashSale = () => {
                     )}
                   </button>
                   {/* ✅ pass item here */}
-                  <button onClick={() => handleClick(item)} className="icon-btn">
+                  <button onClick={() => handleClick(item)} className="icon-btn-flashsale">
                     <FiEye />
                   </button>
                 </div>
                 {/* Image */}
-                <img src={item.img} alt={item.title} className="product-img" />
-                <button onClick={() => addToCart(item)} className="addcart-btn">
+                <img src={item.img} alt={item.title} className="product-img-flashsale" />
+                <button onClick={() => addToCart(item)} className="addcart-btn-flashsale">
                   Add To Cart
                 </button>
 
                 {/* Info */}
-                <h3 className="product-title">{item.title}</h3>
-                <div className="price-wrapper">
-                  <p className="price-current">${item.price}</p>
-                  <p className="price-old">${item.oldPrice}</p>
+                <h3 className="product-title-flashsale">{item.title}</h3>
+                <div className="price-wrapper-flashsale">
+                  <p className="price-current-flashsale">${item.price}</p>
+                  <p className="price-old-flashsale">${item.oldPrice}</p>
                 </div>
-                <div className="rating-wrapper">
+                <div className="rating-wrapper-flashsale">
                   {Array.from({ length: item.rating }).map((_, i) => (
                     <FaStar key={i} />
                   ))}
-                  <span className="rating-count">({item.reviews})</span>
+                  <span className="rating-count-flashsale">({item.reviews})</span>
                 </div>
               </div>
             );
