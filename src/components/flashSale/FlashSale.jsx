@@ -142,14 +142,14 @@ const FlashSale = () => {
                 <span className="discount-badge-flashsale">{item.discount}</span>
 
                 {/* Wishlist Button */}
-                <div className="action-btn-flashsale">
+                <div className="action-btn">
                   <button
                     onClick={() =>
                       isWishlisted
                         ? removeFromWishlist(item.id)
                         : addToWishlist(item)
                     }
-                    className="icon-btn-flashsale"
+                    className="icon-btn"
                   >
                     {isWishlisted ? (
                       <FaHeart className="text-red-500" />
@@ -158,7 +158,7 @@ const FlashSale = () => {
                     )}
                   </button>
                   {/* ✅ pass item here */}
-                  <button onClick={() => handleClick(item)} className="icon-btn-flashsale">
+                  <button onClick={() => handleClick(item)} className="icon-btn">
                     <FiEye />
                   </button>
                 </div>
