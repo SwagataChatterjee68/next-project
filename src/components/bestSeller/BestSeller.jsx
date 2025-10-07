@@ -4,10 +4,11 @@ import { FaHeart, FaStar } from "react-icons/fa";
 import { useWishlist } from "@/context/WishlistContext";
 import "./bestSeller.css"; // adjust path if needed
 import { useRouter } from "next/navigation";
-
+import { useFilter } from "@/context/FilterContext";
 const BestSeller = () => {
   const router = useRouter();
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
+  const { searchTerm } = useFilter();
 
   const bestSelling = [
     {
@@ -54,6 +55,9 @@ const BestSeller = () => {
   const handleClick = (item) => {
     router.push(`/product/${item.slug}`);
   };
+  const filteredProducts = bestSelling.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <section className="bestseller-section">
@@ -70,7 +74,7 @@ const BestSeller = () => {
 
         {/* Product Grid */}
         <div className="bestseller-grid">
-          {bestSelling.map((item) => {
+          {filteredProducts.map((item) => {
             const isWishlisted = wishlist.some((w) => w.id === item.id);
 
             return (

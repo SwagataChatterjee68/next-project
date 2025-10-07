@@ -7,6 +7,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { useCart } from "@/context/CartContext";
 import { useWishlist } from "@/context/WishlistContext";
 import "./navbar.css"; // import the @apply styles
+import { useFilter } from "@/context/FilterContext";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,8 @@ export default function Navbar() {
   const { wishlist } = useWishlist();
   const cartCount = cart.length;
   const wishlistCount = wishlist.length;
+  const { searchTerm, setSearchTerm } = useFilter();
+
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
@@ -43,6 +46,8 @@ export default function Navbar() {
               <input
                 type="text"
                 placeholder="What are you looking for?"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 className="search-input"
               />
               <FiSearch className="text-gray-700" />

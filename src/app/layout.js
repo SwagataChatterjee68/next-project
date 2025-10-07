@@ -5,7 +5,8 @@ import { CartProvider } from "@/context/CartContext";
 import { WishlistProvider } from "@/context/WishlistContext";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
-import { Poppins , Inter} from 'next/font/google'
+import { Poppins, Inter } from 'next/font/google'
+import { FilterProvider } from "@/context/FilterContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,14 +29,16 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <CartProvider>
-          <WishlistProvider>
-           <Navbar/>
-            {children}
-          <Footer/>
-            <ToastContainer />
-          </WishlistProvider>
-        </CartProvider>
+        <FilterProvider>
+          <CartProvider>
+            <WishlistProvider>
+              <Navbar />
+              {children}
+              <Footer />
+              <ToastContainer />
+            </WishlistProvider>
+          </CartProvider>
+        </FilterProvider>
       </body>
     </html>
   );

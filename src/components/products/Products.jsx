@@ -6,11 +6,12 @@ import { useCart } from "@/context/CartContext";
 import { useWishlist } from "@/context/WishlistContext";
 import { useRouter } from "next/navigation";
 import "./products.css";
-
+import { useFilter } from "@/context/FilterContext";
 const Products = () => {
   const router = useRouter();
   const { addToCart } = useCart();
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
+  const { searchTerm } = useFilter();
 
   const productList = [
     {
@@ -78,7 +79,7 @@ const Products = () => {
     },
     {
       id: 16,
-      title: "Gaming Controller",
+      title: "Gaming Controller", 
       price: 500,
       rating: 4,
       reviews: 145,
@@ -86,7 +87,9 @@ const Products = () => {
       slug: "gaming-controller",
     },
   ];
-
+  const filteredProducts = productList.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   const handleClick = (item) => {
     router.push(`/product/${item.slug}`);
   };
@@ -105,7 +108,7 @@ const Products = () => {
 
         {/* Product Grid */}
         <div className="products-grid">
-          {productList.map((item) => {
+          {filteredProducts.map((item) => {
             const isWishlisted = wishlist.some((w) => w.id === item.id);
 
             return (

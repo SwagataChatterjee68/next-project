@@ -6,7 +6,7 @@ import { useCart } from "@/context/CartContext";
 import { useState, useEffect } from "react";
 import { useWishlist } from "@/context/WishlistContext";
 import "./flashSale.css";
-
+import { useFilter } from "@/context/FilterContext";
 const FlashSale = () => {
   const router = useRouter();
   const [timeLeft, setTimeLeft] = useState({
@@ -15,6 +15,7 @@ const FlashSale = () => {
     minutes: 19,
     seconds: 56,
   });
+  const { searchTerm } = useFilter();
   const handleClick = (item) => {
     router.push(`/product/${item.slug}`);
   };
@@ -95,6 +96,9 @@ const FlashSale = () => {
       slug: "s-series-comfort-chair",   // ✅ Add slug
     },
   ];
+  const filteredProducts = product.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   function TimeBox({ label, value, showColon }) {
   return (
@@ -133,7 +137,7 @@ const FlashSale = () => {
 
         {/* Products */}
         <div className="flashsale-grid">
-          {product.map((item) => {
+          {filteredProducts.map((item) => {
             const isWishlisted = wishlist.some((w) => w.id === item.id);
 
             return (
