@@ -7,7 +7,7 @@ export default function AccountPage() {
       <div className="text-sm text-gray-500 mb-6 flex justify-between items-center  ">
         <span className="text-black">Home / My Account</span>
         <p className="text-sm text-gray-700">
-          Welcome! <span className="text-[#DB4444] font-medium">Md Rimel</span>
+          Welcome! <span className="text-[#FF4000] font-medium">Md Rimel</span>
         </p>
       </div>
 
