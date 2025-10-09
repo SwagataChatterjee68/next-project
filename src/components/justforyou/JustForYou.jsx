@@ -4,11 +4,10 @@ import { FiEye } from "react-icons/fi";
 import { useCart } from "@/context/CartContext";
 import { BsCartPlus } from "react-icons/bs";
 import "./justforyou.css";
-import { useFilter } from "@/context/FilterContext";
 
 export default function JustForYou() {
   const { addToCart } = useCart();
-  const { searchTerm } = useFilter();
+
 
   const products = [
     {
@@ -45,24 +44,23 @@ export default function JustForYou() {
       img: "/saleproduct2.png",
     },
   ];
-const filteredProducts = products.filter((item) =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   return (
     <section className="section-just-for-you">
       {/* Header */}
       <div className="section-header-just-for-you">
         <div className="section-header-left-just-for-you">
-          <div className="section-header-bar-just-for-you"></div>
-          <h2 className="section-header-title-just-for-you">Just For You</h2>
+          <div className="header">
+              <div className="section-header-bar"></div>
+              <p>Just For You</p>
+            </div>
         </div>
         <button className="section-header-btn-just-for-you">See All</button>
       </div>
 
       {/* Product Grid */}
       <div className="products-grid-just-for-you">
-        {filteredProducts.map((item) => (
+        {products.map((item) => (
           <div key={item.id} className="product-card-just-for-you">
             {/* Image */}
             <div className="product-img-wrapper-just-for-you">

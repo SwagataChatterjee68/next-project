@@ -5,7 +5,7 @@
 }
 
 .section-header-just-for-you {
-  @apply flex justify-between items-center mb-8;
+  @apply flex justify-between items-center mb-10;
 }
 
 .section-header-left-just-for-you {
@@ -21,7 +21,7 @@
 }
 
 .section-header-btn-just-for-you {
-  @apply border px-5 py-2 rounded transition hover:bg-black hover:text-white;
+  @apply border px-5 py-2 rounded transition hover:bg-black hover:text-white cursor-pointer;
 }
 
 .products-grid-just-for-you {
@@ -70,4 +70,11 @@
 
 .product-reviews-just-for-you {
   @apply text-gray-600 text-xs ml-2;
+}
+.section-header-bar {
+  @apply w-[20px] h-[40px] rounded-[4px] bg-[#FFA500] cursor-pointer;
+}
+
+.header {
+  @apply flex items-center gap-2 mb-4 text-[#FFA500] text-[20px]
 }

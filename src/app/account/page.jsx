@@ -1,143 +1,114 @@
 "use client";
-import { useState } from "react";
-import "./account.css"
 
 export default function AccountPage() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    address: "",
-    password: "",
-    confirmPassword: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted:", formData);
-  };
-
   return (
-    <div className="page-container">
+    <main className="max-w-7xl mx-auto px-6 py-32 ">
       {/* Breadcrumb */}
-      <div className="breadcrumb">
-        Home / <span className="breadcrumb-current">My Account</span>
+      <div className="text-sm text-gray-500 mb-6 flex justify-between items-center  ">
+        <span className="text-black">Home / My Account</span>
+        <p className="text-sm text-gray-700">
+          Welcome! <span className="text-[#DB4444] font-medium">Md Rimel</span>
+        </p>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-8">
-        {/* Sidebar */}
-        <aside className="sidebar">
-          <h3 className="sidebar-title">Manage My Account</h3>
-          <ul className="space-y-2">
-            <li className="sidebar-link-active">My Profile</li>
-            <li className="sidebar-link">Address Book</li>
-            <li className="sidebar-link">My Payment Options</li>
-          </ul>
+      <div className="flex justify-between mt-10">
+        {/* --- Left Sidebar --- */}
+        <aside className=" border-gray-200 mt-10">
+          <div>
+            <h2 className="font-semibold text-gray-800 mb-2">Manage My Account</h2>
+            <ul className="space-y-2 text-sm">
+              <li className="text-[#DB4444] font-medium cursor-pointer">My Profile</li>
+              <li className="text-gray-700 hover:text-black cursor-pointer">Address Book</li>
+              <li className="text-gray-700 hover:text-black cursor-pointer">My Payment Options</li>
+            </ul>
+          </div>
 
-          <h3 className="sidebar-title mt-6">My Orders</h3>
-          <ul className="space-y-2">
-            <li className="sidebar-link">My Returns</li>
-            <li className="sidebar-link">My Cancellations</li>
-          </ul>
+          <div className="mt-6">
+            <h2 className="font-semibold text-gray-800 mb-2">My Orders</h2>
+            <ul className="space-y-2 text-sm">
+              <li className="text-gray-700 hover:text-black cursor-pointer">My Returns</li>
+              <li className="text-gray-700 hover:text-black cursor-pointer">My Cancellations</li>
+            </ul>
+          </div>
 
-          <h3 className="sidebar-title mt-6">My Wishlist</h3>
+          <div className="mt-6">
+            <h2 className="font-semibold text-gray-800 mb-2">My Wishlist</h2>
+          </div>
         </aside>
 
-        {/* Profile Form */}
-        <div className="profile-wrapper">
-          <div className="profile-card">
-            <h2 className="profile-title">Edit Your Profile</h2>
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Row 1 */}
-              <div className="form-grid">
-                <div>
-                  <label className="form-label">First Name</label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-                <div>
-                  <label className="form-label">Last Name</label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-              </div>
-
-              {/* Row 2 */}
-              <div className="form-grid">
-                <div>
-                  <label className="form-label">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-                <div>
-                  <label className="form-label">Address</label>
-                  <input
-                    type="text"
-                    name="address"
-                    value={formData.address}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-              </div>
-
-              {/* Password Fields */}
-              <div className="form-grid">
-                <div>
-                  <label className="form-label">Password</label>
-                  <input
-                    type="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-                <div>
-                  <label className="form-label">Confirm Password</label>
-                  <input
-                    type="password"
-                    name="confirmPassword"
-                    value={formData.confirmPassword}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
-              </div>
-
-              {/* Buttons */}
-              <div className="flex justify-end space-x-4">
-                <button type="button" className="btn-cancel">
-                  Cancel
-                </button>
-                <button type="submit" className="btn-save">
-                  Save Changes
-                </button>
-              </div>
-            </form>
+        {/* --- Edit Profile Section --- */}
+        <section className=" shadow-2xl rounded-md px-24 py-5 border border-gray-200">
+          <div className="flex justify-between items-center mb-5">
+            <h2 className="text-lg font-semibold text-red-500">Edit Your Profile</h2>
           </div>
-        </div>
+
+          <form className="space-y-6">
+            {/* Name and Email */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm text-gray-600 mb-1">First Name</label>
+                <input
+                  type="text"
+                  className="w-full border border-gray-300 rounded-sm px-3 py-2 bg-[#D9D9D959] outline-none focus:ring-1 focus:ring-gray-400"
+                />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-600 mb-1">Last Name</label>
+                <input
+                  type="text"
+                  className="w-full border border-gray-300 bg-[#D9D9D959]  rounded-sm px-3 py-2 outline-none focus:ring-1 focus:ring-gray-400"
+                />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-600 mb-1">Email</label>
+                <input
+                  type="email"
+                  className="w-full border border-gray-300 bg-[#D9D9D959]  rounded-sm px-3 py-2 outline-none focus:ring-1 focus:ring-gray-400"
+                />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-600 mb-1">Address</label>
+                <input
+                  type="text"
+                  className="w-full border border-gray-300 bg-[#D9D9D959]  rounded-sm px-3 py-2 outline-none focus:ring-1 focus:ring-gray-400"
+                />
+              </div>
+            </div>
+
+            {/* Password Changes */}
+            <div>
+              <label className="block text-sm text-gray-600 mb-2">Password Changes</label>
+              <div className="space-y-4">
+                <input
+                  type="password"
+                  className="w-full border border-gray-300 bg-[#D9D9D959]  rounded-sm px-3 py-2 outline-none focus:ring-1 focus:ring-gray-400"
+                />
+                <input
+                  type="password"
+                  className="w-full border border-gray-300 bg-[#D9D9D959]  rounded-sm px-3 py-2 outline-none focus:ring-1 focus:ring-gray-400"
+                />
+                <input
+                  type="password"
+                  className="w-full border border-gray-300 bg-[#D9D9D959]  rounded-sm px-3 py-2 outline-none focus:ring-1 focus:ring-gray-400"
+                />
+              </div>
+            </div>
+
+            {/* Buttons */}
+            <div className="flex justify-end items-center gap-4">
+              <button type="button" className="text-gray-700 hover:text-black">
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="bg-[#FF8400] text-white px-6 py-2 rounded-sm text-[16px] hover:bg-orange-600 transition"
+              >
+                Save Changes
+              </button>
+            </div>
+          </form>
+        </section>
       </div>
-    </div>
+    </main>
   );
 }

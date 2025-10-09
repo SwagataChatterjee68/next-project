@@ -22,10 +22,10 @@
   @apply text-lg font-bold;
 }
 .nav-links {
-  @apply hidden md:flex space-x-8 text-gray-800 font-medium;
+  @apply hidden md:flex space-x-8 text-gray-800 font-medium ;
 }
 .nav-link {
-  @apply cursor-pointer hover:text-black transition;
+  @apply cursor-pointer hover:text-black transition ;
 }
 .nav-link-active {
   @apply cursor-pointer border-b-2 border-black;

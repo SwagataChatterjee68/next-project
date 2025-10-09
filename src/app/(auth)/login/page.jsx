@@ -77,7 +77,7 @@ export default function LoginPage() {
 
                         <div className="submit-container">
                             <button type="submit" className="submit-btn">
-                                {loading ? "Logging..." : "Log in"}
+                                {loading ? "Logging..." : "Log In"}
                             </button>
                             <Link className="forgot-password" href="/">
                                 Forget Password

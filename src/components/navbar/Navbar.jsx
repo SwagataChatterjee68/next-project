@@ -1,22 +1,30 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import { FaRegHeart, FaRegUser } from "react-icons/fa6";
 import { IoCartOutline } from "react-icons/io5";
 import { useCart } from "@/context/CartContext";
 import { useWishlist } from "@/context/WishlistContext";
-import "./navbar.css"; // import the @apply styles
-import { useFilter } from "@/context/FilterContext";
+import "./navbar.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const router = useRouter();
   const { cart } = useCart();
   const { wishlist } = useWishlist();
   const cartCount = cart.length;
   const wishlistCount = wishlist.length;
-  const { searchTerm, setSearchTerm } = useFilter();
 
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      router.push(`/search?query=${encodeURIComponent(searchTerm)}`);
+      setSearchTerm("");
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
@@ -41,8 +49,9 @@ export default function Navbar() {
           <Link href="/contact" className="nav-link">Contact</Link>
           <Link href="/about" className="nav-link">About</Link>
           <Link href="/register" className="nav-link-active">Sign Up</Link>
+
           <div className="flex items-center gap-4 cursor-pointer">
-            <div className="search-box">
+            <form onSubmit={handleSearch} className="search-box flex items-center">
               <input
                 type="text"
                 placeholder="What are you looking for?"
@@ -50,8 +59,10 @@ export default function Navbar() {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="search-input"
               />
-              <FiSearch className="text-gray-700" />
-            </div>
+              <button type="submit">
+                <FiSearch className="text-gray-700" />
+              </button>
+            </form>
 
             <Link href="/wishlist" className="icon-btn">
               <FaRegHeart />
@@ -67,10 +78,7 @@ export default function Navbar() {
               <FaRegUser />
             </Link>
           </div>
-
         </ul>
-
-        {/* Search + Icons */}
 
         {/* Mobile Hamburger */}
         <button
@@ -90,10 +98,18 @@ export default function Navbar() {
           <p className="cursor-pointer">Sign Up</p>
 
           {/* Mobile Search */}
-          <div className="flex items-center gap-4">
-            <div className="mobile-search">
-              <input type="text" placeholder="Search..." className="search-input" />
-              <FiSearch className="text-gray-700" />
+          <form onSubmit={handleSearch} className="flex items-center gap-4">
+            <div className="mobile-search flex items-center">
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="search-input"
+              />
+              <button type="submit">
+                <FiSearch className="text-gray-700" />
+              </button>
             </div>
             <FaRegHeart className="text-xl" />
             <Link href="/cart" className="icon-btn">
@@ -101,11 +117,9 @@ export default function Navbar() {
               {cartCount > 0 && <span className="badge">{cartCount}</span>}
             </Link>
             <FaRegUser className="text-xl" />
-          </div>
+          </form>
         </div>
       )}
-
-
     </header>
   );
 }

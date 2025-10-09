@@ -1,21 +1,25 @@
 "use client";
-import { FaStar, FaHeart } from "react-icons/fa";
+import { FaStar, FaHeart} from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { FiHeart, FiEye } from "react-icons/fi";
 import { useCart } from "@/context/CartContext";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useWishlist } from "@/context/WishlistContext";
 import "./flashSale.css";
-import { useFilter } from "@/context/FilterContext";
+import { GoArrowLeft,GoArrowRight } from "react-icons/go";
+
 const FlashSale = () => {
   const router = useRouter();
+  const scrollRef = useRef(null);
   const [timeLeft, setTimeLeft] = useState({
     days: 3,
     hours: 23,
     minutes: 19,
     seconds: 56,
   });
-  const { searchTerm } = useFilter();
+  const { addToCart } = useCart();
+  const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
+
   const handleClick = (item) => {
     router.push(`/product/${item.slug}`);
   };
@@ -25,7 +29,6 @@ const FlashSale = () => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         let { days, hours, minutes, seconds } = prev;
-
         if (seconds > 0) seconds--;
         else if (minutes > 0) {
           minutes--;
@@ -43,12 +46,8 @@ const FlashSale = () => {
         return { days, hours, minutes, seconds };
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
-
-  const { addToCart } = useCart();
-  const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
 
   const product = [
     {
@@ -60,7 +59,7 @@ const FlashSale = () => {
       rating: 4,
       reviews: 88,
       img: "saleproduct1.png",
-      slug: "havit-hv-g92-gamepad",   // ✅ Add slug
+      slug: "havit-hv-g92-gamepad",
     },
     {
       id: 2,
@@ -71,7 +70,7 @@ const FlashSale = () => {
       rating: 4,
       reviews: 75,
       img: "saleproduct2.png",
-      slug: "ak-900-wired-keyboard",   // ✅ Add slug
+      slug: "ak-900-wired-keyboard",
     },
     {
       id: 3,
@@ -82,7 +81,7 @@ const FlashSale = () => {
       rating: 5,
       reviews: 99,
       img: "/saleproduct3.png",
-      slug: "ips-lcd-gaming-monitor",   // ✅ Add slug
+      slug: "ips-lcd-gaming-monitor",
     },
     {
       id: 4,
@@ -93,23 +92,40 @@ const FlashSale = () => {
       rating: 5,
       reviews: 99,
       img: "/saleproduct4.png",
-      slug: "s-series-comfort-chair",   // ✅ Add slug
+      slug: "s-series-comfort-chair",
+    },
+    {
+      id: 5,
+      title: "S-Series Comfort Chair",
+      price: 375,
+      oldPrice: 400,
+      discount: "-25%",
+      rating: 5,
+      reviews: 99,
+      img: "/saleproduct4.png",
+      slug: "s-series-comfort-chair",
     },
   ];
-  const filteredProducts = product.filter((item) =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+
+  // Scroll Controls
+  const scrollLeft = () => {
+    scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+  };
+  const scrollRight = () => {
+    scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+  };
 
   function TimeBox({ label, value, showColon }) {
-  return (
-    <div className="timebox">
-      <span className="timebox-label">
-        {label}{showColon && ":"}
-      </span>
-      <span className="timebox-value">{String(value).padStart(2, "0")}</span>
-    </div>
-  );
-}
+    return (
+      <div className="timebox">
+        <span className="timebox-label">
+          {label}
+          {showColon && ":"}
+        </span>
+        <span className="timebox-value">{String(value).padStart(2, "0")}</span>
+      </div>
+    );
+  }
 
   return (
     <section className="flashsale-section">
@@ -123,29 +139,33 @@ const FlashSale = () => {
             </div>
             <div className="title-with-timer-flashsale">
               <h2>Flash Sales</h2>
-              <div className="flashsale-timer">
-                <TimeBox label="Days " value={timeLeft.days} />
-                <TimeBox label="Hours " value={timeLeft.hours} />
-                <TimeBox label="Minutes " value={timeLeft.minutes} />
-                <TimeBox label="Seconds " value={timeLeft.seconds} />
+              <div className="timer-and-arrows justify-between">
+                <div className="flashsale-timer">
+                  <TimeBox label="Days " value={timeLeft.days} />
+                  <TimeBox label="Hours " value={timeLeft.hours} />
+                  <TimeBox label="Minutes " value={timeLeft.minutes} />
+                  <TimeBox label="Seconds " value={timeLeft.seconds} />
+                </div>
+                <div className="arrow-btns">
+                  <button onClick={scrollLeft} className="arrow-btn">
+                    <GoArrowLeft />
+                  </button>
+                  <button onClick={scrollRight} className="arrow-btn">
+                    <GoArrowRight />
+                  </button>
+                </div>
               </div>
             </div>
-
           </div>
-
         </div>
 
-        {/* Products */}
-        <div className="flashsale-grid">
-          {filteredProducts.map((item) => {
+        {/* Slider */}
+        <div className="flashsale-slider" ref={scrollRef}>
+          { product.map((item) => {
             const isWishlisted = wishlist.some((w) => w.id === item.id);
-
             return (
               <div key={item.id} className="flashsale-card">
-                {/* Discount Badge */}
                 <span className="discount-badge-flashsale">{item.discount}</span>
-
-                {/* Wishlist Button */}
                 <div className="action-btn">
                   <button
                     onClick={() =>
@@ -161,18 +181,21 @@ const FlashSale = () => {
                       <FiHeart />
                     )}
                   </button>
-                  {/* ✅ pass item here */}
                   <button onClick={() => handleClick(item)} className="icon-btn">
                     <FiEye />
                   </button>
                 </div>
-                {/* Image */}
-                <img src={item.img} alt={item.title} className="product-img-flashsale" />
-                <button onClick={() => addToCart(item)} className="addcart-btn-flashsale">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="product-img-flashsale"
+                />
+                <button
+                  onClick={() => addToCart(item)}
+                  className="addcart-btn-flashsale"
+                >
                   Add To Cart
                 </button>
-
-                {/* Info */}
                 <h3 className="product-title-flashsale">{item.title}</h3>
                 <div className="price-wrapper-flashsale">
                   <p className="price-current-flashsale">${item.price}</p>
@@ -182,13 +205,16 @@ const FlashSale = () => {
                   {Array.from({ length: item.rating }).map((_, i) => (
                     <FaStar key={i} />
                   ))}
-                  <span className="rating-count-flashsale">({item.reviews})</span>
+                  <span className="rating-count-flashsale">
+                    ({item.reviews})
+                  </span>
                 </div>
               </div>
             );
           })}
         </div>
       </div>
+      <button className="view-all-btn">View All Products</button>
     </section>
   );
 };

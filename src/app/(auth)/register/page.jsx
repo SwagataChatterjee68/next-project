@@ -44,7 +44,6 @@ export default function SignUpPage() {
 
                 {/* Form */}
                 <div className="auth-form">
-                    <h1 className="auth-title">Create an account</h1>
 
                     <button className="auth-google">
                         <img src="/google.png" alt="Google" className="w-5 h-5" />
@@ -59,7 +58,7 @@ export default function SignUpPage() {
                             <label className="auth-label">Name</label>
                             <input
                                 type="text"
-                                placeholder="Name"
+                                placeholder="What should we call you?"
                                 {...register("name", { required: "Name is required" })}
                                 className="auth-input"
                             />
@@ -71,7 +70,7 @@ export default function SignUpPage() {
                             <label className="auth-label">Email</label>
                             <input
                                 type="email"
-                                placeholder="Email"
+                                placeholder="you@domain.com"
                                 {...register("email", { required: "Email is required" })}
                                 className="auth-input"
                             />
@@ -83,7 +82,7 @@ export default function SignUpPage() {
                             <label className="auth-label">Password</label>
                             <input
                                 type="password"
-                                placeholder="Password"
+                                placeholder="••••••••"
                                 {...register("password", { required: "Password is required" })}
                                 className="auth-input"
                             />

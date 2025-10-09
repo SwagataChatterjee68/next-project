@@ -1,7 +1,7 @@
 /* --- Section --- */
 @import "tailwindcss";
 .bestseller-section {
-  @apply w-full bg-gray-50 py-10;
+  @apply w-full bg-gray-50 py-20;
 }
 /* --- Header --- */
 .bestseller-header {

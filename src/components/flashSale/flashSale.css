@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 .flashsale-section {
-  @apply w-full bg-gray-50 py-10;
+  @apply w-full bg-gray-50 py-10 border-b border-gray-300 my-10;
 }
 
 .flashsale-header {
   @apply flex flex-col md:flex-row md:items-center gap-20 mb-8;
 }
-
+.flashsale-title p {
+  @apply text-[#FFA500] font-semibold;
+}
 .flashsale-title p {
   @apply text-[#FFA500] font-semibold;
 }
@@ -15,52 +17,47 @@
   @apply ml-1 text-[#FFA500];
   content: ':';
 }
-
 .timebox:last-child .timebox-value::after {
   content: '';  
 }
-.flashsale-title h2 {
-  @apply font-bold md:text-3xl;
-}
-
-.flashsale-timer {
-  @apply flex gap-8 ;
-}
-
 .title-with-timer-flashsale {
   @apply flex gap-20 items-center;
 }
-
 .title-with-timer-flashsale h2 {
   @apply text-[36px] font-semibold;
 }
 
-.timebox {
-  @apply flex flex-col items-center;
+.timer-and-arrows {
+  @apply flex items-center gap-4 ;
 }
 
-.timebox-label {
-  @apply text-[12px] font-medium text-[#000000]  ;
+.flashsale-timer {
+  @apply flex gap-6;
 }
 
-.timebox-value {
-  @apply text-lg font-bold text-[32px] ;
+.arrow-btns {
+  @apply flex items-center gap-2 ;
+}
+.arrow-btn {
+  @apply bg-[#FDFBD4] p-2 rounded-full text-[24px] hover:bg-[#FFA500] hover:text-white transition;
+}
+/* Slider */
+.flashsale-slider {
+  @apply flex gap-6 overflow-x-auto scroll-smooth;
+  scrollbar-width: none;
 }
 
-.flashsale-grid {
-  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6;
+.flashsale-slider::-webkit-scrollbar {
+  display: none;
 }
 
+/* Product Card */
 .flashsale-card {
-  @apply relative   rounded-lg shadow hover:shadow-lg transition p-4;
+  @apply relative min-w-[250px] bg-white rounded-lg shadow hover:shadow-lg transition p-4;
 }
 
 .discount-badge-flashsale {
   @apply absolute top-3 left-3 bg-[#FFA500] text-white text-xs px-2 py-1 rounded;
-}
-
-.wishlist-btn-flashsale {
-  @apply absolute top-3 right-3 text-gray-600 hover:text-red-500 cursor-pointer;
 }
 
 .product-img-flashsale {
@@ -95,10 +92,25 @@
   @apply text-gray-600 text-xs ml-2;
 }
 
+.timebox {
+  @apply flex flex-col items-center;
+}
+
+.timebox-label {
+  @apply text-[12px] font-medium text-[#000000];
+}
+
+.timebox-value {
+  @apply text-lg font-bold text-[32px];
+}
+
 .section-header-bar {
   @apply w-[20px] h-[40px] rounded-[4px] bg-[#FFA500] cursor-pointer;
 }
 
 .header {
-  @apply flex items-center gap-2 mb-4
+  @apply flex items-center gap-2 mb-4;
+}
+.view-all-btn {
+  @apply bg-[#FF8400] cursor-pointer text-white mt-10 px-6 py-3 rounded font-medium hover:bg-orange-600 transition block mx-auto;
 }

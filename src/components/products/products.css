@@ -7,24 +7,43 @@
 .products-wrapper {
   @apply max-w-7xl mx-auto px-4;
 }
+
+/* Header */
 .products-header {
-  @apply flex items-center justify-between mb-8;
+  @apply flex items-center justify-between mb-4;
 }
-.products-title {
-  @apply text-[36px] font-semibold mb-4;
+.header {
+  @apply flex items-center gap-2;
 }
-.products-subtitle {
-  @apply text-[#FF8400] text-sm font-semibold mb-2 flex items-center gap-2;
+.section-header-bar {
+  @apply w-[20px] h-[40px] rounded-[4px] bg-[#FFA500];
 }
 
-/* Grid */
-.products-grid {
-  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10;
+/* Arrows */
+.arrow-buttons {
+  @apply flex gap-2;
+}
+.arrow-btn {
+  @apply bg-[#FDFBD4] p-2 rounded-full text-[24px] hover:bg-[#FFA500] hover:text-white transition;
+}
+
+/* Title */
+.products-title {
+  @apply text-[36px] font-semibold mb-6;
+}
+
+/* Slider */
+.products-slider {
+  @apply flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory;
+  scrollbar-width: none;
+}
+.products-slider::-webkit-scrollbar {
+  display: none;
 }
 
 /* Card */
 .product-card {
-  @apply bg-[#FDFBD44A] relative rounded-lg shadow p-4 transition hover:shadow-lg flex flex-col items-center text-center;
+  @apply flex-shrink-0 w-64 bg-[#FDFBD44A] relative rounded-lg shadow p-4 transition hover:shadow-lg flex flex-col items-center text-center snap-start;
 }
 .product-img {
   @apply w-full h-40 object-contain mb-4;
@@ -34,9 +53,6 @@
 }
 .product-price {
   @apply text-[#FF8400] font-bold;
-}
-.product-oldprice {
-  @apply text-gray-400 line-through text-sm ml-2;
 }
 
 /* Rating */
@@ -48,24 +64,18 @@
 }
 
 /* Buttons */
-.product-btn {
-  @apply absolute inset-0 bg-black/80 flex items-center justify-center text-white font-medium opacity-0 hover:opacity-100 transition rounded-lg;
-}
 .action-btn {
   @apply absolute top-3 right-3 flex flex-col gap-2;
 }
 .icon-btn {
   @apply bg-white p-2 rounded-full shadow hover:bg-gray-100 text-gray-600;
 }
-
-/* View All */
-.view-all-btn {
-  @apply bg-[#FF8400] cursor-pointer text-white px-6 py-3 rounded font-medium hover:bg-orange-600 transition block mx-auto;
-}
 .addcart-btn {
-  @apply w-full bg-black text-white py-2 text-sm font-medium border-0 cursor-pointer transition-colors duration-300;
+  @apply w-full bg-black text-white py-2 text-sm font-medium border-0 cursor-pointer transition-colors duration-300 mt-2;
 }
-
 .addcart-btn:hover {
   @apply bg-gray-800;
+}
+.view-all-btn {
+  @apply bg-[#FF8400] cursor-pointer text-white mt-10 px-6 py-3 rounded font-medium hover:bg-orange-600 transition block mx-auto;
 }
