@@ -80,7 +80,7 @@ export default function LoginPage() {
                                 {loading ? "Logging..." : "Log In"}
                             </button>
                             <Link className="forgot-password" href="/">
-                                Forget Password
+                                Forget Password?
                             </Link>
                         </div>
                     </form>

@@ -29,36 +29,32 @@ export default function ContactPage() {
 
         <div className="contact-grid">
           {/* Left Section */}
-          <div className="space-y-6">
-            {/* Call Us */}
-            <div className="contact-card">
-              <div className="flex items-start space-x-4">
-                <div className="contact-icon"></div>
-                <div>
-                  <h3 className="contact-title">Call To Us</h3>
-                  <p className="contact-sub">We are available 24/7, 7 days a week.</p>
-                  <p className="contact-text">Phone: +8801611112222</p>
-                </div>
+          <aside className="space-y-6">
+            <div className="bg-white border border-gray-200 shadow-sm p-6 rounded-md">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-5 h-5 bg-orange-500 rounded-full"></div>
+                <h3 className="font-semibold">Call To Us</h3>
               </div>
+              <p className="text-sm text-gray-600">We are available 24/7, 7 days a week.</p>
+              <p className="text-sm text-gray-700 mt-2 font-medium">Phone: +8801611112222</p>
             </div>
 
-            {/* Write To Us */}
-            <div className="contact-card">
-              <div className="flex items-start space-x-4">
-                <div className="contact-icon"></div>
-                <div>
-                  <h3 className="contact-title">Write To Us</h3>
-                  <p className="contact-sub">
-                    Fill out our form and we will contact you within 24 hours.
-                  </p>
-                  <p className="contact-text">
-                    Emails: customer@exclusive.com <br />
-                    support@exclusive.com
-                  </p>
-                </div>
+            <div className="bg-white border border-gray-200 shadow-sm p-6 rounded-md">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-5 h-5 bg-orange-500 rounded-full"></div>
+                <h3 className="font-semibold">Write To US</h3>
               </div>
+              <p className="text-sm text-gray-600">
+                Fill out our form and we will contact you within 24 hours.
+              </p>
+              <p className="text-sm text-gray-700 mt-2">
+                Emails: <span className="font-medium">customer@exclusive.com</span>
+              </p>
+              <p className="text-sm text-gray-700">
+                Emails: <span className="font-medium">support@exclusive.com</span>
+              </p>
             </div>
-          </div>
+          </aside>
 
           {/* Right Section - Form */}
           <div className="md:col-span-2">

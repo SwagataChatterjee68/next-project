@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter,usePathname } from "next/navigation";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import { FaRegHeart, FaRegUser } from "react-icons/fa6";
 import { IoCartOutline } from "react-icons/io5";
@@ -15,6 +15,7 @@ export default function Navbar() {
   const router = useRouter();
   const { cart } = useCart();
   const { wishlist } = useWishlist();
+  const pathname = usePathname();
   const cartCount = cart.length;
   const wishlistCount = wishlist.length;
 
@@ -25,7 +26,7 @@ export default function Navbar() {
       setSearchTerm("");
     }
   };
-
+  const isActive = (href) => pathname === href ? "nav-link-active" : "nav-link";
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       {/* --- Top Black Bar --- */}
@@ -45,14 +46,13 @@ export default function Navbar() {
         <div className="logo">LOGO</div>
 
         <ul className="nav-links">
-          <Link href="/" className="nav-link">Home</Link>
-          <Link href="/contact" className="nav-link">Contact</Link>
-          <Link href="/about" className="nav-link">About</Link>
-          <Link href="/register" className="nav-link-active">Sign Up</Link>
+          <Link href="/" className={isActive("/")}>Home</Link>
+          <Link href="/contact" className={isActive("/contact")}>Contact</Link>
+          <Link href="/register" className={isActive("/register")}>Sign Up</Link>
 
           <div className="flex items-center gap-4 cursor-pointer">
             <form onSubmit={handleSearch} className="search-box flex items-center">
-              <input
+              <input 
                 type="text"
                 placeholder="What are you looking for?"
                 value={searchTerm}
