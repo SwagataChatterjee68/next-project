@@ -38,7 +38,7 @@
 .search-input {
   @apply bg-transparent outline-none flex-1 text-sm;
 }
-.icon-btn {
+.icon-btn-nav {
   @apply relative text-xl cursor-pointer hover:text-yellow-500 transition;
 }
 .cart-icon {

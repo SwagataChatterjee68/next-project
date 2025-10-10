@@ -1,12 +1,10 @@
 @import "tailwindcss";
-.footer-wrapper {
-  @apply w-full py-10;
-}
+
 .footer-container{
   @apply max-w-7xl mx-auto px-4;
 }
 .footer-grid {
-  @apply mx-auto px-10 py-20 grid md:grid-cols-5 gap-20;
+  @apply mx-auto px-10 py-20 grid sm:grid-cols-2 md:grid-cols-5 gap-20;
 }
 
 .footer-title {

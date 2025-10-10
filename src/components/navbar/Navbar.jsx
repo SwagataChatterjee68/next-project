@@ -64,17 +64,17 @@ export default function Navbar() {
               </button>
             </form>
 
-            <Link href="/wishlist" className="icon-btn">
+            <Link href="/wishlist" className="icon-btn-nav">
               <FaRegHeart />
               {wishlistCount > 0 && <span className="badge">{wishlistCount}</span>}
             </Link>
 
-            <Link href="/cart" className="icon-btn">
+            <Link href="/cart" className="icon-btn-nav">
               <IoCartOutline className="cart-icon" />
               {cartCount > 0 && <span className="badge">{cartCount}</span>}
             </Link>
 
-            <Link href="/account" className="icon-btn">
+            <Link href="/account" className="icon-btn-nav">
               <FaRegUser />
             </Link>
           </div>

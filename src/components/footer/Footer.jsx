@@ -7,10 +7,8 @@ import "./footer.css"
 const Footer = () => {
   return (
 
-    <footer className="footer-wrapper">
+    <footer>
       <div className="footer-container">
-
-
         {/* Top Section */}
         <div className="footer-grid">
           {/* Subscribe */}
