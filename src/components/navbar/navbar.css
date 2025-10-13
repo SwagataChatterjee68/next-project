@@ -55,7 +55,7 @@
   @apply md:hidden text-2xl cursor-pointer;
 }
 .mobile-menu {
-  @apply md:hidden bg-white p-4 space-y-4 space-x-7 font-medium text-gray-800 shadow-md;
+  @apply md:hidden bg-white p-4 space-y-4 space-x-7 font-medium text-gray-800 shadow-md flex flex-col ;
 }
 .mobile-menu p, .mobile-menu a {
   @apply cursor-pointer hover:text-black transition;

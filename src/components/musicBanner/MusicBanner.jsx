@@ -38,10 +38,6 @@ const MusicBanner = () => {
 
   return (
     <section className="music-banner">
-
-      
-
-
         {/* Left Content */}
         <div className="music-text-wrapper">
           <p className="music-category">Categories</p>

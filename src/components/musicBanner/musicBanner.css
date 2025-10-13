@@ -1,12 +1,12 @@
 
 @import "tailwindcss";
 .music-banner {
-  @apply bg-black max-w-7xl mx-auto text-white flex flex-col md:flex-row items-center justify-between rounded-lg px-8 py-10 mb-12;
+  @apply bg-black text-white flex flex-col md:flex-row items-center justify-between rounded-lg mx-2 py-10 mb-12;
 }
 
 /* Left Side */
 .music-text-wrapper {
-  @apply flex-1 mb-6 md:mb-0;
+  @apply  mb-6 md:mb-0;
 }
 .music-category {
   @apply text-[#C35817] text-sm font-semibold mb-3;

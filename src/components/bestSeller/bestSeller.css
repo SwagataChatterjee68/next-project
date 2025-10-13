@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
+/* --- Main Title + Button --- */
+.bestseller-header {
+  @apply flex items-start sm:items-center justify-between mb-8;
+}
 .bestseller-section {
   @apply w-full py-16 md:py-20;
 }
 
 .wrapper {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  @apply max-w-7xl mx-auto ;
 }
 
 /* --- Header --- */
@@ -21,7 +25,7 @@
 
 /* --- Main Title + Button --- */
 .bestseller-header {
-  @apply flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8;
+  @apply flex items-start sm:items-center justify-between mb-8;
 }
 .bestseller-title {
   @apply text-2xl md:text-[36px] font-semibold text-gray-900 mb-2 sm:mb-0;
@@ -74,4 +78,72 @@
 }
 .bestseller-reviews {
   @apply text-gray-600 text-xs ml-2;
+}
+.bestseller-grid {
+  @apply flex sm:grid overflow-x-auto sm:overflow-visible scroll-smooth snap-x snap-mandatory sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 pb-2;
+  scrollbar-width: none;
+}
+
+.bestseller-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Product Card --- */
+.bestseller-card {
+  @apply relative bg-white rounded-xl shadow hover:shadow-lg transition-all p-4 flex flex-col min-w-[250px] sm:min-w-0 snap-start;
+}
+
+/* --- Action Buttons --- */
+.action-btn {
+  @apply absolute top-3 right-3 flex flex-col gap-2;
+}
+
+.icon-btn {
+  @apply bg-white w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full shadow hover:bg-gray-100 transition;
+}
+
+/* --- Product Image --- */
+.bestseller-img-wrapper {
+  @apply flex justify-center items-center w-full h-40 sm:h-48 md:h-56 mb-3;
+}
+
+.bestseller-img {
+  @apply w-full h-full object-contain;
+}
+
+/* --- Product Info --- */
+.bestseller-title-text {
+  @apply font-medium text-sm sm:text-base text-gray-800 mb-2 truncate;
+}
+
+.bestseller-price-row {
+  @apply flex items-center gap-2 mb-2;
+}
+
+.bestseller-price {
+  @apply text-[#FFA500] font-bold text-base md:text-lg;
+}
+
+.bestseller-oldprice {
+  @apply text-gray-400 line-through text-xs sm:text-sm;
+}
+
+.bestseller-rating {
+  @apply flex items-center gap-1 text-[#FFA500] text-xs sm:text-sm;
+}
+
+.bestseller-reviews {
+  @apply text-gray-600 text-xs ml-2;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 640px) {
+
+  .bestseller-grid {
+    @apply space-x-4 px-2;
+  }
+
+  .bestseller-card {
+    @apply flex-shrink-0;
+  }
 }
