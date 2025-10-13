@@ -13,7 +13,7 @@ export default function AccountPage() {
         </p>
       </div>
 
-      <div className="flex justify-between mt-10">
+      <div className="flex justify-between mt-10 flex-wrap">
         {/* --- Left Sidebar --- */}
         <aside className=" border-gray-200 mt-10">
           <div>
@@ -39,7 +39,7 @@ export default function AccountPage() {
         </aside>
 
         {/* --- Edit Profile Section --- */}
-        <section className=" shadow-2xl rounded-md px-24 py-5 border border-gray-200">
+        <section className=" shadow-2xl rounded-md px-24 py-5 border border-gray-200 ">
           <div className="flex justify-between items-center mb-5">
             <h2 className="text-lg font-semibold text-red-500">Edit Your Profile</h2>
           </div>

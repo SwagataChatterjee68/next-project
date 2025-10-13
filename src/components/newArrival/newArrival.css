@@ -40,11 +40,11 @@
 }
 
 .newarrival-card-title {
-  @apply text-lg font-semibold mb-2;
+  @apply text-lg text-[24px]  font-semibold mb-2;
 }
 
 .newarrival-card-subtitle {
-  @apply text-sm mb-4;
+  @apply font-normal text-[14px] leading-[21px] tracking-normal;;
 }
 
 .newarrival-btn {

@@ -2,8 +2,9 @@ import React from "react";
 import { FiHeart, FiEye } from "react-icons/fi";
 import { FaHeart, FaStar } from "react-icons/fa";
 import { useWishlist } from "@/context/WishlistContext";
-import "./bestSeller.css"; // adjust path if needed
 import { useRouter } from "next/navigation";
+import "./bestSeller.css";
+
 const BestSeller = () => {
   const router = useRouter();
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
@@ -17,7 +18,7 @@ const BestSeller = () => {
       rating: 5,
       reviews: 65,
       img: "/bestselling1.png",
-      slug: "the-north-coat"
+      slug: "the-north-coat",
     },
     {
       id: 6,
@@ -27,7 +28,7 @@ const BestSeller = () => {
       rating: 5,
       reviews: 65,
       img: "/bestselling2.png",
-      slug: "gucci-duffle-bag"
+      slug: "gucci-duffle-bag",
     },
     {
       id: 7,
@@ -50,6 +51,7 @@ const BestSeller = () => {
       img: "/bestselling4.png",
     },
   ];
+
   const handleClick = (item) => {
     router.push(`/product/${item.slug}`);
   };
@@ -57,11 +59,13 @@ const BestSeller = () => {
   return (
     <section className="bestseller-section">
       <div className="wrapper">
+        {/* Header Label */}
         <div className="header">
           <div className="section-header-bar"></div>
           <p>This Month</p>
         </div>
-        {/* Header */}
+
+        {/* Title and Button */}
         <div className="bestseller-header">
           <h2 className="bestseller-title">Best Selling Products</h2>
           <button className="bestseller-btn">View All</button>
@@ -74,7 +78,7 @@ const BestSeller = () => {
 
             return (
               <div key={item.id} className="bestseller-card">
-                {/* Wishlist Button */}
+                {/* Action Buttons */}
                 <div className="action-btn">
                   <button
                     onClick={() =>
@@ -90,17 +94,19 @@ const BestSeller = () => {
                       <FiHeart />
                     )}
                   </button>
-                  {/* ✅ pass item here */}
                   <button onClick={() => handleClick(item)} className="icon-btn">
                     <FiEye />
                   </button>
                 </div>
-                {/* Image */}
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="bestseller-img"
-                />
+
+                {/* Product Image */}
+                <div className="bestseller-img-wrapper">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="bestseller-img"
+                  />
+                </div>
 
                 {/* Info */}
                 <h3 className="bestseller-title-text">{item.title}</h3>

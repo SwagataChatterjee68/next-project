@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .flashsale-section {
-  @apply w-full bg-gray-50 py-10 border-b border-gray-300 my-10;
+  @apply w-full py-10 border-b border-gray-300 my-10;
 }
 
 .flashsale-header {

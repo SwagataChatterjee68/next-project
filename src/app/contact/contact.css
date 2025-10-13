@@ -1,14 +1,46 @@
 @import "tailwindcss";
-
-
-
-.contact-text {
-  @apply text-sm text-gray-800;
+.contact-container {
+  @apply max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-16 py-16 md:py-24 lg:py-32;
 }
 
+/* --- Breadcrumb --- */
+.breadcrumb {
+  @apply text-sm text-gray-600;
+}
+
+/* --- Layout Wrapper --- */
+.contact-wrapper {
+  @apply flex flex-col lg:flex-row justify-between mt-10 gap-10;
+}
+
+/* --- Sidebar --- */
+.contact-sidebar {
+  @apply w-full lg:w-[340px];
+}
+
+.contact-sidebar-box {
+  @apply border border-gray-200 shadow-sm p-6 rounded-md flex flex-col gap-10 bg-white;
+}
+
+.contact-section-header {
+  @apply flex items-center gap-4 mb-4;
+}
+
+.contact-icon {
+  @apply w-[40px] h-[40px] bg-[#FF4000] rounded-full;
+}
+
+.contact-text {
+  @apply text-sm text-gray-700;
+}
+
+/* --- Form Section --- */
+.contact-form-box {
+  @apply w-full lg:flex-1;
+}
 
 .contact-form {
-  @apply shadow-md rounded-lg p-6 space-y-6;
+  @apply shadow-md rounded-lg p-6 md:p-8 space-y-6 bg-white;
 }
 
 .contact-input-group {
@@ -16,13 +48,28 @@
 }
 
 .contact-input {
-  @apply border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-orange-400 outline-none bg-[#D9D9D9];
+  @apply border border-gray-300 rounded-md p-2 md:p-3 focus:ring-2 focus:ring-orange-400 outline-none bg-[#F5F5F5] w-full;
 }
 
 .contact-textarea {
-  @apply w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-orange-400 outline-none  bg-[#D9D9D9];
+  @apply w-full border border-gray-300 rounded-md p-2 md:p-3 focus:ring-2 focus:ring-orange-400 outline-none bg-[#F5F5F5];
 }
 
 .contact-btn {
-  @apply bg-[#FF8400] text-white px-6 py-2 rounded-md hover:bg-orange-600 transition;
+  @apply bg-[#FF8400] text-white px-6 py-2 rounded-md hover:bg-orange-600 transition font-medium;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 768px) {
+  .contact-form {
+    @apply p-4;
+  }
+
+  .contact-btn {
+    @apply w-full;
+  }
+
+  .contact-sidebar-box {
+    @apply p-4;
+  }
 }

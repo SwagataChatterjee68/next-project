@@ -1,48 +1,76 @@
-/* --- Section --- */
 @import "tailwindcss";
+
 .bestseller-section {
-  @apply w-full bg-gray-50 py-20;
+  @apply w-full py-16 md:py-20;
 }
+
+.wrapper {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
 /* --- Header --- */
+.header {
+  @apply flex items-center gap-2 mb-4;
+}
+.section-header-bar {
+  @apply w-2 h-8 bg-[#FF8400] rounded;
+}
+.header p {
+  @apply text-[#FF8400] font-semibold text-base md:text-lg;
+}
+
+/* --- Main Title + Button --- */
 .bestseller-header {
-  @apply flex items-center justify-between mb-6;
+  @apply flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8;
 }
 .bestseller-title {
-  @apply text-[36px] font-semibold mb-4;
+  @apply text-2xl md:text-[36px] font-semibold text-gray-900 mb-2 sm:mb-0;
 }
 .bestseller-btn {
-  @apply bg-[#FF8400] text-white px-4 py-2 rounded hover:bg-orange-600 cursor-pointer;
+  @apply bg-[#FF8400] text-white px-4 py-2 md:px-6 md:py-2.5 rounded-md hover:bg-orange-600 transition-colors text-sm md:text-base;
 }
 
 /* --- Product Grid --- */
 .bestseller-grid {
-  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6;
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8;
 }
 
 /* --- Product Card --- */
 .bestseller-card {
-  @apply relative bg-[#FDFBD44A] rounded-lg shadow hover:shadow-lg transition p-4;
+  @apply relative bg-white rounded-xl shadow hover:shadow-lg transition-all p-4 flex flex-col;
 }
-.bestseller-wishlist {
-  @apply absolute top-3 right-3 text-gray-600 hover:text-red-500 cursor-pointer;
+
+/* Action Buttons */
+.action-btn {
+  @apply absolute top-3 right-3 flex flex-col gap-2;
+}
+.icon-btn {
+  @apply bg-white w-8 h-8 flex items-center justify-center rounded-full shadow hover:bg-gray-100 transition;
+}
+
+/* Product Image */
+.bestseller-img-wrapper {
+  @apply flex justify-center items-center w-full h-40 sm:h-48 md:h-56 mb-3;
 }
 .bestseller-img {
-  @apply w-full h-40 object-contain mb-3;
+  @apply w-full h-full object-contain;
 }
+
+/* Product Info */
 .bestseller-title-text {
-  @apply font-medium text-sm mb-2;
+  @apply font-medium text-sm md:text-base text-gray-800 mb-2 truncate;
 }
 .bestseller-price-row {
   @apply flex items-center gap-2 mb-2;
 }
 .bestseller-price {
-  @apply text-[#FFA500] font-bold;
+  @apply text-[#FFA500] font-bold text-base md:text-lg;
 }
 .bestseller-oldprice {
-  @apply text-gray-400 line-through text-sm;
+  @apply text-gray-400 line-through text-xs md:text-sm;
 }
 .bestseller-rating {
-  @apply flex items-center gap-1 text-[#FFA500] text-sm;
+  @apply flex items-center gap-1 text-[#FFA500] text-xs md:text-sm;
 }
 .bestseller-reviews {
   @apply text-gray-600 text-xs ml-2;

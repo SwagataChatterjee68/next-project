@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter,usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import { FaRegHeart, FaRegUser } from "react-icons/fa6";
 import { IoCartOutline } from "react-icons/io5";
@@ -13,9 +13,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
+  const pathname = usePathname();
   const { cart } = useCart();
   const { wishlist } = useWishlist();
-  const pathname = usePathname();
   const cartCount = cart.length;
   const wishlistCount = wishlist.length;
 
@@ -24,24 +24,26 @@ export default function Navbar() {
     if (searchTerm.trim()) {
       router.push(`/search?query=${encodeURIComponent(searchTerm)}`);
       setSearchTerm("");
+      setIsOpen(false);
     }
   };
+
   const isActive = (href) => pathname === href ? "nav-link-active" : "nav-link";
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50">
-      {/* --- Top Black Bar --- */}
+    <header className="w-full fixed top-0 z-50">
+      {/* Top Black Bar */}
       <div className="topbar">
         <p className="topbar-text">
           Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!{" "}
           <span className="topbar-highlight">ShopNow</span>
         </p>
         <div className="topbar-lang">
-          <span>English</span>
-          <span>▼</span>
+          <span>English</span> <span>▼</span>
         </div>
       </div>
 
-      {/* --- Main Navbar --- */}
+      {/* Main Navbar */}
       <nav className="mainNav">
         <div className="logo">LOGO</div>
 
@@ -50,18 +52,17 @@ export default function Navbar() {
           <Link href="/contact" className={isActive("/contact")}>Contact</Link>
           <Link href="/register" className={isActive("/register")}>Sign Up</Link>
 
-          <div className="flex items-center gap-4 cursor-pointer">
-            <form onSubmit={handleSearch} className="search-box flex items-center">
-              <input 
+          {/* Desktop Icons */}
+          <div className="flex items-center gap-4">
+            <form onSubmit={handleSearch} className="search-box">
+              <input
                 type="text"
                 placeholder="What are you looking for?"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="search-input"
               />
-              <button type="submit">
-                <FiSearch className="text-gray-700" />
-              </button>
+              <button type="submit"><FiSearch className="text-gray-700" /></button>
             </form>
 
             <Link href="/wishlist" className="icon-btn-nav">
@@ -81,43 +82,42 @@ export default function Navbar() {
         </ul>
 
         {/* Mobile Hamburger */}
-        <button
-          className="mobile-toggle"
-          onClick={() => setIsOpen(!isOpen)}
-        >
+        <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
       </nav>
 
-      {/* --- Mobile Dropdown Menu --- */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="mobile-menu">
-          <p className="cursor-pointer">Home</p>
-          <p className="cursor-pointer">Contact</p>
-          <p className="cursor-pointer">About</p>
-          <p className="cursor-pointer">Sign Up</p>
+          <Link href="/" className={isActive("/")}>Home</Link>
+          <Link href="/contact" className={isActive("/contact")}>Contact</Link>
+          <Link href="/register" className={isActive("/register")}>Sign Up</Link>
 
           {/* Mobile Search */}
-          <form onSubmit={handleSearch} className="flex items-center gap-4">
-            <div className="mobile-search flex items-center">
-              <input
-                type="text"
-                placeholder="Search..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="search-input"
-              />
-              <button type="submit">
-                <FiSearch className="text-gray-700" />
-              </button>
-            </div>
-            <FaRegHeart className="text-xl" />
-            <Link href="/cart" className="icon-btn">
+          <form onSubmit={handleSearch} className="mobile-search">
+            <input
+              type="text"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <button type="submit"><FiSearch className="text-gray-700" /></button>
+          </form>
+
+          <div className="flex items-center gap-4 mt-2">
+            <Link href="/wishlist" className="icon-btn-nav">
+              <FaRegHeart />
+              {wishlistCount > 0 && <span className="badge">{wishlistCount}</span>}
+            </Link>
+            <Link href="/cart" className="icon-btn-nav">
               <IoCartOutline className="cart-icon" />
               {cartCount > 0 && <span className="badge">{cartCount}</span>}
             </Link>
-            <FaRegUser className="text-xl" />
-          </form>
+            <Link href="/account" className="icon-btn-nav">
+              <FaRegUser />
+            </Link>
+          </div>
         </div>
       )}
     </header>

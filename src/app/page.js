@@ -21,15 +21,13 @@ export default function Home() {
     "Groceries & Pets",
     "Health & Beauty",
   ];
+
   const [current, setCurrent] = useState(0);
 
-  const images = ["/header.png", "/header2.avif", "/images/img3.jpg"];
-
-
   return (
-    <div className="homepage">
-
+    <div className="homepage font-poppins">
       <div className="wrapper">
+        {/* --- Hero Section --- */}
         <section className="hero">
           <div className="categories">
             {categories.map((cat, i) => (
@@ -38,31 +36,32 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <div className="hero-divider"></div>
-          <div className="relative bg-black text-white rounded-md overflow-hidden flex items-center justify-between px-10 py-8  w-[892px] h-[344px] opacity-100 ">
-            <div>
-              <img
-                src="/iphone logo.png"
-                alt="iPhone"
-                className="w-[40px] h-[49px] "
-              />
-              <p className="text-sm mb-2">iPhone 16 Series</p>
-              <h2 className="font-semibold text-[48px] leading-[60px] tracking-[4%]">
-                Up to 10% off Voucher
-              </h2>
-              <button className="mt-4 border-b border-white pb-1 text-sm hover:opacity-80">
-                Shop Now →
-              </button>
+
+          <div className="hero-divider" />
+
+          <div className="hero-banner">
+            <div className="hero-text">
+              <div className="flex justify-items-center items-center gap-3">
+                <img
+                  src="/iphone logo.png"
+                  alt="iPhone"
+                  className="hero-logo"
+                />
+                <p className="hero-subtitle">iPhone 16 Series</p>
+              </div>
+
+              <h2 className="hero-heading">Up to 10% off Voucher</h2>
+              <button className="hero-btn">Shop Now →</button>
             </div>
             <img
               src="/iphone.png"
               alt="iPhone"
-              className="w-[528px] h-[352px] top-[16px] left-[396px] rotate-0 opacity-100"
+              className="hero-image"
             />
           </div>
         </section>
 
-        {/* Flash Sale */}
+        {/* --- Sections --- */}
         <FlashSale />
         <Category />
         <BestSeller />
@@ -71,7 +70,6 @@ export default function Home() {
         <NewArrival />
         <InfoSection />
       </div>
-
     </div>
   );
 }

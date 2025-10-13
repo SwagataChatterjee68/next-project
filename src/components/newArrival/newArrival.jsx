@@ -20,7 +20,7 @@ const NewArrival = () => {
                         <img
                             src="/play.png"
                             alt="PlayStation 5"
-                            className="newarrival-img"
+                            className="newarrival-img w-[511px] h-[511px] "
                         />
                         <div className="newarrival-overlay">
                             <h3 className="newarrival-card-title">PlayStation 5</h3>
@@ -34,11 +34,11 @@ const NewArrival = () => {
                     {/* Right Side Small Grid */}
                     <div className="newarrival-small-grid">
                         {/* Women's Collections */}
-                        <div className="newarrival-card h-[286px] sm:col-span-2">
+                        <div className="newarrival-card w-[570px] h-[286px] sm:col-span-2">
                             <img
                                 src="/women.png"
                                 alt="Women's Collections"
-                                className="newarrival-img"
+                                className="newarrival-img w-[432px] h-[286px] "
                             />
                             <div className="newarrival-overlay">
                                 <h3 className="newarrival-card-title">Women’s Collections</h3>
@@ -50,14 +50,14 @@ const NewArrival = () => {
                         </div>
 
                         {/* Speakers */}
-                        <div className="newarrival-card h-[284px]">
+                        <div className="newarrival-card w-[276px] h-[284px]">
                             <img
                                 src="/speakers.png"
                                 alt="Speakers"
-                                className="newarrival-img"
+                                className="newarrival-img w-[210px] h-[222px] "
                             />
                             <div className="newarrival-overlay">
-                                <h3 className="newarrival-card-title">Speakers</h3>
+                                <h3 className="newarrival-card-title object-cover">Speakers</h3>
                                 <p className="newarrival-card-subtitle">
                                     Amazon wireless speakers
                                 </p>
@@ -66,11 +66,11 @@ const NewArrival = () => {
                         </div>
 
                         {/* Perfume */}
-                        <div className="newarrival-card h-[284px]">
+                        <div className="newarrival-card w-[276px] h-[284px]">
                             <img
                                 src="/perfume.png"
                                 alt="Perfume"
-                                className="newarrival-img"
+                                className="newarrival-img w-[210px] h-[222px]"
                             />
                             <div className="newarrival-overlay">
                                 <h3 className="newarrival-card-title">Perfume</h3>

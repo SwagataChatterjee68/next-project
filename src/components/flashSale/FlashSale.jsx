@@ -139,7 +139,7 @@ const FlashSale = () => {
             </div>
             <div className="title-with-timer-flashsale">
               <h2>Flash Sales</h2>
-              <div className="timer-and-arrows justify-between">
+              <div className="timer-and-arrows">
                 <div className="flashsale-timer">
                   <TimeBox label="Days " value={timeLeft.days} />
                   <TimeBox label="Hours " value={timeLeft.hours} />

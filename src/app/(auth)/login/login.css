@@ -5,7 +5,7 @@
 }
 
 .login-container {
-  @apply flex max-w-7xl mx-auto p-20;
+  @apply flex  items-center max-w-7xl mx-auto  w-full bg-white lg:p-20 pt-20 overflow-hidden justify-center;
 }
 
 .left-side {
@@ -37,7 +37,7 @@
 }
 
 .submit-container {
-  @apply flex justify-between items-center;
+  @apply flex justify-between items-center gap-10;
 }
 
 .submit-btn {

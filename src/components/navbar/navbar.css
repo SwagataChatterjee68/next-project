@@ -1,39 +1,41 @@
-
 @import "tailwindcss";
 
+/* --- Top Bar --- */
 .topbar {
-  @apply bg-black text-white text-sm flex items-center justify-center relative py-2;
+  @apply bg-black text-white text-xs sm:text-sm flex justify-center items-center relative py-2;
 }
 .topbar-text {
-  @apply text-center text-xs sm:text-sm;
+  @apply text-center;
 }
 .topbar-highlight {
   @apply font-semibold underline cursor-pointer;
 }
 .topbar-lang {
-  @apply absolute right-50 cursor-pointer flex items-center space-x-1;
+  @apply absolute hidden  right-4 top-2 md:flex items-center space-x-1 cursor-pointer text-xs sm:text-sm;
 }
 
 /* --- Main Navbar --- */
 .mainNav {
-  @apply flex items-center justify-around px-6 py-4 border-b border-gray-200 bg-white;
+  @apply flex items-center lg:justify-around justify-between px-4 sm:px-6 md:px-10 py-3 border-b border-gray-200 bg-white sticky top-0 z-50;
 }
 .logo {
-  @apply text-lg font-bold;
-}
-.nav-links {
-  @apply hidden md:flex space-x-8 text-gray-800 font-medium ;
-}
-.nav-link {
-  @apply cursor-pointer hover:text-black transition ;
-}
-.nav-link-active {
-  @apply cursor-pointer border-b-2 border-black;
+  @apply text-xl md:text-2xl font-bold cursor-pointer;
 }
 
-/* --- Search + Icons --- */
+/* Desktop Links */
+.nav-links {
+  @apply hidden md:flex items-center gap-6 lg:gap-10 font-medium text-gray-800;
+}
+.nav-link {
+  @apply cursor-pointer hover:text-black transition;
+}
+.nav-link-active {
+  @apply cursor-pointer border-b-2 border-black transition;
+}
+
+/* Search + Icons */
 .search-box {
-  @apply hidden md:flex items-center bg-yellow-100 rounded-md px-3 py-2 w-64;
+  @apply hidden md:flex items-center bg-[#FDFBD4] rounded-md px-3 py-1 w-64;
 }
 .search-input {
   @apply bg-transparent outline-none flex-1 text-sm;
@@ -50,11 +52,17 @@
 
 /* --- Mobile --- */
 .mobile-toggle {
-  @apply md:hidden text-2xl;
+  @apply md:hidden text-2xl cursor-pointer;
 }
 .mobile-menu {
-  @apply md:hidden bg-white p-4 space-y-4 text-gray-800 font-medium;
+  @apply md:hidden bg-white p-4 space-y-4 space-x-7 font-medium text-gray-800 shadow-md;
+}
+.mobile-menu p, .mobile-menu a {
+  @apply cursor-pointer hover:text-black transition;
 }
 .mobile-search {
-  @apply flex items-center bg-yellow-100 rounded-md px-3 py-2;
+  @apply flex items-center gap-2 bg-[#FDFBD4]  rounded-md px-2 py-1 mt-2;
+}
+.mobile-search input {
+  @apply flex-1 bg-transparent outline-none text-sm;
 }

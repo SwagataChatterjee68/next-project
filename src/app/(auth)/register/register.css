@@ -1,36 +1,31 @@
-
 @import "tailwindcss";
 
 .auth-container {
-  @apply min-h-screen bg-white text-black;
+  @apply min-h-screen bg-white text-black flex items-center justify-center p-4 sm:p-8 ;
 }
 
 .auth-wrapper {
-  @apply flex max-w-7xl mx-auto p-20;
+  @apply flex flex-col md:flex-row items-center md:items-start max-w-7xl w-full bg-white xl:p-20 overflow-hidden;
 }
 
 .auth-image {
-  @apply hidden md:flex w-1/2 relative;
+  @apply hidden md:flex w-full md:w-1/2 relative;
 }
 
 .auth-image img {
-  @apply w-[640px] h-[784px] object-cover;
+  @apply w-full h-full object-cover;
 }
 
 .auth-form {
-  @apply flex flex-col md:w-1/2 px-8 md:px-16 py-20 justify-center;
-}
-
-.auth-title {
-  @apply text-3xl font-semibold mb-6 text-[48px] text-center;
+  @apply w-full md:w-1/2 px-6 sm:px-12 py-8 sm:py-12 flex flex-col justify-center;
 }
 
 .auth-google {
-  @apply w-full py-4 shadow-md rounded-md flex items-center justify-center gap-2 mb-4;
+  @apply w-full py-3 sm:py-4 shadow-md rounded-md flex items-center justify-center gap-2 mb-4 transition hover:shadow-lg;
 }
 
 .auth-divider {
-  @apply text-center text-gray-400 mb-6;
+  @apply text-center text-gray-400 my-4;
 }
 
 .auth-label {
@@ -38,7 +33,7 @@
 }
 
 .auth-input {
-  @apply w-full rounded-2xl shadow px-4 py-4 outline-none mb-6;
+  @apply w-full rounded-2xl shadow px-4 py-3 outline-none mb-4 sm:mb-6 focus:ring-2 focus:ring-orange-400;
 }
 
 .auth-error {
@@ -46,7 +41,7 @@
 }
 
 .auth-submit {
-  @apply w-full bg-[#FF8400] text-white py-2 rounded-md hover:bg-orange-500;
+  @apply w-full bg-[#FF8400] text-white py-3 sm:py-4 rounded-md hover:bg-orange-500 transition;
 }
 
 .auth-footer {
