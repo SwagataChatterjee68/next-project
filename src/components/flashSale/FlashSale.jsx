@@ -138,7 +138,7 @@ const FlashSale = () => {
               <p>Today’s</p>
             </div>
             <div className="title-with-timer-flashsale">
-              <div className="flex gap-10 items-center">
+              <div className="md:flex gap-10 items-center">
                 <h2>Flash Sales</h2>
                 <div className="flashsale-timer">
                   <TimeBox label="Days " value={timeLeft.days} />

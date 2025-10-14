@@ -5,7 +5,7 @@
 }
 
 .auth-wrapper {
-  @apply flex flex-col md:flex-row items-center md:items-start max-w-7xl w-full bg-white xl:p-20 overflow-hidden;
+  @apply flex flex-col md:flex-row items-center md:items-start max-w-7xl w-full bg-white px-4 overflow-hidden;
 }
 
 .auth-image {
@@ -17,7 +17,7 @@
 }
 
 .auth-form {
-  @apply w-full md:w-1/2 px-6 sm:px-12 py-8 sm:py-12 flex flex-col justify-center;
+  @apply w-full md:w-1/2 px-6 2xl:mt-20 mt-10 sm:px-12 py-20 sm:py-12 flex flex-col justify-center ;
 }
 
 .auth-google {

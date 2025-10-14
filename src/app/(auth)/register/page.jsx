@@ -51,7 +51,7 @@ export default function SignUpPage() {
 
           <div className="auth-divider">or</div>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 ">
             {/* Name */}
             <div>
               <label className="auth-label">Name</label>
