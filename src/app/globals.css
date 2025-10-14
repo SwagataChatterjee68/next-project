@@ -31,12 +31,12 @@ footer{
 }
 
 .wrapper {
-  @apply 2xl:max-w-7xl mx-auto px-2;
+  @apply 2xl:max-w-7xl  md:max-w-5xl  mx-auto px-2;
 }
 
 /* --- Hero Section --- */
 .hero {
-  @apply flex flex-col lg:flex-row gap-6 md:gap-10 py-10 max-w-7xl mx-auto px-2;
+  @apply flex flex-col lg:flex-row gap-6 md:gap-10 py-10 2xl:max-w-7xl  md:max-w-5xl mx-auto px-2;
 }
 
 .categories {

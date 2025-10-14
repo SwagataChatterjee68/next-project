@@ -34,7 +34,7 @@ const NewArrival = () => {
                     {/* Right Side Small Grid */}
                     <div className="newarrival-small-grid">
                         {/* Women's Collections */}
-                        <div className="newarrival-card md:w-[570px] md:h-[286px]">
+                        <div className="newarrival-card md:w-[570px] md:h-[286px] sm:col-span-2 ">
                             <img
                                 src="/women.png"
                                 alt="Women's Collections"

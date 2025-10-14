@@ -10,7 +10,7 @@
 
 /* Header */
 .products-header {
-  @apply flex items-center justify-between mb-4;
+  @apply flex items-start sm:items-center justify-between mb-8;
 }
 .header {
   @apply flex items-center gap-2;
@@ -29,7 +29,7 @@
 
 /* Title */
 .products-title {
-  @apply text-[36px] font-semibold mb-6;
+  @apply text-2xl md:text-[36px]  font-semibold mb-6;
 }
 
 /* Slider */
@@ -71,7 +71,7 @@
   @apply bg-white p-2 rounded-full shadow hover:bg-gray-100 text-gray-600;
 }
 .addcart-btn {
-  @apply w-full bg-black text-white py-2 text-sm font-medium border-0 cursor-pointer transition-colors duration-300 mt-2;
+  @apply w-full bg-black text-white py-2 text-sm font-medium border-0 cursor-pointer rounded mt-2;
 }
 .addcart-btn:hover {
   @apply bg-gray-800;
@@ -79,3 +79,5 @@
 .view-all-btn {
   @apply bg-[#FF8400] cursor-pointer text-white mt-10 px-6 py-3 rounded font-medium hover:bg-orange-600 transition block mx-auto;
 }
+
+

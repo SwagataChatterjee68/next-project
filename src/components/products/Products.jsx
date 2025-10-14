@@ -44,7 +44,7 @@ const Products = () => {
           <p>Our Products</p>
         </div>
 
-        <div className="products-header flex items-center justify-between mb-4">
+        <div className="products-header">
           <h2 className="products-title mb-6">Explore Our Products</h2>
           <div className="arrow-buttons flex gap-2">
             <button onClick={() => scroll("left")} className="arrow-btn"><GoArrowLeft /></button>

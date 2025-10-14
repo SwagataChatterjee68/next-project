@@ -8,10 +8,6 @@
   @apply w-full py-16 md:py-20;
 }
 
-.wrapper {
-  @apply max-w-7xl mx-auto ;
-}
-
 /* --- Header --- */
 .header {
   @apply flex items-center gap-2 mb-4;

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .footer-container{
-  @apply max-w-7xl ;
+  @apply 2xl:max-w-7xl  md:max-w-5xl mx-auto;
 }
 .footer-grid {
   @apply mx-auto px-4 py-20 grid sm:grid-cols-2 md:grid-cols-5 gap-20;
