@@ -106,22 +106,6 @@ export default function Home() {
               </div>
             ))}
 
-            {/* --- Manual Controls --- */}
-            <button
-              onClick={() =>
-                setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1))
-              }
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-black p-2 rounded-full"
-            >
-              ❮
-            </button>
-            <button
-              onClick={() => setCurrent((prev) => (prev + 1) % slides.length)}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-black p-2 rounded-full"
-            >
-              ❯
-            </button>
-
             {/* --- Dots --- */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
               {slides.map((_, i) => (

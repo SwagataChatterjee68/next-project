@@ -57,7 +57,7 @@ footer{
 }
 
 .hero-text {
-  @apply flex flex-col justify-center gap-2 md:gap-4 max-w-[400px];
+  @apply flex flex-col justify-center gap-2 md:gap-4 max-w-[400px] 2xl:px-20;
 }
 
 .hero-logo {
