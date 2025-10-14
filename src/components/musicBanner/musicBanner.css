@@ -33,7 +33,7 @@
 
 /* Right Side */
 .music-img {
-  @apply w-[600px] h-[420px] top-[37px] left-[526px] rotate-0 opacity-100 ;
+  @apply w-[600px] h-[420px] opacity-100 ;
 }
 .music-img img {
   @apply w-[568px] h-[330px] object-contain;

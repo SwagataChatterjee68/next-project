@@ -2,7 +2,7 @@
 
 /* --- Top Bar --- */
 .topbar {
-  @apply bg-black text-white text-xs sm:text-sm flex justify-center items-center relative py-2;
+  @apply bg-black text-white text-xs sm:text-sm flex justify-center items-center relative py-2 ;
 }
 .topbar-text {
   @apply text-center;
@@ -16,7 +16,7 @@
 
 /* --- Main Navbar --- */
 .mainNav {
-  @apply flex items-center lg:justify-around justify-between px-4 sm:px-6 md:px-10 py-3 border-b border-gray-200 bg-white sticky top-0 z-50;
+  @apply flex items-center 2xl:max-w-7xl md:max-w-6xl  mx-auto justify-between px-3.5 py-3 sticky top-0 z-50;
 }
 .logo {
   @apply text-xl md:text-2xl font-bold cursor-pointer;

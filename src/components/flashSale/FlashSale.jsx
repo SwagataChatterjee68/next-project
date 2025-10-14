@@ -1,12 +1,12 @@
 "use client";
-import { FaStar, FaHeart} from "react-icons/fa";
+import { FaStar, FaHeart } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { FiHeart, FiEye } from "react-icons/fi";
 import { useCart } from "@/context/CartContext";
 import { useState, useEffect, useRef } from "react";
 import { useWishlist } from "@/context/WishlistContext";
 import "./flashSale.css";
-import { GoArrowLeft,GoArrowRight } from "react-icons/go";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 const FlashSale = () => {
   const router = useRouter();
@@ -138,22 +138,22 @@ const FlashSale = () => {
               <p>Today’s</p>
             </div>
             <div className="title-with-timer-flashsale">
-              <h2>Flash Sales</h2>
-              <div className="timer-and-arrows">
+              <div className="flex gap-10 items-center">
+                <h2>Flash Sales</h2>
                 <div className="flashsale-timer">
                   <TimeBox label="Days " value={timeLeft.days} />
                   <TimeBox label="Hours " value={timeLeft.hours} />
                   <TimeBox label="Minutes " value={timeLeft.minutes} />
                   <TimeBox label="Seconds " value={timeLeft.seconds} />
                 </div>
-                <div className="arrow-btns">
-                  <button onClick={scrollLeft} className="arrow-btn">
-                    <GoArrowLeft />
-                  </button>
-                  <button onClick={scrollRight} className="arrow-btn">
-                    <GoArrowRight />
-                  </button>
-                </div>
+              </div>
+              <div className="arrow-btns">
+                <button onClick={scrollLeft} className="arrow-btn">
+                  <GoArrowLeft />
+                </button>
+                <button onClick={scrollRight} className="arrow-btn">
+                  <GoArrowRight />
+                </button>
               </div>
             </div>
           </div>
@@ -161,7 +161,7 @@ const FlashSale = () => {
 
         {/* Slider */}
         <div className="flashsale-slider" ref={scrollRef}>
-          { product.map((item) => {
+          {product.map((item) => {
             const isWishlisted = wishlist.some((w) => w.id === item.id);
             return (
               <div key={item.id} className="flashsale-card">

@@ -2,7 +2,7 @@
 
 export default function AccountPage() {
   return (
-    <main className="max-w-[1200px] mx-auto px-16 py-32">
+    <main className="2xl:max-w-7xl md:max-w-6xl mx-auto px-4 py-32">
       {/* Breadcrumb */}
       <div className="text-sm text-gray-600 mb-5 flex justify-between">
         <div>

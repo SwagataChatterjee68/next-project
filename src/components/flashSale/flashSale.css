@@ -9,22 +9,19 @@
 .flashsale-header {
   @apply flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 mb-10;
 }
-
+.flashsale-title {
+  @apply w-full;
+}
 .flashsale-title p {
-  @apply text-[#FFA500] font-semibold text-sm sm:text-base;
+  @apply text-[#FFA500] font-semibold text-sm sm:text-base ;
 }
 
 .title-with-timer-flashsale {
-  @apply flex w-full items-start sm:items-center justify-between gap-6 sm:gap-10 md:gap-16;
+  @apply flex items-center justify-between gap-6 sm:gap-10 md:gap-16;
 }
 
 .title-with-timer-flashsale h2 {
   @apply text-[22px] sm:text-[28px] md:text-[36px] font-semibold text-gray-900;
-}
-
-/* --- Timer + Arrows --- */
-.timer-and-arrows {
-  @apply flex justify-between  items-center gap-4 sm:gap-6;
 }
 
 .flashsale-timer {
@@ -70,11 +67,11 @@
 
 /* --- Product Card --- */
 .flashsale-card {
-  @apply relative min-w-[180px] sm:min-w-[220px] md:min-w-[250px] bg-white rounded-lg shadow hover:shadow-lg transition p-2 sm:p-2;
+  @apply relative min-w-[180px] sm:min-w-[220px] md:min-w-[250px] bg-white rounded-lg shadow hover:shadow-lg transition md:p-4 sm:p-2;
 }
 
 .discount-badge-flashsale {
-  @apply absolute top-3 left-3 bg-[#FFA500] text-white text-[10px] sm:text-xs  py-1 rounded;
+  @apply absolute top-3 left-3 bg-[#FFA500] text-white text-[10px] sm:text-xs  p-1 rounded;
 }
 
 .product-img-flashsale {

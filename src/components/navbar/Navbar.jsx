@@ -31,61 +31,67 @@ export default function Navbar() {
   const isActive = (href) => pathname === href ? "nav-link-active" : "nav-link";
 
   return (
-    <header className="w-full fixed top-0 z-50">
+    <header className="w-full fixed top-0 z-50 border-b border-gray-200">
       {/* Top Black Bar */}
       <div className="topbar">
-        <p className="topbar-text">
-          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!{" "}
-          <span className="topbar-highlight">ShopNow</span>
-        </p>
-        <div className="topbar-lang">
-          <span>English</span> <span>▼</span>
+        <div className="2xl:max-w-7xl  md:max-w-6xl  mx-auto ">
+          <p className="topbar-text">
+            Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!{" "}
+            <span className="topbar-highlight">ShopNow</span>
+          </p>
+          <div className="topbar-lang">
+            <span>English</span> <span>▼</span>
+          </div>
         </div>
+
       </div>
 
       {/* Main Navbar */}
-      <nav className="mainNav">
-        <div className="logo">LOGO</div>
+      <div className="bg-white">
+        <nav className="mainNav">
+          <div className="logo">LOGO</div>
 
-        <ul className="nav-links">
-          <Link href="/" className={isActive("/")}>Home</Link>
-          <Link href="/contact" className={isActive("/contact")}>Contact</Link>
-          <Link href="/register" className={isActive("/register")}>Sign Up</Link>
+          <ul className="nav-links">
+            <Link href="/" className={isActive("/")}>Home</Link>
+            <Link href="/contact" className={isActive("/contact")}>Contact</Link>
+            <Link href="/register" className={isActive("/register")}>Sign Up</Link>
 
-          {/* Desktop Icons */}
-          <div className="flex items-center gap-4">
-            <form onSubmit={handleSearch} className="search-box">
-              <input
-                type="text"
-                placeholder="What are you looking for?"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="search-input"
-              />
-              <button type="submit"><FiSearch className="text-gray-700" /></button>
-            </form>
+            {/* Desktop Icons */}
+            <div className="flex items-center gap-4">
+              <form onSubmit={handleSearch} className="search-box">
+                <input
+                  type="text"
+                  placeholder="What are you looking for?"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="search-input"
+                />
+                <button type="submit"><FiSearch className="text-gray-700" /></button>
+              </form>
 
-            <Link href="/wishlist" className="icon-btn-nav">
-              <FaRegHeart />
-              {wishlistCount > 0 && <span className="badge">{wishlistCount}</span>}
-            </Link>
+              <Link href="/wishlist" className="icon-btn-nav">
+                <FaRegHeart />
+                {wishlistCount > 0 && <span className="badge">{wishlistCount}</span>}
+              </Link>
 
-            <Link href="/cart" className="icon-btn-nav">
-              <IoCartOutline className="cart-icon" />
-              {cartCount > 0 && <span className="badge">{cartCount}</span>}
-            </Link>
+              <Link href="/cart" className="icon-btn-nav">
+                <IoCartOutline className="cart-icon" />
+                {cartCount > 0 && <span className="badge">{cartCount}</span>}
+              </Link>
 
-            <Link href="/account" className="icon-btn-nav">
-              <FaRegUser />
-            </Link>
-          </div>
-        </ul>
+              <Link href="/account" className="icon-btn-nav">
+                <FaRegUser />
+              </Link>
+            </div>
+          </ul>
 
-        {/* Mobile Hamburger */}
-        <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <FiX /> : <FiMenu />}
-        </button>
-      </nav>
+          {/* Mobile Hamburger */}
+          <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <FiX /> : <FiMenu />}
+          </button>
+        </nav>
+
+      </div>
 
       {/* Mobile Menu */}
       {isOpen && (
