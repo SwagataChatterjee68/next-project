@@ -34,7 +34,7 @@ export default function Navbar() {
     <header className="w-full fixed top-0 z-50 border-b border-gray-200">
       {/* Top Black Bar */}
       <div className="topbar">
-        <div className="2xl:max-w-7xl  md:max-w-6xl  mx-auto ">
+        <div className="2xl:max-w-7xl md:max-w-6xl mx-auto text-xs sm:text-sm flex justify-center items-center relative py-2 ">
           <p className="topbar-text">
             Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!{" "}
             <span className="topbar-highlight">ShopNow</span>

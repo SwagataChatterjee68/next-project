@@ -2,7 +2,7 @@
 
 /* --- Top Bar --- */
 .topbar {
-  @apply bg-black text-white text-xs sm:text-sm flex justify-center items-center relative py-2 ;
+  @apply bg-black text-white ;
 }
 .topbar-text {
   @apply text-center;
