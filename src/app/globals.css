@@ -24,7 +24,7 @@ body {
   color: #000000;
 }
 footer{
-  @apply bg-[#000000] text-[#fafafa]  w-full 
+  @apply bg-[#000000] text-[#fafafa]  w-full ;
 }
 .homepage {
   @apply min-h-screen w-full py-16 md:py-20 xl:py-24;
