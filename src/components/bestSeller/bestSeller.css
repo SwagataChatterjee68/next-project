@@ -37,7 +37,7 @@
 
 /* --- Product Card --- */
 .bestseller-card {
-  @apply relative bg-white rounded-xl shadow hover:shadow-lg transition-all p-4 flex flex-col;
+  @apply relative rounded-xl transition-all flex flex-col;
 }
 
 /* Action Buttons */
@@ -45,7 +45,7 @@
   @apply absolute top-3 right-3 flex flex-col gap-2;
 }
 .icon-btn {
-  @apply bg-white w-8 h-8 flex items-center justify-center rounded-full shadow hover:bg-gray-100 transition;
+  @apply bg-white w-8 h-8 flex items-center justify-center cursor-pointer rounded-full shadow  transition;
 }
 
 /* Product Image */
@@ -84,10 +84,6 @@
   display: none;
 }
 
-/* --- Product Card --- */
-.bestseller-card {
-  @apply relative bg-white rounded-xl shadow hover:shadow-lg transition-all p-4 flex flex-col min-w-[250px] sm:min-w-0 snap-start;
-}
 
 /* --- Action Buttons --- */
 .action-btn {

@@ -43,7 +43,7 @@
 
 /* Card */
 .product-card {
-  @apply flex-shrink-0 w-64 bg-[#FDFBD44A] relative rounded-lg shadow p-4 transition hover:shadow-lg flex flex-col items-center text-center snap-start;
+  @apply flex-shrink-0 w-72 h-56 bg-[#FDFBD44A] relative rounded-lg shadow p-4 transition hover:shadow-lg flex flex-col items-center text-center snap-start mb-5;
 }
 .product-img {
   @apply w-full h-40 object-contain mb-4;
@@ -57,7 +57,7 @@
 
 /* Rating */
 .product-rating {
-  @apply flex items-center justify-center gap-1 text-[#FFA500] text-sm mt-1;
+  @apply flex  gap-1 text-[#FFA500] text-sm  text-left;
 }
 .product-reviews {
   @apply text-gray-600 text-xs ml-2;
@@ -67,17 +67,12 @@
 .action-btn {
   @apply absolute top-3 right-3 flex flex-col gap-2;
 }
-.icon-btn {
-  @apply bg-white p-2 rounded-full shadow hover:bg-gray-100 text-gray-600;
-}
-.addcart-btn {
-  @apply w-full bg-black text-white py-2 text-sm font-medium border-0 cursor-pointer rounded mt-2;
-}
-.addcart-btn:hover {
-  @apply bg-gray-800;
-}
 .view-all-btn {
   @apply bg-[#FF8400] cursor-pointer text-white mt-10 px-6 py-3 rounded font-medium hover:bg-orange-600 transition block mx-auto;
 }
+.addcart-btn {
+  @apply w-full bg-black text-white cursor-pointer py-2 text-xs sm:text-sm justify-center items-center hover:bg-gray-800 transition px-5 absolute bottom-2 overflow-hidden transform -translate-x-1/2 hidden group-hover:block rounded mt-2;
+}
+
 
 

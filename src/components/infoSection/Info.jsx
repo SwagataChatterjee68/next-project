@@ -7,21 +7,28 @@ export default function InfoSection() {
             {/* Delivery */}
 
             <div className="info-card">
-                <Truck className="info-icon" />
+                <div className="rounded-full bg-[#2F2E30] ">
+                    <Truck className="info-icon" />
+                </div>
                 <h3 className="info-title">FREE AND FAST DELIVERY</h3>
                 <p className="info-text">Free delivery for all orders over $140</p>
             </div>
 
             {/* Customer Service */}
             <div className="info-card">
-                <Headphones className="info-icon" />
+                <div className="rounded-full bg-[#2F2E30]  ">
+                    <Headphones className="info-icon" />
+                </div>
                 <h3 className="info-title">24/7 CUSTOMER SERVICE</h3>
                 <p className="info-text">Friendly 24/7 customer support</p>
             </div>
 
             {/* Money Back */}
             <div className="info-card">
-                <ShieldCheck className="info-icon" />
+                <div className="rounded-full bg-[#2F2E30]">
+                    <ShieldCheck className="info-icon" />
+                </div>
+
                 <h3 className="info-title">MONEY BACK GUARANTEE</h3>
                 <p className="info-text">We return money within 30 days</p>
             </div>

@@ -67,7 +67,7 @@
 
 /* --- Product Card --- */
 .flashsale-card {
-  @apply relative min-w-[180px] sm:min-w-[220px] md:min-w-[250px] bg-white rounded-lg shadow hover:shadow-lg transition md:p-4 sm:p-2;
+  @apply relative min-w-[180px] bg-[#FDFBD44A] sm:min-w-[220px] md:min-w-[250px] rounded-lg hover:shadow-lg transition md:p-4 mb-4 sm:p-2;
 }
 
 .discount-badge-flashsale {
@@ -82,9 +82,6 @@
   @apply absolute top-3 right-3 flex flex-col gap-2;
 }
 
-.icon-btn {
-  @apply bg-white p-2 rounded-full shadow hover:bg-[#FFA500] hover:text-white transition;
-}
 
 .addcart-btn-flashsale {
   @apply w-full bg-black text-white py-2 text-xs sm:text-sm flex justify-center items-center gap-2 hover:bg-gray-800 transition;
@@ -126,4 +123,7 @@
 /* --- View All Button --- */
 .view-all-btn {
   @apply bg-[#FF8400] cursor-pointer text-white mt-10 px-5 sm:px-6 py-2 sm:py-3 rounded font-medium text-sm sm:text-base hover:bg-orange-600 transition block mx-auto;
+}
+.addcart-btn-flashsale {
+  @apply w-full bg-black cursor-pointer  text-white py-2 text-xs sm:text-sm justify-center items-center hover:bg-gray-800 transition px-5 absolute  overflow-hidden transform -translate-4 hidden group-hover:block rounded mt-2;
 }

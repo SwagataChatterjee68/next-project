@@ -1,7 +1,7 @@
 
 @import "tailwindcss";
 .music-banner {
-  @apply bg-black text-white flex flex-col md:flex-row items-center justify-between rounded-lg mx-2 px-10 py-10 mb-12;
+  @apply bg-black text-white flex flex-col md:flex-row items-center rounded-lg mx-2 px-10 py-10 mb-12;
 }
 
 /* Left Side */

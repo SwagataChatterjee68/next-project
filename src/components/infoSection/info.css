@@ -9,7 +9,7 @@
   }
 
   .info-icon {
-    @apply md:w-12 md:h-12 mb-4 text-gray-700;
+    @apply md:w-12 md:h-12 mb-4  text-white ;
   }
 
   .info-title {

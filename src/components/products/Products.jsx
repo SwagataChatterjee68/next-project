@@ -5,7 +5,7 @@ import { FiHeart, FiEye } from "react-icons/fi";
 import { useCart } from "@/context/CartContext";
 import { useWishlist } from "@/context/WishlistContext";
 import { useRouter } from "next/navigation";
-import { GoArrowLeft,GoArrowRight } from "react-icons/go";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import "./products.css";
 
 const Products = () => {
@@ -48,7 +48,7 @@ const Products = () => {
           <h2 className="products-title mb-6">Explore Our Products</h2>
           <div className="arrow-buttons flex gap-2">
             <button onClick={() => scroll("left")} className="arrow-btn"><GoArrowLeft /></button>
-            <button onClick={() => scroll("right")} className="arrow-btn"><GoArrowRight/></button>
+            <button onClick={() => scroll("right")} className="arrow-btn"><GoArrowRight /></button>
           </div>
         </div>
 
@@ -57,28 +57,38 @@ const Products = () => {
             const isWishlisted = wishlist.some((w) => w.id === item.id);
 
             return (
-              <div key={item.id} className="product-card">
-                <div className="action-btn">
-                  <button onClick={() => (isWishlisted ? removeFromWishlist(item.id) : addToWishlist(item))} className="icon-btn">
-                    {isWishlisted ? <FaHeart className="text-red-500" /> : <FiHeart />}
-                  </button>
-                  <button onClick={() => handleClick(item)} className="icon-btn">
-                    <FiEye />
-                  </button>
+              <div key={item.id} >
+                <div className="product-card group">
+                  <div className="action-btn">
+                    <button onClick={() => (isWishlisted ? removeFromWishlist(item.id) : addToWishlist(item))} className="icon-btn">
+                      {isWishlisted ? <FaHeart className="text-red-500" /> : <FiHeart />}
+                    </button>
+                    <button onClick={() => handleClick(item)} className="icon-btn">
+                      <FiEye />
+                    </button>
+                  </div>
+
+                  <img src={item.img} alt={item.title} className="product-img" />
+                  <div>
+                    <button onClick={() => addToCart(item)} className="addcart-btn">
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
-
-                <img src={item.img} alt={item.title} className="product-img" />
-
-                <button onClick={() => addToCart(item)} className="addcart-btn">Add To Cart</button>
 
                 <h3 className="product-name">{item.title}</h3>
-                <p className="product-price">${item.price}</p>
-
-                <div className="product-rating">
-                  {Array.from({ length: item.rating }).map((_, i) => <FaStar key={i} />)}
-                  <span className="product-reviews">({item.reviews})</span>
+                <div className="flex items-center gap-2 ">
+                  <p className="product-price">${item.price}</p>
+                  <div className="product-rating">
+                    {Array.from({ length: item.rating }).map((_, i) => <FaStar key={i} />)}
+                    <span className="product-reviews">({item.reviews})</span>
+                  </div>
                 </div>
+
+
+
               </div>
+
             );
           })}
         </div>

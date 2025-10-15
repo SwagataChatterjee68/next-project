@@ -77,38 +77,40 @@ const BestSeller = () => {
             const isWishlisted = wishlist.some((w) => w.id === item.id);
 
             return (
-              <div key={item.id} className="bestseller-card">
-                {/* Action Buttons */}
-                <div className="action-btn">
-                  <button
-                    onClick={() =>
-                      isWishlisted
-                        ? removeFromWishlist(item.id)
-                        : addToWishlist(item)
-                    }
-                    className="icon-btn"
-                  >
-                    {isWishlisted ? (
-                      <FaHeart className="text-red-500" />
-                    ) : (
-                      <FiHeart />
-                    )}
-                  </button>
-                  <button onClick={() => handleClick(item)} className="icon-btn">
-                    <FiEye />
-                  </button>
-                </div>
 
-                {/* Product Image */}
-                <div className="bestseller-img-wrapper">
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="bestseller-img"
-                  />
-                </div>
+              <div key={item.id} className="bestseller-card mb-2">
+                <div className="bg-[#FDFBD44A] ">
+                  {/* Action Buttons */}
+                  <div className="action-btn">
+                    <button
+                      onClick={() =>
+                        isWishlisted
+                          ? removeFromWishlist(item.id)
+                          : addToWishlist(item)
+                      }
+                      className="icon-btn"
+                    >
+                      {isWishlisted ? (
+                        <FaHeart className="text-red-500" />
+                      ) : (
+                        <FiHeart />
+                      )}
+                    </button>
+                    <button onClick={() => handleClick(item)} className="icon-btn">
+                      <FiEye />
+                    </button>
+                  </div>
 
-                {/* Info */}
+                  {/* Product Image */}
+                  <div className="bestseller-img-wrapper">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="bestseller-img"
+                    />
+                  </div>
+
+                </div>
                 <h3 className="bestseller-title-text">{item.title}</h3>
                 <div className="bestseller-price-row">
                   <p className="bestseller-price">${item.price}</p>

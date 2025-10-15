@@ -164,38 +164,37 @@ const FlashSale = () => {
           {product.map((item) => {
             const isWishlisted = wishlist.some((w) => w.id === item.id);
             return (
-              <div key={item.id} className="flashsale-card">
-                <span className="discount-badge-flashsale">{item.discount}</span>
-                <div className="action-btn">
-                  <button
-                    onClick={() =>
-                      isWishlisted
-                        ? removeFromWishlist(item.id)
-                        : addToWishlist(item)
-                    }
-                    className="icon-btn"
-                  >
-                    {isWishlisted ? (
-                      <FaHeart className="text-red-500" />
-                    ) : (
-                      <FiHeart />
-                    )}
-                  </button>
-                  <button onClick={() => handleClick(item)} className="icon-btn">
-                    <FiEye />
+              <div key={item.id} className=" group " >
+                <div className="flashsale-card">
+                  <span className="discount-badge-flashsale">{item.discount}</span>
+                  <div className="action-btn">
+                    <button
+                      onClick={() =>
+                        isWishlisted
+                          ? removeFromWishlist(item.id)
+                          : addToWishlist(item)
+                      }
+                      className="icon-btn"
+                    >
+                      {isWishlisted ? (
+                        <FaHeart className="text-red-500" />
+                      ) : (
+                        <FiHeart />
+                      )}
+                    </button>
+                    <button onClick={() => handleClick(item)} className="icon-btn">
+                      <FiEye />
+                    </button>
+                  </div>
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="product-img-flashsale"
+                  />
+                  <button onClick={() => addToCart(item)} className="addcart-btn-flashsale">
+                    Add to Cart
                   </button>
                 </div>
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="product-img-flashsale"
-                />
-                <button
-                  onClick={() => addToCart(item)}
-                  className="addcart-btn-flashsale"
-                >
-                  Add To Cart
-                </button>
                 <h3 className="product-title-flashsale">{item.title}</h3>
                 <div className="price-wrapper-flashsale">
                   <p className="price-current-flashsale">${item.price}</p>

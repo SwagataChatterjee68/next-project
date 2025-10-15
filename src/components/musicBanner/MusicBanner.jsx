@@ -38,40 +38,40 @@ const MusicBanner = () => {
 
   return (
     <section className="music-banner">
-        {/* Left Content */}
-        <div className="music-text-wrapper">
-          <p className="music-category">Categories</p>
-          <h2 className="music-heading">Enhance Your Music Experience</h2>
+      {/* Left Content */}
+      <div className="music-text-wrapper">
+        <p className="music-category">Categories</p>
+        <h2 className="music-heading">Enhance Your Music Experience</h2>
 
-          {/* Countdown */}
-          <div className="music-countdown">
-            <div className="music-count">
-              <span>{timeLeft.days.toString().padStart(2, "0")}</span>
-              Days
-            </div>
-            <div className="music-count">
-              <span>{timeLeft.hours.toString().padStart(2, "0")}</span>
-              Hours
-            </div>
-            <div className="music-count">
-              <span>{timeLeft.minutes.toString().padStart(2, "0")}</span>
-              Min
-            </div>
-            <div className="music-count">
-              <span>{timeLeft.seconds.toString().padStart(2, "0")}</span>
-              Sec
-            </div>
+        {/* Countdown */}
+        <div className="music-countdown">
+          <div className="music-count">
+            <span>{timeLeft.hours.toString().padStart(2, "0")}</span>
+            Hours
           </div>
-
-          {/* Button */}
-          <button className="music-btn">Buy Now!</button>
+          <div className="music-count">
+            <span>{timeLeft.days.toString().padStart(2, "0")}</span>
+            Days
+          </div>
+          <div className="music-count">
+            <span>{timeLeft.minutes.toString().padStart(2, "0")}</span>
+            Minutes
+          </div>
+          <div className="music-count">
+            <span>{timeLeft.seconds.toString().padStart(2, "0")}</span>
+            Seconds
+          </div>
         </div>
 
-        {/* Right Image */}
-        <div className="music-img">
-          <img src="/speaker.png" alt="Music Speaker" />
-        </div>
-     
+        {/* Button */}
+        <button className="music-btn">Buy Now!</button>
+      </div>
+
+      {/* Right Image */}
+      <div className="music-img">
+        <img src="/speaker.png" alt="Music Speaker" />
+      </div>
+
     </section>
   );
 };

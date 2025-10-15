@@ -17,6 +17,9 @@
 .cart-table {
   @apply w-full border-collapse text-left;
 }
+.cart-table-scroll {
+  @apply overflow-x-auto w-full;
+}
 .cart-table th {
   @apply bg-gray-100 font-medium p-4 text-sm;
 }
@@ -46,33 +49,44 @@
 .left-actions-cart {
   @apply flex flex-col gap-4 md:flex-1;
 }
-.return-btn-cart {
-  @apply border border-gray-800  py-2 text-sm rounded cursor-pointer bg-transparent hover:bg-gray-100;
+.btn-return {
+  @apply border border-gray-800 text-sm py-2 px-5 rounded bg-transparent hover:bg-gray-50;
 }
-.coupon-box-cart {
-  @apply flex gap-2;
+.btn-update {
+  @apply border border-gray-800 text-sm py-2 px-5 rounded bg-transparent hover:bg-gray-50;
 }
-.coupon-box-cart input {
-  @apply border border-gray-300 rounded px-3 py-2 flex-1;
+.coupon-area .coupon-input {
+  @apply border border-gray-300 rounded px-3 py-2 w-full sm:w-64;
 }
-.apply-btn-cart {
-  @apply bg-orange-500 text-white px-4 py-2 rounded cursor-pointer hover:bg-orange-600;
+.btn-apply {
+  @apply bg-[#FF8400] text-white px-4 py-2 rounded text-sm hover:bg-orange-600;
 }
-.cart-total {
-  @apply border border-gray-300 rounded-md p-5 w-full max-w-[300px] md:shrink-0;
+.btn-checkout {
+  @apply bg-[#FF8400] text-white px-4 py-3 rounded text-sm hover:bg-orange-600;
 }
-.cart-total h3 {
-  @apply text-lg font-semibold mb-5;
+
+/* Summary card */
+.summary-card {
+  @apply border border-gray-300 rounded-md p-5 bg-white;
 }
-.total-row-cart {
-  @apply flex justify-between mb-3 text-[15px];
+
+/* Responsive behaviors */
+/* On mobile stack coupon and buttons, on larger screens keep inline */
+@media (min-width: 640px) {
+  .coupon-area {
+    @apply flex-row;
+  }
 }
-.total-row-cart.total {
-  @apply border-t border-gray-300 pt-3 font-semibold;
+
+/* Finetune spacing to match pixel design */
+.cart-table-wrapper {
+  @apply mb-8;
 }
-.free-cart {
-  @apply text-green-600;
+.cart-table td, .cart-table th {
+  @apply align-top;
 }
-.checkout-btn-cart {
-  @apply bg-orange-500 text-white p-3 w-full rounded cursor-pointer mt-4 hover:bg-orange-600;
+
+/* Small visual shadow like Figma */
+.cart-table-wrapper .cart-row {
+  @apply shadow-sm;
 }
