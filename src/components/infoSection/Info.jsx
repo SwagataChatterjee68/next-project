@@ -7,8 +7,10 @@ export default function InfoSection() {
             {/* Delivery */}
 
             <div className="info-card">
-                <div className="rounded-full bg-[#2F2E30] ">
-                    <Truck className="info-icon" />
+                <div className="rounded-full bg-gray-300 w-18 h-18 flex justify-center items-center">
+                    <div className="rounded-full bg-[#000000] w-12 h-12 flex justify-center items-center ">
+                        <Truck className="info-icon" />
+                    </div>
                 </div>
                 <h3 className="info-title">FREE AND FAST DELIVERY</h3>
                 <p className="info-text">Free delivery for all orders over $140</p>
@@ -16,8 +18,10 @@ export default function InfoSection() {
 
             {/* Customer Service */}
             <div className="info-card">
-                <div className="rounded-full bg-[#2F2E30]  ">
-                    <Headphones className="info-icon" />
+                <div className="rounded-full bg-gray-300 w-18 h-18 flex justify-center items-center">
+                    <div className="rounded-full bg-[#000000]  w-12 h-12 flex justify-center items-center">
+                        <Headphones className="info-icon" />
+                    </div>
                 </div>
                 <h3 className="info-title">24/7 CUSTOMER SERVICE</h3>
                 <p className="info-text">Friendly 24/7 customer support</p>
@@ -25,10 +29,11 @@ export default function InfoSection() {
 
             {/* Money Back */}
             <div className="info-card">
-                <div className="rounded-full bg-[#2F2E30]">
-                    <ShieldCheck className="info-icon" />
+                <div className="rounded-full  bg-gray-300  w-18 h-18 flex justify-center items-center" >
+                    <div className="rounded-full bg-[#000000]  w-12 h-12 flex justify-center items-center ">
+                        <ShieldCheck className="info-icon" />
+                    </div>
                 </div>
-
                 <h3 className="info-title">MONEY BACK GUARANTEE</h3>
                 <p className="info-text">We return money within 30 days</p>
             </div>
