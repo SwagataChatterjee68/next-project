@@ -5,7 +5,7 @@
   @apply px-2 py-10 border-b border-gray-300 my-10;
 }
 .category-wrapper {
-  @apply mb-10;
+  @apply mb-10 2xl:max-w-7xl  md:max-w-6xl  mx-auto ;
 }
 
 .category-header {
@@ -43,7 +43,7 @@
 
 /* --- Card --- */
 .category-card {
-  @apply flex flex-col items-center justify-center min-w-[150px] border rounded-md py-10 px-4 cursor-pointer transition snap-start;
+  @apply flex flex-col items-center min-w-[150px] px-2 w-full border rounded-md py-10 cursor-pointer transition snap-start;
 }
 .category-card-hover {
   @apply hover:bg-[#FF8400] hover:text-white;

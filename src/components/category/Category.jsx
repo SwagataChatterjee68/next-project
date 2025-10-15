@@ -16,9 +16,7 @@ const Category = () => {
     { id: 3, name: "SmartWatch", icon: <TbDeviceWatchStats /> },
     { id: 4, name: "Camera", icon: <AiOutlineCamera /> },
     { id: 5, name: "HeadPhones", icon: <CiHeadphones /> },
-    { id: 6, name: "Gaming", icon: <LuGamepad /> },
-    { id: 7, name: "Accessories", icon: <TbDeviceWatchStats /> },
-    { id: 8, name: "Speakers", icon: <CiHeadphones /> },
+    { id: 6, name: "Gaming", icon: <LuGamepad /> }
   ];
 
   const scrollRef = useRef(null);
