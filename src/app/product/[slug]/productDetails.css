@@ -5,7 +5,19 @@
 }
 
 .product-page {
-  @apply max-w-7xl mx-auto bg-gray-50 min-h-screen py-52;
+  @apply max-w-7xl mx-auto min-h-screen py-52 px-1;
+}
+
+.header {
+  @apply flex items-center gap-2 mb-4;
+}
+
+.section-header-bar {
+  @apply w-4 h-8 bg-[#FF8400] rounded;
+}
+
+.header p {
+  @apply text-[#FF8400] font-semibold text-base md:text-lg;
 }
 
 .container {
@@ -41,7 +53,7 @@
 }
 
 .product-title {
-  @apply text-[24px] font-semibold text-gray-800 ;
+  @apply text-[24px] font-semibold text-gray-800;
 }
 
 .rating {
@@ -69,10 +81,11 @@
   @apply font-medium;
 }
 
-.sizes{
+.sizes {
   @apply flex items-center gap-4
 }
-.colors{
+
+.colors {
   @apply flex items-center gap-4
 }
 

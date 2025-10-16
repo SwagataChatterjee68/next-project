@@ -92,7 +92,10 @@ export default function ProductPage() {
 
       {/* Related Items */}
       <div className="related-section">
-        <h2>Related Items</h2>
+        <div className="header">
+          <div className="section-header-bar"></div>
+          <p>Related Items</p>
+        </div>
         <div className="related-grid">
           {products.map((item) => (
             <div key={item.id} className="related-card">
