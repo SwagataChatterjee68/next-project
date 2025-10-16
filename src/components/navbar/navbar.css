@@ -24,7 +24,7 @@
 
 /* Desktop Links */
 .nav-links {
-  @apply hidden md:flex items-center gap-6 lg:gap-10 font-medium text-gray-800;
+  @apply hidden md:flex items-center gap-6 lg:gap-10 font-medium text-gray-800 ;
 }
 .nav-link {
   @apply cursor-pointer hover:text-black transition;

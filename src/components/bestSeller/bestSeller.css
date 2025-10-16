@@ -2,7 +2,7 @@
 
 /* --- Main Title + Button --- */
 .bestseller-header {
-  @apply flex items-start sm:items-center justify-between mb-8;
+  @apply flex items-start sm:items-center justify-between mb-10;
 }
 .bestseller-section {
   @apply w-full py-16 md:py-20;
@@ -10,21 +10,21 @@
 
 /* --- Header --- */
 .header {
-  @apply flex items-center gap-2 mb-4;
+  @apply flex items-center gap-2 ;
 }
 .section-header-bar {
   @apply w-2 h-8 bg-[#FF8400] rounded;
 }
 .header p {
-  @apply text-[#FF8400] font-semibold text-base md:text-lg;
+  @apply text-[#FF8400] font-semibold text-sm md:text-lg;
 }
 
 /* --- Main Title + Button --- */
 .bestseller-header {
-  @apply flex items-start sm:items-center justify-between mb-8;
+  @apply flex items-start sm:items-center justify-between ;
 }
 .bestseller-title {
-  @apply text-2xl md:text-[36px] font-semibold text-gray-900 mb-2 sm:mb-0;
+  @apply text-xl md:text-[36px] font-semibold text-gray-900 ;
 }
 .bestseller-btn {
   @apply bg-[#FF8400] text-white px-4 py-2 md:px-6 md:py-2.5 rounded-md hover:bg-orange-600 transition-colors text-sm md:text-base;

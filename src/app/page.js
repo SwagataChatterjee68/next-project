@@ -59,11 +59,11 @@ export default function Home() {
   }, [slides.length]);
 
   return (
-    <div className="homepage font-poppins">
+    <div className="homepage">
       <div className="wrapper">
         {/* --- Hero Section --- */}
         <section className="hero">
-          <div className="categories">
+          <div className="categories font-poppins">
             {categories.map((cat, i) => (
               <Link href="/" key={i}>
                 {cat}
@@ -77,7 +77,7 @@ export default function Home() {
             {slides.map((slide, index) => (
               <div
                 key={slide.id}
-                className={`absolute top-0 left-0 w-full transition-all duration-700 ease-in-out ${index === current
+                className={`absolute top-10 left-0 w-full transition-all duration-700 ease-in-out ${index === current
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 translate-x-full"
                   }`}

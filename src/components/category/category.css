@@ -2,7 +2,7 @@
 
 /* --- Container --- */
 .category-section {
-  @apply px-2 py-10 border-b border-gray-300 my-10;
+  @apply px-2 py-10 border-b border-gray-300 my-10 mb-10;
 }
 .category-wrapper {
   @apply mb-10 2xl:max-w-7xl  md:max-w-6xl  mx-auto ;
@@ -13,20 +13,20 @@
 }
 
 .header p {
-  @apply text-[#FFA500] font-semibold;
+  @apply text-[#FFA500]  font-semibold;
 }
 
 .category-header-title {
-  @apply flex items-center justify-between gap-4  ;
+  @apply flex items-center justify-between gap-4  mb-6;
 }
 
 .category-title {
-  @apply lg:text-[36px] font-semibold text-2xl;
+  @apply lg:text-[36px] font-semibold text-xl ;
 }
 
 /* --- Arrows --- */
 .arrow-buttons {
-  @apply flex items-center gap-2;
+  @apply flex items-center gap-2 ;
 }
 .arrow-btn {
   @apply bg-[#FDFBD4] p-2 rounded-full text-[24px] hover:bg-[#FFA500] hover:text-white transition;

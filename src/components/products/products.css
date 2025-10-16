@@ -10,7 +10,7 @@
 
 /* Header */
 .products-header {
-  @apply flex items-start sm:items-center justify-between mb-8;
+  @apply flex items-start sm:items-center justify-between mb-4;
 }
 .header {
   @apply flex items-center gap-2;
@@ -29,7 +29,7 @@
 
 /* Title */
 .products-title {
-  @apply text-2xl md:text-[36px]  font-semibold mb-6;
+  @apply text-xl md:text-[36px]  font-semibold mb-6;
 }
 
 /* Slider */
@@ -43,7 +43,7 @@
 
 /* Card */
 .product-card {
-  @apply flex-shrink-0 w-72 h-56 bg-[#FDFBD44A] relative rounded-lg shadow p-4 transition hover:shadow-lg flex flex-col items-center text-center snap-start mb-5;
+  @apply flex-shrink-0 w-72 h-56 bg-[#FDFBD44A] relative rounded-lg p-4 transition flex flex-col items-center text-center snap-start mb-5;
 }
 .product-img {
   @apply w-full h-40 object-contain mb-4;

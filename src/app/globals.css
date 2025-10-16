@@ -1,46 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 @import "tailwindcss";
 
-* {
-  font-weight: 100;
-  font-family: 'Poppins', sans-serif;
-  
-}
-html, body {
+html,
+body {
   @apply overflow-x-hidden;
 }
 
-.font-poppins {
-  font-family: 'Poppins', sans-serif;
-}
-
-.font-inter {
-  font-family: 'Inter', sans-serif;
+body {
+  font-family: 'Poppins';
 }
 
 body {
   background-color: #FFFFFF;
   color: #000000;
 }
-footer{
-  @apply bg-[#000000] text-[#fafafa]  w-full ;
+
+footer {
+  @apply bg-[#000000] text-[#fafafa] w-full;
 }
+
 .homepage {
   @apply min-h-screen w-full py-16 md:py-20 xl:py-24;
 }
 
 .wrapper {
-  @apply 2xl:max-w-7xl  md:max-w-6xl  mx-auto px-2;
+  @apply 2xl:max-w-7xl md:max-w-6xl mx-auto px-2;
 }
 
 /* --- Hero Section --- */
 .hero {
-  @apply flex flex-col lg:flex-row gap-6 md:gap-10 py-10 2xl:max-w-7xl  md:max-w-6xl mx-auto px-2;
+  @apply flex flex-col lg:flex-row gap-6 md:gap-10 2xl:max-w-7xl md:max-w-6xl mx-auto px-2;
 }
 
 .categories {
-  @apply flex flex-row lg:flex-col flex-wrap gap-4 text-sm md:text-base font-medium lg:w-[220px] w-[217px] h-[344px];
+  @apply flex flex-row lg:flex-col flex-wrap gap-4 text-sm md:text-base font-medium lg:w-[220px] w-[217px] pt-10 ;
 }
 
 .categories a {
@@ -53,7 +45,7 @@ footer{
 
 /* --- Hero Banner --- */
 .hero-banner {
-  @apply relative bg-black text-white rounded overflow-hidden flex flex-col md:flex-row items-center justify-between p-6 sm:p-8  md:py-10 w-full md:h-[340px];
+  @apply relative bg-black text-white rounded overflow-hidden flex flex-col md:flex-row items-center justify-between p-6 sm:p-8 md:py-10 w-full md:h-[340px];
 }
 
 .hero-text {
@@ -79,9 +71,8 @@ footer{
 .hero-image {
   @apply w-full md:w-[450px] lg:w-[520px] object-contain mt-6 md:mt-0;
 }
+
 /* --- Utilities --- */
 .title {
   @apply text-lg md:text-xl font-bold;
 }
-
-

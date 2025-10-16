@@ -1,7 +1,7 @@
 
 @import "tailwindcss";
 .music-banner {
-  @apply xl:px-24 xl:py-20 py-5 bg-black text-white h-[500px] mx-2;
+  @apply lg:px-10 pt-20 mb-10 pb-20 px-5 py-5 bg-black text-white  mx-2 rounded;
 }
 
 .music-category {
@@ -16,7 +16,7 @@
   @apply flex gap-4  mb-6 ;
 }
 .music-count {
-  @apply bg-white text-black rounded-full md:w-16 md:h-16 w-10 h-10 flex flex-col items-center justify-center text-xs font-semibold;
+  @apply bg-white  text-black rounded-full md:w-16 md:h-16 w-10 h-10 flex flex-col items-center justify-center text-xs font-semibold;
 }
 .music-count span {
   @apply text-sm font-bold;
@@ -24,7 +24,7 @@
 
 /* Button */
 .music-btn {
-  @apply bg-[#C35817] text-white px-6 py-3 rounded font-medium hover:bg-orange-600 transition;
+  @apply bg-[#C35817] xl:mt-10 text-white text-sm px-10 py-3 rounded font-medium hover:bg-orange-600 transition;
 }
 
 /* Right Side */
@@ -32,5 +32,5 @@
   @apply w-[600px] h-[420px] opacity-100 ;
 }
 .music-img img {
-  @apply h-[330px] w-[568px] rotate-y-180  object-cover;
+  @apply rotate-y-180  object-cover xl:scale-150 ;
 }

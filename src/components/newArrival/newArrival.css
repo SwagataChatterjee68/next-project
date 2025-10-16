@@ -10,7 +10,7 @@
 }
 
 .newarrival-title {
-  @apply text-2xl md:text-[36px]  font-semibold mb-4;
+  @apply text-xl md:text-[36px]  font-semibold mb-10;
 }
 
 /* Grid */
@@ -19,7 +19,7 @@
 }
 
 .newarrival-large {
-  @apply relative rounded-lg overflow-hidden;
+  @apply relative  overflow-hidden;
 }
 
 .newarrival-small-grid {
@@ -28,7 +28,7 @@
 
 /* Card */
 .newarrival-card {
-  @apply relative rounded-lg overflow-hidden;
+  @apply relative overflow-hidden;
 }
 
 .newarrival-img {

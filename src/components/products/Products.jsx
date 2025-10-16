@@ -45,7 +45,7 @@ const Products = () => {
         </div>
 
         <div className="products-header">
-          <h2 className="products-title mb-6">Explore Our Products</h2>
+          <h2 className="products-title ">Explore Our Products</h2>
           <div className="arrow-buttons flex gap-2">
             <button onClick={() => scroll("left")} className="arrow-btn"><GoArrowLeft /></button>
             <button onClick={() => scroll("right")} className="arrow-btn"><GoArrowRight /></button>
@@ -84,9 +84,6 @@ const Products = () => {
                     <span className="product-reviews">({item.reviews})</span>
                   </div>
                 </div>
-
-
-
               </div>
 
             );

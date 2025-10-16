@@ -138,8 +138,8 @@ const FlashSale = () => {
               <p>Today’s</p>
             </div>
             <div className="title-with-timer-flashsale">
-              <div className="md:flex gap-10 items-center">
-                <h2>Flash Sales</h2>
+              <div className="md:flex md:flex-row sm:flex-col sm:gap-20 gap-10 items-center">
+                <h2 className="font-inter">Flash Sales</h2>
                 <div className="flashsale-timer">
                   <TimeBox label="Days " value={timeLeft.days} />
                   <TimeBox label="Hours " value={timeLeft.hours} />
@@ -164,7 +164,7 @@ const FlashSale = () => {
           {product.map((item) => {
             const isWishlisted = wishlist.some((w) => w.id === item.id);
             return (
-              <div key={item.id} className=" group " >
+              <div key={item.id} className=" group transition-all ease-in-out " >
                 <div className="flashsale-card">
                   <span className="discount-badge-flashsale">{item.discount}</span>
                   <div className="action-btn">
