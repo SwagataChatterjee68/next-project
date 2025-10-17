@@ -2,7 +2,7 @@
 
 /* --- Top Bar --- */
 .topbar {
-  @apply bg-black text-white ;
+  @apply bg-black text-white px-3.5;
 }
 .topbar-text {
   @apply text-center;

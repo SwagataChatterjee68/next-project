@@ -4,7 +4,7 @@
   @apply 2xl:max-w-7xl  md:max-w-6xl mx-auto;
 }
 .footer-grid {
-  @apply mx-auto px-4 py-20 grid sm:grid-cols-2 md:grid-cols-5 gap-20;
+  @apply mx-auto px-4 py-20 grid sm:grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-20;
 }
 
 .footer-title {

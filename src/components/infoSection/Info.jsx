@@ -38,7 +38,6 @@ export default function InfoSection() {
                 <p className="info-text">We return money within 30 days</p>
             </div>
 
-
         </section>
     );
 }

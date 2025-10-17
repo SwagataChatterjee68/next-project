@@ -106,7 +106,7 @@ export default function AccountPage() {
             ></textarea>
 
             {/* Button */}
-            <div className="text-right mt-10 md:mt-16">
+            <div className="text-right mt-5 md:mt-16">
               <button type="submit" className="contact-btn">
                 Send Message
               </button>

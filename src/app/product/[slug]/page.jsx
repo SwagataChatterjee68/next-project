@@ -12,7 +12,6 @@ import { useCart } from "@/context/CartContext";
 export default function ProductPage() {
   const params = useParams();
   const { slug } = params;
-
   const [product, setProduct] = useState(null);
   const [selectedImage, setSelectedImage] = useState('');
   const [quantity, setQuantity] = useState(1);
@@ -40,7 +39,7 @@ export default function ProductPage() {
   }, [slug]);
 
   if (!product) return <div className="not-found">Product not found</div>;
-  const isWishlisted = wishlist.some((w) => w.id === item.id);
+
   return (
     <div className="product-page">
       <div className="container">
@@ -74,8 +73,6 @@ export default function ProductPage() {
 
           <p className="price">${product.price.toFixed(2)}</p>
           <p className="desc">{product.description}</p>
-
-
 
           <div className="colors">
             <h3>Colours:</h3>
@@ -137,18 +134,10 @@ export default function ProductPage() {
                 {item.oldPrice && <span className="discount-badge">-{Math.round(((item.oldPrice - item.price) / item.oldPrice) * 100)}%</span>}
                 <div className="action-btn">
                   <button
-                    onClick={() =>
-                      isWishlisted
-                        ? removeFromWishlist(item.id)
-                        : addToWishlist(item)
-                    }
+                    
                     className="icon-btn"
                   >
-                    {isWishlisted ? (
-                      <FaHeart className="text-red-500" />
-                    ) : (
-                      <FiHeart />
-                    )}
+                    
                   </button>
                   <button onClick={() => handleClick(item)} className="icon-btn">
                     <FiEye />
