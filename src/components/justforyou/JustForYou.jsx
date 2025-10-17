@@ -4,10 +4,11 @@ import { FiEye } from "react-icons/fi";
 import { useCart } from "@/context/CartContext";
 import { BsCartPlus } from "react-icons/bs";
 import "./justforyou.css";
+import { useRouter } from "next/navigation";
 
 export default function JustForYou() {
   const { addToCart } = useCart();
-
+const router = useRouter();
 
   const products = [
     {
@@ -18,6 +19,7 @@ export default function JustForYou() {
       reviews: 65,
       img: "/laptop.png",
       discount: "-35%",
+      slug: "rgb-liquid-cpu-cooler-160",
     },
     {
       id: 18,
@@ -26,6 +28,7 @@ export default function JustForYou() {
       rating: 5,
       reviews: 65,
       img: "/saleproduct3.png",
+      slug: "rgb-liquid-cpu-cooler-160",
     },
     {
       id: 19,
@@ -34,6 +37,7 @@ export default function JustForYou() {
       rating: 5,
       reviews: 65,
       img: "/saleproduct1.png",
+      slug: "rgb-liquid-cpu-cooler-160",
     },
     {
       id: 20,
@@ -42,18 +46,19 @@ export default function JustForYou() {
       rating: 5,
       reviews: 65,
       img: "/saleproduct2.png",
+      slug: "rgb-liquid-cpu-cooler-160",
     },
   ];
-
+  const handleClick = (item) => router.push(`/product/${item.slug}`);
   return (
     <section className="section-just-for-you">
       {/* Header */}
       <div className="section-header-just-for-you">
         <div className="section-header-left-just-for-you">
           <div className="header">
-              <div className="section-header-bar"></div>
-              <p>Just For You</p>
-            </div>
+            <div className="section-header-bar"></div>
+            <p>Just For You</p>
+          </div>
         </div>
         <button className="section-header-btn-just-for-you">See All</button>
       </div>
@@ -67,7 +72,7 @@ export default function JustForYou() {
               <div className="product-img-top-just-for-you">
                 {item.discount && <span className="product-discount-just-for-you">{item.discount}</span>}
                 <button className="product-eye-just-for-you">
-                  <FiEye size={16} />
+                  <FiEye onClick={() => handleClick(item)}  size={16} />
                 </button>
               </div>
 

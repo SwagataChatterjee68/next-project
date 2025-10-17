@@ -77,7 +77,7 @@ export default function CartPage() {
         {/* Left area */}
         <div className="left-actions flex-1">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <button onClick={handleReturn} className="btn-return">
+            <button onClick={handleReturn} className="btn-return cursor-pointer">
               Return To Shop
             </button>
 
@@ -86,7 +86,7 @@ export default function CartPage() {
 
           <div className="coupon-area mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3">
             <input type="text" placeholder="Coupon Code" className="coupon-input" />
-            <button className="btn-apply">Apply Coupon</button>
+            <button className="btn-apply cursor-pointer">Apply Coupon</button>
           </div>
         </div>
 
@@ -95,22 +95,22 @@ export default function CartPage() {
           <div className="summary-card border border-gray-300 rounded-md p-6">
             <h3 className="text-lg font-semibold mb-5">Cart Total</h3>
 
-            <div className="flex justify-between mb-3 text-sm">
-              <span>Subtotal</span>
+            <div className="flex justify-between mb-3 pb-2 font-normal text-sm border-b-1">
+              <span>Subtotal:</span>
               <span>${subtotal}</span>
             </div>
 
-            <div className="flex justify-between mb-3 text-sm">
-              <span>Shipping</span>
+            <div className="flex justify-between mb-3 pb-2 font-normal text-sm border-b-1">
+              <span>Shipping:</span>
               <span className="text-gray-600">Free</span>
             </div>
 
-            <div className="flex justify-between pt-3 border-t border-gray-200 font-semibold text-sm">
-              <span>Total</span>
+            <div className="flex justify-between pt-3 font-normal text-sm">
+              <span>Total:</span>
               <span>${subtotal}</span>
             </div>
 
-            <button className="btn-checkout mt-6 w-full">Proceed To Checkout</button>
+            <button className="btn-checkout mt-6 w-full cursor-pointer">Proceed To Checkout</button>
           </div>
         </aside>
       </div>

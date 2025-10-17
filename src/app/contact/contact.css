@@ -19,11 +19,11 @@
 }
 
 .contact-sidebar-box {
-  @apply border border-gray-200 shadow-sm p-6 rounded-md flex flex-col gap-10 bg-white;
+  @apply border border-gray-200 shadow-sm p-6 rounded-md flex flex-col gap-10 bg-white  h-[457px];
 }
 
 .contact-section-header {
-  @apply flex items-center gap-4 mb-4;
+  @apply flex items-center gap-4 mb-6;
 }
 
 .contact-icon {
@@ -31,16 +31,16 @@
 }
 
 .contact-text {
-  @apply text-sm text-gray-700;
+  @apply text-sm text-gray-700 mb-5;
 }
 
 /* --- Form Section --- */
 .contact-form-box {
-  @apply w-full lg:flex-1;
+  @apply w-full lg:flex-1 ;
 }
 
 .contact-form {
-  @apply shadow-md rounded-lg p-6 md:p-8 space-y-6 bg-white;
+  @apply shadow-md rounded-lg p-6 md:p-8 space-y-6 bg-white h-[457px];
 }
 
 .contact-input-group {

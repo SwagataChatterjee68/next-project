@@ -71,7 +71,9 @@
   @apply bg-[#FF8400] cursor-pointer text-white mt-10 px-6 py-3 rounded font-medium hover:bg-orange-600 transition block mx-auto;
 }
 .addcart-btn {
-  @apply w-full bg-black text-white cursor-pointer py-2 text-xs sm:text-sm justify-center items-center hover:bg-gray-800 transition px-5 absolute bottom-2 overflow-hidden transform -translate-x-1/2 hidden group-hover:block rounded mt-2;
+  @apply w-full bg-black text-white cursor-pointer py-2 text-xs sm:text-sm justify-center 
+  items-center hover:bg-gray-800 transition px-5 absolute bottom-2 overflow-hidden 
+  transform -translate-x-1/2 hidden group-hover:block rounded mt-2;
 }
 
 

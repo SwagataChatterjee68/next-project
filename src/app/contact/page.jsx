@@ -30,10 +30,10 @@ export default function AccountPage() {
         {/* --- Left Sidebar --- */}
         <aside className="contact-sidebar">
           <div className="contact-sidebar-box">
-            <div>
+            <div className="border-b pb-8 border-b-[#D9D9D959]">
               <div className="contact-section-header">
                 <div className="contact-icon"></div>
-                <h3 className="font-semibold">Call To Us</h3>
+                <h3 className="font-semibold ">Call To Us</h3>
               </div>
               <p className="contact-text">
                 We are available 24/7, 7 days a week.

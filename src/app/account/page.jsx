@@ -39,7 +39,7 @@ export default function AccountPage() {
         </aside>
 
         {/* --- Edit Profile Section --- */}
-        <section className=" shadow-2xl rounded-md px-24 py-5 border border-gray-200 ">
+        <section className=" shadow-2xl rounded-md xl:px-24 px-5 py-5 border border-gray-200 ">
           <div className="flex justify-between items-center mb-5">
             <h2 className="text-lg font-semibold text-red-500">Edit Your Profile</h2>
           </div>
@@ -97,13 +97,13 @@ export default function AccountPage() {
             </div>
 
             {/* Buttons */}
-            <div className="flex justify-end items-center gap-4">
+            <div className="flex justify-end items-center gap-10">
               <button type="button" className="text-gray-700 hover:text-black">
                 Cancel
               </button>
               <button
                 type="submit"
-                className="bg-[#FF8400] text-white px-6 py-2 rounded-sm text-[16px] hover:bg-orange-600 transition"
+                className="bg-[#FF8400] text-white px-6 py-4 font-medium rounded-sm text-[16px] hover:bg-orange-600 transition"
               >
                 Save Changes
               </button>

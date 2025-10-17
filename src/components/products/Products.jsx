@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { FaStar, FaHeart, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaStar, FaHeart } from "react-icons/fa";
 import { FiHeart, FiEye } from "react-icons/fi";
 import { useCart } from "@/context/CartContext";
 import { useWishlist } from "@/context/WishlistContext";

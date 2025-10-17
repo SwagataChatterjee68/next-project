@@ -32,10 +32,10 @@
   @apply w-full h-48 object-contain bg-[#FDFBD44A];
 }
 .add-to-cart-btn-wishlist {
-  @apply w-full cursor-pointer bg-black text-white py-2 flex justify-center items-center gap-2 text-sm hover:bg-gray-800 transition;
+  @apply w-full cursor-pointer rounded bg-black text-white py-2 flex justify-center items-center gap-2 text-sm hover:bg-gray-800 transition;
 }
 .card-info-wishlist {
-  @apply p-4 text-left;
+  @apply py-2 mt-3 text-left;
 }
 .card-title-wishlist {
   @apply text-sm font-medium;
