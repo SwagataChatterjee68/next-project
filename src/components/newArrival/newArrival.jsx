@@ -11,7 +11,7 @@ const NewArrival = () => {
                     <div className="section-header-bar"></div>
                     <p>Featured</p>
                 </div>
-                <h2 className="newarrival-title">New Arrival</h2>
+                <h2 className="newarrival-title title">New Arrival</h2>
 
                 {/* Grid */}
                 <div className="newarrival-grid">
@@ -23,9 +23,9 @@ const NewArrival = () => {
                             className="newarrival-img  "
                         />
                         <div className="newarrival-overlay">
-                            <h3 className="newarrival-card-title">PlayStation 5</h3>
+                            <h3 className="newarrival-card-title title">PlayStation 5</h3>
                             <p className="newarrival-card-subtitle">
-                                Black and White version of the PS5 coming out on sale.
+                               Black and White version of the PS5 coming out on sale.
                             </p>
                             <button className="newarrival-btn">Shop Now</button>
                         </div>
@@ -41,7 +41,7 @@ const NewArrival = () => {
                                 className="newarrival-img rotate-y-180  "
                             />
                             <div className="newarrival-overlay">
-                                <h3 className="newarrival-card-title">Women’s Collections</h3>
+                                <h3 className="newarrival-card-title title">Women’s Collections</h3>
                                 <p className="newarrival-card-subtitle">
                                     Featured woman collections that give you another vibe.
                                 </p>
@@ -57,7 +57,7 @@ const NewArrival = () => {
                                 className="newarrival-img "
                             />
                             <div className="newarrival-overlay">
-                                <h3 className="newarrival-card-title object-cover">Speakers</h3>
+                                <h3 className="newarrival-card-title object-cover title">Speakers</h3>
                                 <p className="newarrival-card-subtitle">
                                     Amazon wireless speakers
                                 </p>
@@ -73,7 +73,7 @@ const NewArrival = () => {
                                 className="newarrival-img"
                             />
                             <div className="newarrival-overlay">
-                                <h3 className="newarrival-card-title">Perfume</h3>
+                                <h3 className="newarrival-card-title title">Perfume</h3>
                                 <p className="newarrival-card-subtitle">GUCCI INTENSE-OUD EDP</p>
                                 <button className="newarrival-btn">Shop Now</button>
                             </div>

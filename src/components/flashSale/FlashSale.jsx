@@ -139,8 +139,8 @@ const FlashSale = () => {
             </div>
             <div className="title-with-timer-flashsale">
               <div className="md:flex md:flex-row sm:flex-col sm:gap-20 gap-10 items-center">
-                <h2 className="font-inter">Flash Sales</h2>
-                <div className="flashsale-timer">
+                <h2 className="title">Flash Sales</h2>
+                <div className="flashsale-timer title">
                   <TimeBox label="Days " value={timeLeft.days} />
                   <TimeBox label="Hours " value={timeLeft.hours} />
                   <TimeBox label="Minutes " value={timeLeft.minutes} />

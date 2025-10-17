@@ -51,7 +51,7 @@ export default function ProductPage() {
 
         {/* Right: Details */}
         <div className="details-section">
-          <h1 className="product-title">{product.title}</h1>
+          <h1 className="product-title title">{product.title}</h1>
           <p className="rating">
             ⭐⭐⭐⭐⭐ ({product.reviews} Reviews){' '}
             <span className={product.stock ? 'in-stock' : 'out-stock'}>

@@ -41,7 +41,7 @@ const MusicBanner = () => {
       <div className="wrapper flex md:flex-nowrap flex-wrap">
         <div className="music-text-wrapper">
           <p className="music-category">Categories</p>
-          <h2 className="music-heading">Enhance Your Music Experience</h2>
+          <h2 className="music-heading title">Enhance Your Music Experience</h2>
 
           {/* Countdown */}
           <div className="music-countdown">

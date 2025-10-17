@@ -13,7 +13,9 @@ body {
   background-color: #FFFFFF;
   color: #000000;
 }
-
+.title{
+  font-family: 'Inter';
+}
 footer {
   @apply bg-[#000000] text-[#fafafa] w-full;
 }

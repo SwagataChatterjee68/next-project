@@ -43,7 +43,7 @@ const Category = () => {
             <p>Categories</p>
           </div>
           <div className="category-header-title">
-            <h2 className="category-title">Browse By Category</h2>
+            <h2 className="category-title title">Browse By Category</h2>
             <div className="arrow-buttons">
               <button onClick={() => scroll("left")} className="arrow-btn">
                 <GoArrowLeft />

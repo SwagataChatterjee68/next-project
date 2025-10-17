@@ -24,13 +24,13 @@
 
 /* Desktop Links */
 .nav-links {
-  @apply hidden md:flex items-center gap-6 lg:gap-10 font-medium text-gray-800 ;
+  @apply hidden md:flex items-center gap-6 lg:gap-10 font-normal text-[#000000] ;
 }
 .nav-link {
   @apply cursor-pointer hover:text-black transition;
 }
 .nav-link-active {
-  @apply cursor-pointer border-b-2 border-black transition;
+  @apply cursor-pointer border-b-1 border-b-gray-300 transition ;
 }
 
 /* Search + Icons */

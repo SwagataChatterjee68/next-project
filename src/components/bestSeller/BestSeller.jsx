@@ -67,7 +67,7 @@ const BestSeller = () => {
 
         {/* Title and Button */}
         <div className="bestseller-header">
-          <h2 className="bestseller-title" >Best Selling Products</h2>
+          <h2 className="bestseller-title title" >Best Selling Products</h2>
           <button className="bestseller-btn">View All</button>
         </div>
 
