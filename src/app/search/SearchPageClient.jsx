@@ -17,24 +17,27 @@ export default function SearchPageClient() {
   );
 
   return (
-    <div className="mt-28 p-6">
-      <h1 className="text-2xl font-semibold mb-6">
-        Search Results for <span className="text-red-500">"{query}"</span>
-      </h1>
+    <div className="min-h-screen w-full py-16 md:py-20 xl:py-24">
+      <div className="2xl:max-w-7xl md:max-w-6xl mx-auto px-4 py-20">
+        <h1 className="md:text-2xl text-xl font-semibold mb-6">
+          Search Results for <span className="text-red-500">"{query}"</span>
+        </h1>
 
-      {filtered.length > 0 ? (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {filtered.map((item) => (
-            <div key={item.id} className="border p-4 rounded-md">
-              <img src={item.img} alt={item.title} className="h-40 object-contain mb-3" />
-              <h2 className="text-sm font-medium">{item.title}</h2>
-              <p className="text-red-600 font-semibold">${item.price}</p>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <p className="text-gray-500">No products found.</p>
-      )}
+        {filtered.length > 0 ? (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+            {filtered.map((item) => (
+              <div key={item.id} className="border px-3 py-4 text-left w-full border-gray-400 rounded-md">
+                <img src={item.img} alt={item.title} className="h-52 w-full object-cover mb-2 px-2 py-4" />
+                <h2 className="text-sm font-medium">{item.title}</h2>
+                <p className="text-red-600 font-semibold">${item.price}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="text-gray-500">No products found.</p>
+        )}
+      </div>
+
     </div>
   );
 }

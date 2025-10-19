@@ -4,12 +4,8 @@
   @apply p-10 text-red-500;
 }
 
-.product-page {
-  @apply 2xl:max-w-7xl  md:max-w-5xl mx-auto min-h-screen py-52 px-1;
-}
-
 .header {
-  @apply flex items-center gap-2 mb-4;
+  @apply flex items-center gap-2 ;
 }
 
 .section-header-bar {
@@ -126,7 +122,7 @@
 }
 
 .size-btn {
-  @apply px-3 py-1 border border-gray-300 rounded-md hover:bg-gray-100;
+  @apply px-3 py-1 border rounded-md  cursor-pointer  hover:bg-[#FF8400] ;
 }
 
 .quantity-buy {
@@ -175,11 +171,11 @@
 }
 
 .related-price {
-  @apply text-orange-500 font-bold;
+  @apply text-[#FFA500] font-bold;
 }
 
 .old-price {
-  @apply text-gray-400 line-through ml-2;
+  @apply text-gray-400 line-through ml-2 text-xs;
 }
 
 .related-rating {
@@ -188,5 +184,15 @@
 .addcart-btn {
   @apply w-full bg-black text-white cursor-pointer py-2 text-xs sm:text-sm justify-center items-center
    hover:bg-gray-800 transition px-5 absolute bottom-0
-  overflow-hidden transform -translate-x-1/2 hidden group-hover:block rounded mt-2;
+  overflow-hidden transform -translate-x-1/2 hidden group-hover:block rounded mt-2 ;
+}
+.rating-wrapper-detail {
+  @apply flex items-center gap-1 text-[#FFA500] text-xs sm:text-sm;
+}
+
+.rating-count-detail {
+  @apply text-gray-600 text-[11px] sm:text-xs ml-1;
+}
+.action-btn {
+  @apply absolute top-5 right-3 flex flex-col gap-4;
 }
