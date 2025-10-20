@@ -61,7 +61,7 @@
 }
 
 .details-section {
-  @apply space-y-4  w-md;
+  @apply space-y-4  lg:w-md;
 }
 
 .product-title {
@@ -134,7 +134,7 @@
 }
 
 .qty-btn {
-  @apply px-3 py-1 cursor-pointer  hover:bg-[#FF8400] transition-all;
+  @apply px-3 py-1 cursor-pointer  hover:bg-[#FF8400] transition-all hover:text-white;
 }
 
 .qty-value {

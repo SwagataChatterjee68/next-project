@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import { products } from '@/data/products';
 import "./productDetails.css";
 import { useWishlist } from "@/context/WishlistContext";
-import { FaHeart,FaStar } from "react-icons/fa";
+import { FaHeart, FaStar } from "react-icons/fa";
 import { FiHeart, FiEye } from "react-icons/fi";
 import { useCart } from "@/context/CartContext";
 
@@ -18,7 +18,9 @@ export default function ProductPage() {
   const [quantity, setQuantity] = useState(1);
   const [relatedItems, setRelatedItems] = useState([]);
   const [selectedColor, setSelectedColor] = useState("");
+  const [selectedSize, setSelectedSize] = useState("");
   const colors = ["blue", "red"];
+  const sizes = ["XS", "S", "M", "L", "XL"];
 
   const router = useRouter();
   const { addToCart } = useCart();
@@ -39,6 +41,20 @@ export default function ProductPage() {
       setProduct(null);
     }
   }, [slug]);
+
+  const handleBuyNow = () => {
+    console.log({
+      productTitle: product.title,
+      selectedColor,
+      selectedSize,
+      quantity,
+      price: product.price,
+    });
+    setSelectedColor("");
+    setSelectedSize("");
+    setQuantity(1);
+  };
+
 
   if (!product) return <div className="not-found">Product not found</div>;
 
@@ -84,31 +100,43 @@ export default function ProductPage() {
                   <div
                     key={color}
                     onClick={() => setSelectedColor(color)}
-                    className={`p-1 rounded-full cursor-pointer ${selectedColor === color ? "border-1 border-black" : "border-2 border-transparent"
+                    className={`p-1 rounded-full cursor-pointer ${selectedColor === color ? "border-2 border-black" : "border-2 border-transparent"
                       }`}
                   >
-                    <span className={`color-circle block w-6 h-6 rounded-full bg-${color}-500`}></span>
+                    <span className={`block w-6 h-6 rounded-full bg-${color}-500`}></span>
                   </div>
                 ))}
               </div>
             </div>
             <div className="sizes">
               <h3>Size:</h3>
-              <div className="size-options">
+              <div className="size-options flex gap-2">
                 {['XS', 'S', 'M', 'L', 'XL'].map((size) => (
-                  <button key={size} className="size-btn">{size}</button>
+                  <button
+                    key={size}
+                    onClick={() => setSelectedSize(size)}
+                    className={`size-btn px-4 py-2 border rounded 
+          ${selectedSize === size
+                        ? "bg-[#FF8400] text-white"
+                        : "bg-white text-black border-gray-300"
+                      }`}
+                  >
+                    {size}
+                  </button>
                 ))}
               </div>
             </div>
-
-            <div className="quantity-buy ">
+            <div className="quantity-buy">
               <div className="qty-box">
                 <button onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)} className="qty-btn border-r ">-</button>
                 <span className="qty-value">{quantity}</span>
                 <button onClick={() => setQuantity(quantity + 1)} className="qty-btn border-l ">+</button>
               </div>
-              <button className="buy-btn">Buy Now</button>
+              <button onClick={handleBuyNow} className="buy-btn">
+                Buy Now
+              </button>
             </div>
+
 
             {/* Delivery Info */}
             <div className="delivery-info cursor-pointer ">
