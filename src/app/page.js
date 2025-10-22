@@ -95,10 +95,10 @@ export default function Home() {
                 className=" lg:justify-start justify-center items-center lg:pt-0 pt-10    lg:text-left hover:text-[#FFA500] transition-colors duration-200"
               >
                 {/* Icons only visible on mobile and tablet */}
-                <div className="lg:hidden flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-gray-100 rounded-full mb-2">
+                <div className="lg:hidden flex items-center justify-center w-12  h-12 md:w-14 md:h-14 bg-gray-100 rounded-full mb-2">
                   {categoryIcons[cat]}
                 </div>
-                <span className="text-xs sm:text-sm md:text-base font-medium">
+                <span className="text-sm  sm:text-sm md:text-base font-medium">
                   {cat}
                 </span>
               </Link>
