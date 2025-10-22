@@ -1,6 +1,18 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import {
+  FaFemale,
+  FaTshirt,
+  FaMobileAlt,
+  FaHome,
+  FaPills,
+  FaFutbol,
+  FaBabyCarriage,
+  FaShoppingCart,
+  FaSpa,
+} from "react-icons/fa";
+
 import FlashSale from "@/components/flashSale/FlashSale";
 import Category from "@/components/category/Category";
 import BestSeller from "@/components/bestSeller/BestSeller";
@@ -21,6 +33,18 @@ export default function Home() {
     "Groceries & Pets",
     "Health & Beauty",
   ];
+
+  const categoryIcons = {
+    "Woman’s Fashion": <FaFemale className="w-6 h-6 md:w-7 md:h-7" />,
+    "Men’s Fashion": <FaTshirt className="w-6 h-6 md:w-7 md:h-7" />,
+    "Electronics": <FaMobileAlt className="w-6 h-6 md:w-7 md:h-7" />,
+    "Home & Lifestyle": <FaHome className="w-6 h-6 md:w-7 md:h-7" />,
+    "Medicine": <FaPills className="w-6 h-6 md:w-7 md:h-7" />,
+    "Sports & Outdoor": <FaFutbol className="w-6 h-6 md:w-7 md:h-7" />,
+    "Baby's & Toys": <FaBabyCarriage className="w-6 h-6 md:w-7 md:h-7" />,
+    "Groceries & Pets": <FaShoppingCart className="w-6 h-6 md:w-7 md:h-7" />,
+    "Health & Beauty": <FaSpa className="w-6 h-6 md:w-7 md:h-7" />,
+  };
 
   const [current, setCurrent] = useState(0);
   const slides = [
@@ -50,7 +74,6 @@ export default function Home() {
     },
   ];
 
-  // Auto slide every 4s
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
@@ -63,24 +86,37 @@ export default function Home() {
       <div className="wrapper">
         {/* --- Hero Section --- */}
         <section className="hero">
+          {/* --- Categories --- */}
           <div className="categories font-poppins">
             {categories.map((cat, i) => (
-              <Link href="/" key={i}>
-                {cat}
+              <Link
+                href="/"
+                key={i}
+                className=" lg:justify-start justify-center items-center lg:pt-0 pt-10    lg:text-left hover:text-[#FFA500] transition-colors duration-200"
+              >
+                {/* Icons only visible on mobile and tablet */}
+                <div className="lg:hidden flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-gray-100 rounded-full mb-2">
+                  {categoryIcons[cat]}
+                </div>
+                <span className="text-xs sm:text-sm md:text-base font-medium">
+                  {cat}
+                </span>
               </Link>
             ))}
           </div>
 
           <div className="hero-divider" />
+
           {/* --- Slider --- */}
           <div className="relative w-full overflow-hidden rounded-lg">
             {slides.map((slide, index) => (
               <div
                 key={slide.id}
-                className={`absolute top-10 left-0 w-full transition-all duration-700 ease-in-out ${index === current
+                className={`absolute top-10 left-0 w-full transition-all duration-700 ease-in-out ${
+                  index === current
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 translate-x-full"
-                  }`}
+                }`}
               >
                 <div
                   className={`hero-banner ${slide.bg} flex flex-col md:flex-row`}
@@ -112,8 +148,9 @@ export default function Home() {
                 <div
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className={`w-2.5 h-2.5 rounded-full cursor-pointer ${current === i ? "bg-[#FF4000]" : "bg-white/50"
-                    }`}
+                  className={`w-2.5 h-2.5 rounded-full cursor-pointer ${
+                    current === i ? "bg-[#FF4000]" : "bg-white/50"
+                  }`}
                 />
               ))}
             </div>

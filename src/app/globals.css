@@ -34,7 +34,7 @@ footer {
 }
 
 .categories {
-  @apply flex flex-row lg:flex-col flex-wrap gap-4 text-sm md:text-base font-medium lg:w-[220px] w-[217px] pt-10 ;
+  @apply grid grid-cols-3  lg:flex lg:flex-col flex-wrap gap-4 text-sm md:text-base font-medium lg:w-[220px] w-full pt-10 ;
 }
 
 .categories a {
@@ -77,4 +77,9 @@ footer {
 /* --- Utilities --- */
 .title {
   @apply text-lg md:text-xl font-bold;
+}
+
+
+.categories a {
+  @apply hover:text-[#FFA500] transition-colors duration-200;
 }
