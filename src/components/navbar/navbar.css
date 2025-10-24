@@ -16,7 +16,7 @@
 
 /* --- Main Navbar --- */
 .mainNav {
-  @apply flex items-center 2xl:max-w-7xl md:max-w-6xl  mx-auto justify-between px-3.5 py-3 pt-10 sticky top-0 z-50;
+  @apply flex items-center 2xl:max-w-7xl md:max-w-6xl  mx-auto justify-between px-3.5 py-3 lg:pt-10 sticky top-0 z-50;
 }
 .logo {
   @apply text-xl md:text-2xl font-bold cursor-pointer;

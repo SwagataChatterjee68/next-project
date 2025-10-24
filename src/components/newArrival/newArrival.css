@@ -10,7 +10,7 @@
 }
 
 .newarrival-title {
-  @apply text-xl md:text-[36px]  font-semibold mb-10;
+  @apply text-xl md:text-[36px] font-semibold text-gray-900 mb-10;
 }
 
 /* Grid */

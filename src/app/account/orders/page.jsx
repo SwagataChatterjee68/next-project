@@ -9,8 +9,8 @@ export default function OrdersPage() {
   const orders = [
     {
       id: 1,
-      title: "Classic Leather Watch",
-      img: "/watch.jpg",
+      title: "Gaming Laptop",
+      img: "/laptop.png",
       price: 199,
       quantity: 1,
       status: "Delivered",
@@ -18,8 +18,8 @@ export default function OrdersPage() {
     },
     {
       id: 2,
-      title: "Wireless Headphones",
-      img: "/headphones.jpg",
+      title: "Football Shoes",
+      img: "/shoes.png",
       price: 120,
       quantity: 2,
       status: "In Transit",

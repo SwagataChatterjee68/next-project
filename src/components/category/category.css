@@ -21,7 +21,7 @@
 }
 
 .category-title {
-  @apply lg:text-[36px] font-semibold text-xl ;
+  @apply text-xl md:text-[36px] font-semibold text-gray-900;
 }
 
 /* --- Arrows --- */

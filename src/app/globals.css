@@ -34,7 +34,7 @@ footer {
 }
 
 .categories {
-  @apply grid grid-cols-3 lg:flex lg:flex-col flex-wrap gap-4 text-sm md:text-base font-medium lg:w-[220px] w-full pt-10 ;
+  @apply grid grid-cols-3 lg:flex lg:flex-col lg:gap-4  gap-0 flex-wrap text-sm md:text-base font-medium lg:w-[220px] lg:pt-18 pt-10 ;
 }
 
 .categories a {
