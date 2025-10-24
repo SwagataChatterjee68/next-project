@@ -59,9 +59,10 @@ export default function CartPage() {
                       type="number"
                       min="1"
                       value={item.quantity}
-                      onChange={(e) =>
-                        updateQuantity(item.id, parseInt(e.target.value))
-                      }
+                      onChange={(e) => {
+                        const value = Math.max(1, parseInt(e.target.value) || 1);
+                        updateQuantity(item.id, value);
+                      }}
                       className="quantity-input-cart"
                     />
                   </td>
