@@ -7,6 +7,7 @@ import { FaStar, FaHeart } from "react-icons/fa";
 import { FiHeart, FiEye } from "react-icons/fi";
 import { useCart } from "@/context/CartContext";
 import { useWishlist } from "@/context/WishlistContext";
+import Link from "next/link";
 
 export default function CategoryPage() {
     const { slug } = useParams();
@@ -112,7 +113,7 @@ export default function CategoryPage() {
             <section className="2xl:max-w-7xl md:max-w-6xl mx-auto px-3.5 pt-10">
                 {/* Breadcrumb */}
                 <div className="text-sm text-gray-500 mb-2">
-                    Home <span className="mx-1">›</span>
+                    <Link href='/' >Home</Link> <span className="mx-1">›</span>
                     <span className="text-gray-800 capitalize">{category.title}</span>
                 </div>
 

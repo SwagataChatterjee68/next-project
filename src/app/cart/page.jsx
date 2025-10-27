@@ -17,7 +17,7 @@ export default function CartPage() {
     <div className="cart-container">
       {/* Breadcrumb */}
       <div className="breadcrumb">
-        Home / <span className="active">Cart</span>
+       <Link href='/' >Home</Link> / <span className="active">Cart</span>
       </div>
 
       {/* Cart Table */}

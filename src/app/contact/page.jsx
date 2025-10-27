@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import "./contact.css";
-
+import Link from "next/link";
 export default function AccountPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,7 +23,7 @@ export default function AccountPage() {
     <main className="contact-container">
       {/* Breadcrumb */}
       <div className="breadcrumb">
-        Home / <span className="font-medium text-black">Contact</span>
+        <Link href='/' >Home</Link> / <span className="font-medium text-black">Contact</span>
       </div>
 
       <div className="contact-wrapper">
