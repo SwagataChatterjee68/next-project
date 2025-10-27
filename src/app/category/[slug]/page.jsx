@@ -43,19 +43,19 @@ export default function CategoryPage() {
         electronics: {
             title: "Electronics",
             products: [
-                { id: 29, name: "Smartphone Pro X", image: "/electronics-1.jpg", price: 799, oldPrice: 999, rating: 5, discount: "-20%", slug: "smartphone-pro-x" },
-                { id: 30, name: "Wireless Headphones", image: "/electronics-2.jpg", price: 120, oldPrice: 150, rating: 4, discount: "-15%", slug: "wireless-headphones" },
-                { id: 31, name: "4K LED TV", image: "/electronics-3.jpg", price: 450, oldPrice: 600, rating: 5, discount: "-25%", slug: "4k-led-tv" },
-                { id: 32, name: "Bluetooth Speaker", image: "/electronics-4.jpg", price: 80, oldPrice: 100, rating: 4, discount: "-20%", slug: "bluetooth-speaker" },
+                { id: 29, name: "Smartphone Pro X", image: "/electronic-1.webp", price: 799, oldPrice: 999, rating: 5, discount: "-20%", slug: "smartphone-pro-x" },
+                { id: 30, name: "Wireless Headphones", image: "/electronic-2.webp", price: 120, oldPrice: 150, rating: 4, discount: "-15%", slug: "wireless-headphones" },
+                { id: 31, name: "4K LED TV", image: "/electronic-3.webp", price: 450, oldPrice: 600, rating: 5, discount: "-25%", slug: "4k-led-tv" },
+                { id: 32, name: "Bluetooth Speaker", image: "/electronic-4.jpg", price: 80, oldPrice: 100, rating: 4, discount: "-20%", slug: "bluetooth-speaker" },
             ],
         },
         "home-lifestyle": {
             title: "Home & Lifestyle",
             products: [
-                { id: 33, name: "Wooden Table Lamp", image: "/home-1.jpg", price: 45, oldPrice: 60, rating: 4, discount: "-25%", slug: "wooden-table-lamp" },
-                { id: 34, name: "Cotton Bed Sheet", image: "/home-2.jpg", price: 70, oldPrice: 85, rating: 5, discount: "-18%", slug: "cotton-bed-sheet" },
-                { id: 35, name: "Wall Clock", image: "/home-3.jpg", price: 30, oldPrice: 45, rating: 4, discount: "-33%", slug: "wall-clock" },
-                { id: 36, name: "Indoor Plant Set", image: "/home-4.jpg", price: 55, oldPrice: 70, rating: 5, discount: "-21%", slug: "indoor-plant-set" },
+                { id: 33, name: "Wooden Table Lamp", image: "/home-1.webp", price: 45, oldPrice: 60, rating: 4, discount: "-25%", slug: "wooden-table-lamp" },
+                { id: 34, name: "Cotton Bed Sheet", image: "/home-2.webp", price: 70, oldPrice: 85, rating: 5, discount: "-18%", slug: "cotton-bed-sheet" },
+                { id: 35, name: "Wall Clock", image: "/home-3.webp", price: 30, oldPrice: 45, rating: 4, discount: "-33%", slug: "wall-clock" },
+                { id: 36, name: "Indoor Plant Set", image: "/home-4.avif", price: 55, oldPrice: 70, rating: 5, discount: "-21%", slug: "indoor-plant-set" },
             ],
         },
         medicine: {
@@ -79,10 +79,10 @@ export default function CategoryPage() {
         "babys-toys": {
             title: "Baby's & Toys",
             products: [
-                { id: 45, name: "Soft Teddy Bear", image: "/toys-1.jpg", price: 25, oldPrice: 35, rating: 5, discount: "-28%", slug: "soft-teddy-bear" },
-                { id: 46, name: "Baby Stroller", image: "/toys-2.jpg", price: 150, oldPrice: 200, rating: 5, discount: "-25%", slug: "baby-stroller" },
-                { id: 47, name: "Lego Building Set", image: "/toys-3.jpg", price: 60, oldPrice: 80, rating: 4, discount: "-25%", slug: "lego-building-set" },
-                { id: 48, name: "Toy Car", image: "/toys-4.jpg", price: 30, oldPrice: 40, rating: 4, discount: "-25%", slug: "toy-car" },
+                { id: 45, name: "Soft Teddy Bear", image: "/toy-1.jpg", price: 25, oldPrice: 35, rating: 5, discount: "-28%", slug: "soft-teddy-bear" },
+                { id: 46, name: "Baby Stroller", image: "/toy-2.jpg", price: 150, oldPrice: 200, rating: 5, discount: "-25%", slug: "baby-stroller" },
+                { id: 47, name: "Lego Building Set", image: "/toy-3.jpg", price: 60, oldPrice: 80, rating: 4, discount: "-25%", slug: "lego-building-set" },
+                { id: 48, name: "Toy Car", image: "/toy-4.jpg", price: 30, oldPrice: 40, rating: 4, discount: "-25%", slug: "toy-car" },
             ],
         },
         "groceries-pets": {
@@ -164,8 +164,8 @@ export default function CategoryPage() {
                                         <Image
                                             src={p.image}
                                             alt={p.name}
-                                            width={150}
-                                            height={150}
+                                            width={200}
+                                            height={200}
                                             className="object-cover transition-transform duration-300"
                                         />
                                     </div>
