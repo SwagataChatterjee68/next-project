@@ -21,7 +21,7 @@ export default function LoginPage() {
             setLoading(true);
 
             const res = await fetch(
-                `http://localhost:5000/users?email=${data.email}&password=${data.password}`
+                `https://json-server-lnkp.onrender.com/users?email=${data.email}&password=${data.password}`
             );
 
             const users = await res.json();

@@ -14,7 +14,7 @@ export default function SignUpPage() {
   const onSubmit = async (data) => {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:5000/users", {
+      const res = await fetch("https://json-server-lnkp.onrender.com/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

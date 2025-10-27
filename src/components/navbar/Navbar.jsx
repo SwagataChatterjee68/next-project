@@ -96,9 +96,15 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="mobile-menu">
-          <Link href="/" className={isActive("/")}>Home</Link>
-          <Link href="/contact" className={isActive("/contact")}>Contact</Link>
-          <Link href="/register" className={isActive("/register")}>Sign Up</Link>
+          <Link href="/" className={isActive("/")} onClick={() => setIsOpen(false)}>
+            Home
+          </Link>
+          <Link href="/contact" className={isActive("/contact")} onClick={() => setIsOpen(false)}>
+            Contact
+          </Link>
+          <Link href="/register" className={isActive("/register")} onClick={() => setIsOpen(false)}>
+            Sign Up
+          </Link>
 
           {/* Mobile Search */}
           <form onSubmit={handleSearch} className="mobile-search">
@@ -112,20 +118,21 @@ export default function Navbar() {
           </form>
 
           <div className="flex items-center gap-4 mt-2">
-            <Link href="/wishlist" className="icon-btn-nav">
+            <Link href="/wishlist" className="icon-btn-nav" onClick={() => setIsOpen(false)}>
               <FaRegHeart />
               {wishlistCount > 0 && <span className="badge">{wishlistCount}</span>}
             </Link>
-            <Link href="/cart" className="icon-btn-nav">
+            <Link href="/cart" className="icon-btn-nav" onClick={() => setIsOpen(false)}>
               <IoCartOutline className="cart-icon" />
               {cartCount > 0 && <span className="badge">{cartCount}</span>}
             </Link>
-            <Link href="/account" className="icon-btn-nav">
+            <Link href="/account" className="icon-btn-nav" onClick={() => setIsOpen(false)}>
               <FaRegUser />
             </Link>
           </div>
         </div>
       )}
+
     </header>
   );
 }
