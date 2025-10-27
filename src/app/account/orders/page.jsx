@@ -77,7 +77,7 @@ export default function OrdersPage() {
               </p>
               <button
                 onClick={() => router.push(`/orders/${order.id}`)}
-                className="text-sm border border-gray-800 px-4 py-2 rounded hover:bg-gray-50"
+                className="text-sm border cursor-pointer border-gray-800 px-4 py-2 rounded hover:bg-gray-50"
               >
                 View Details
               </button>
@@ -92,7 +92,7 @@ export default function OrdersPage() {
           <p>No orders found.</p>
           <button
             onClick={() => router.push("/")}
-            className="mt-4 px-6 py-2 border border-gray-800 rounded hover:bg-gray-50"
+            className="mt-4 px-6 py-2 cursor-pointer border border-gray-800 rounded hover:bg-gray-50"
           >
             Return to Shop
           </button>

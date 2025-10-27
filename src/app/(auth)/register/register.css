@@ -5,7 +5,7 @@
 }
 
 .auth-wrapper {
-  @apply flex 2xl:max-w-7xl md:max-w-5xl mx-auto  bg-white px-3.5 overflow-hidden;
+  @apply flex 2xl:max-w-7xl md:max-w-6xl mx-auto  bg-white px-3.5 overflow-hidden;
 }
 
 .auth-image {
@@ -13,7 +13,7 @@
 }
 
 .auth-image img {
-  @apply w-full  object-cover h-[784px] 2xl:mt-20 mt-10;
+  @apply  object-cover  2xl:mt-20 mt-10;
 }
 
 .auth-form {

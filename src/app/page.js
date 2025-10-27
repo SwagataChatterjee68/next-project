@@ -90,7 +90,11 @@ export default function Home() {
           <div className="categories font-poppins">
             {categories.map((cat, i) => (
               <Link
-                href="/"
+                href={`/category/${cat
+                  .toLowerCase()
+                  .replace(/[’']/g, "")
+                  .replace(/\s+&\s+/g, "-")
+                  .replace(/\s+/g, "-")}`}
                 key={i}
                 className="lg:justify-start flex flex-col justify-center items-center lg:items-start lg:pt-0 pt-10 lg:text-left hover:text-[#FFA500] transition-colors duration-200"
               >
@@ -112,11 +116,10 @@ export default function Home() {
             {slides.map((slide, index) => (
               <div
                 key={slide.id}
-                className={`absolute lg:top-18 top-10 left-0 w-full transition-all duration-700 ease-in-out ${
-                  index === current
+                className={`absolute lg:top-18 top-10 left-0 w-full transition-all duration-700 ease-in-out ${index === current
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 translate-x-full"
-                }`}
+                  }`}
               >
                 <div
                   className={`hero-banner ${slide.bg} flex flex-col md:flex-row`}
@@ -148,9 +151,8 @@ export default function Home() {
                 <div
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className={`w-2.5 h-2.5 rounded-full cursor-pointer ${
-                    current === i ? "bg-[#FF4000]" : "bg-white/50"
-                  }`}
+                  className={`w-2.5 h-2.5 rounded-full cursor-pointer ${current === i ? "bg-[#FF4000]" : "bg-white/50"
+                    }`}
                 />
               ))}
             </div>

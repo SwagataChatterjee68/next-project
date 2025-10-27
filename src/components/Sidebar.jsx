@@ -3,6 +3,12 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+import {
+  VscAccount,
+  VscPackage,
+  VscLocation,
+  VscSignOut,
+} from "react-icons/vsc";
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -10,10 +16,10 @@ export default function Sidebar() {
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const menu = [
-    { name: "Account details", href: "/account" },
-    { name: "Orders", href: "/account/orders" },
-    { name: "Addresses", href: "/account/address" },
-    { name: "Log out", href: "/account/logout" },
+    { name: "Account details", href: "/account", icon: <VscAccount size={24} /> },
+    { name: "Orders", href: "/account/orders", icon: <VscPackage size={24} /> },
+    { name: "Addresses", href: "/account/address", icon: <VscLocation size={24} /> },
+    { name: "Log out", href: "/account/logout", icon: <VscSignOut size={24} /> },
   ];
 
   const handleLogout = () => {
@@ -23,24 +29,26 @@ export default function Sidebar() {
 
   return (
     <>
-      <aside className="py-5 md:py-20 flex md:flex-col xl:py-32 md:w-1/3 w-full gap-8">
+      <aside className="py-5 md:py-20 flex md:flex-col xl:py-32 md:w-1/3 w-full gap-2 md:gap-6">
         {menu.map((item) =>
           item.name === "Log out" ? (
             <button
               key={item.name}
               onClick={() => setShowLogoutModal(true)}
-              className="text-left cursor-pointer text-gray-700 hover:text-black"
+              className="flex items-center gap-2 text-left cursor-pointer text-gray-700 hover:text-black"
             >
-              {item.name}
+              {item.icon}
+              <span>{item.name}</span>
             </button>
           ) : (
             <Link key={item.name} href={item.href}>
               <p
-                className={`cursor-pointer text-gray-700 hover:text-black ${
+                className={`flex items-center gap-2 cursor-pointer text-gray-700 hover:text-black ${
                   pathname === item.href ? "font-semibold" : ""
                 }`}
               >
-                {item.name}
+                {item.icon}
+                <span>{item.name}</span>
               </p>
             </Link>
           )
@@ -49,7 +57,7 @@ export default function Sidebar() {
 
       {/* Logout Confirmation Modal */}
       {showLogoutModal && (
-        <div className="fixed inset-0 bg-gray-100  bg-opacity-70 flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-gray-100 bg-opacity-70 flex justify-center items-center z-50">
           <div className="bg-white rounded-lg shadow-lg p-6 w-80">
             <h2 className="text-lg font-semibold mb-4 text-center">
               Are you sure you want to log out?

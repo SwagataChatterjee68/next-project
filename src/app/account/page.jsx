@@ -62,12 +62,12 @@ export default function AccountPage() {
 
             {/* Buttons */}
             <div className="flex justify-end items-center gap-10">
-              <button type="button" className="text-gray-700 hover:text-black">
+              <button type="button" className="text-gray-700 hover:text-black cursor-pointer">
                 Cancel
               </button>
               <button
                 type="submit"
-                className="bg-[#FF8400] text-white md:px-6 px-4 py-2 md:py-4 font-medium rounded-sm text-[16px] hover:bg-orange-600 transition"
+                className="bg-[#FF8400] text-white md:px-6 cursor-pointer px-4 py-2 md:py-4 font-medium rounded-sm text-[16px] hover:bg-orange-600 transition"
               >
                 Save Changes
               </button>

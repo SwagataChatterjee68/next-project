@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 .wishlist-section {
-  @apply max-w-7xl mx-auto px-3.5 py-32;
+  @apply 2xl:max-w-7xl md:max-w-6xl mx-auto py-32 px-3.5;
 }
 
 .wishlist-header {

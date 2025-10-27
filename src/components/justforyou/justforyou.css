@@ -1,7 +1,7 @@
 /* justforyou.css */
 @import "tailwindcss";
 .section-just-for-you {
-  @apply max-w-7xl mx-auto px-3.5 py-10;
+  @apply 2xl:max-w-7xl md:max-w-6xl mx-auto px-3.5 py-10;
 }
 
 .section-header-just-for-you {
