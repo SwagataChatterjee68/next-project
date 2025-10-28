@@ -33,5 +33,5 @@
   @apply  opacity-100;
 }
 .music-img img {
-  @apply rotate-y-180  object-cover xl:scale-125 ;
+  @apply rotate-y-180  object-cover  ;
 }
