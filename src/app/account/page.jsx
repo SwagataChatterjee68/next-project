@@ -3,7 +3,7 @@
 export default function AccountPage() {
     return (
         <div className="">
-               <section className=" rounded-md xl:px-5 px-5 py-10  lg:mt-0 mt-20 border border-gray-200 ">
+               <section className=" rounded-md xl:px-5 px-5 py-10  border border-gray-200 ">
           <div className="flex justify-between items-center mb-5">
             <h2 className="text-lg font-semibold text-gray-700">Edit Your Profile</h2>
           </div>

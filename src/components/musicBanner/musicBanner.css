@@ -1,7 +1,7 @@
 
 @import "tailwindcss";
 .music-banner {
-  @apply lg:px-10 pt-20 mb-10 px-5 py-5 bg-black text-white h-full mx-2 rounded;
+  @apply lg:px-10 mb-10 px-5 py-5 bg-black text-white h-full mx-2 rounded;
 }
 
 .music-category {
@@ -30,7 +30,7 @@
 
 /* Right Side */
 .music-img {
-  @apply md:w-[600px] md:h-[420px] opacity-100;
+  @apply  opacity-100;
 }
 .music-img img {
   @apply rotate-y-180  object-cover xl:scale-125 ;

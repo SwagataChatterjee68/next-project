@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .not-found {
-  @apply p-10 text-red-500;
+  @apply  text-red-500;
 }
 
 .header {
@@ -150,7 +150,7 @@
 }
 
 .related-grid {
-  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6  ;
+  @apply grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6  ;
 }
 
 .related-card {

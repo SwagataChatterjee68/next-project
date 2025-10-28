@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 .wishlist-section {
-  @apply 2xl:max-w-7xl md:max-w-6xl mx-auto py-32 px-3.5;
+  @apply 2xl:max-w-7xl md:max-w-6xl mx-auto py-32 px-3.5 ;
 }
 
 .wishlist-header {
@@ -16,7 +16,7 @@
 }
 
 .wishlist-grid {
-  @apply grid gap-6 sm:grid-cols-2 md:grid-cols-4;
+  @apply grid gap-6 grid-cols-2 md:grid-cols-4;
 }
 
 .wishlist-card {

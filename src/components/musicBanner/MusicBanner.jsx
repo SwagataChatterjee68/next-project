@@ -38,7 +38,7 @@ const MusicBanner = () => {
 
   return (
     <section className="music-banner">
-      <div className="wrapper flex md:flex-nowrap flex-wrap">
+      <div className="wrapper md:grid md:grid-cols-2 md:items-center sm:flex sm:flex-wrap md:flex-nowrap ">
         <div className="music-text-wrapper">
           <p className="music-category">Categories</p>
           <h2 className="music-heading title">Enhance Your Music Experience</h2>

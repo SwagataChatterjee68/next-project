@@ -2,10 +2,10 @@
 
 /* --- Container --- */
 .category-section {
-  @apply px-2 py-10 border-b border-gray-300 my-10 mb-10;
+  @apply px-2 py-10 border-b border-gray-300 ;
 }
 .category-wrapper {
-  @apply mb-10 2xl:max-w-7xl  md:max-w-6xl  mx-auto ;
+  @apply  2xl:max-w-7xl  md:max-w-6xl  mx-auto ;
 }
 
 .category-header {

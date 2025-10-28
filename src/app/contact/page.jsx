@@ -69,7 +69,7 @@ export default function AccountPage() {
               <input
                 type="text"
                 name="name"
-                placeholder="Your Name"
+                placeholder="Your Name *"
                 value={formData.name}
                 onChange={handleChange}
                 required

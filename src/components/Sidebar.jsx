@@ -29,7 +29,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <aside className="py-5 md:py-20 flex md:flex-col xl:py-32 md:w-1/3 w-full gap-2 md:gap-6">
+      <aside className="py-5 md:py-20 md:flex grid grid-cols-2  md:flex-col xl:py-32 md:w-1/3 w-full gap-10 md:gap-6">
         {menu.map((item) =>
           item.name === "Log out" ? (
             <button
