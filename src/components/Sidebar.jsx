@@ -6,10 +6,9 @@ import { useState } from "react";
 import {
   VscAccount,
   VscPackage,
-  VscLocation,
   VscSignOut,
 } from "react-icons/vsc";
-
+import { IoLocationOutline } from "react-icons/io5";
 export default function Sidebar() {
   const pathname = usePathname();
   const router = useRouter();
@@ -18,7 +17,7 @@ export default function Sidebar() {
   const menu = [
     { name: "Account details", href: "/account", icon: <VscAccount size={24} /> },
     { name: "Orders", href: "/account/orders", icon: <VscPackage size={24} /> },
-    { name: "Addresses", href: "/account/address", icon: <VscLocation size={24} /> },
+    { name: "Addresses", href: "/account/address", icon: <IoLocationOutline size={24} /> },
     { name: "Log out", href: "/account/logout", icon: <VscSignOut size={24} /> },
   ];
 
@@ -29,7 +28,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <aside className="py-5 md:py-20 md:flex grid grid-cols-2  md:flex-col xl:py-32 md:w-1/3 w-full gap-10 md:gap-6">
+      <aside className="py-5 md:py-20 md:flex grid grid-cols-2 px-5 md:border-0 border border-gray-200   md:flex-col xl:py-32 md:w-1/3 w-full gap-10 md:gap-6">
         {menu.map((item) =>
           item.name === "Log out" ? (
             <button
