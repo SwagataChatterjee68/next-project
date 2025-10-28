@@ -23,88 +23,89 @@ export default function CategoryPage() {
 
     // Category Data
     const categoryData = {
-        "womans-fashion": {
-            title: "Women’s Fashion",
-            products: [
-                { id: 21, name: "Floral Print Kurta Set", image: "/women-1.jpg", price: 120, oldPrice: 160, rating: 4, discount: "-25%", slug: "floral-print-kurta-set" },
-                { id: 22, name: "Checkered Top & Pants", image: "/women-2.jpg", price: 90, oldPrice: 110, rating: 4, discount: "-20%", slug: "checkered-top-pants" },
-                { id: 23, name: "Blue Tunic", image: "/women-3.jpg", price: 80, oldPrice: 100, rating: 5, discount: "-15%", slug: "blue-tunic" },
-                { id: 24, name: "Embroidered Saree", image: "/women-4.jpg", price: 150, oldPrice: 180, rating: 5, discount: "-30%", slug: "embroidered-saree" },
-            ],
-        },
-        "mens-fashion": {
-            title: "Men’s Fashion",
-            products: [
-                { id: 25, name: "Casual Cotton Shirt", image: "/men-1.jpg", price: 60, oldPrice: 80, rating: 4, discount: "-25%", slug: "casual-cotton-shirt" },
-                { id: 26, name: "Denim Jacket", image: "/men-2.jpg", price: 100, oldPrice: 120, rating: 5, discount: "-15%", slug: "denim-jacket" },
-                { id: 27, name: "Slim Fit Jeans", image: "/men-3.jpg", price: 70, oldPrice: 90, rating: 4, discount: "-22%", slug: "slim-fit-jeans" },
-                { id: 28, name: "Formal Suit", image: "/men-4.jpg", price: 180, oldPrice: 220, rating: 5, discount: "-18%", slug: "formal-suit" },
-            ],
-        },
-        electronics: {
-            title: "Electronics",
-            products: [
-                { id: 29, name: "Smartphone Pro X", image: "/electronic-1.webp", price: 799, oldPrice: 999, rating: 5, discount: "-20%", slug: "smartphone-pro-x" },
-                { id: 30, name: "Wireless Headphones", image: "/electronic-2.webp", price: 120, oldPrice: 150, rating: 4, discount: "-15%", slug: "wireless-headphones" },
-                { id: 31, name: "4K LED TV", image: "/electronic-3.webp", price: 450, oldPrice: 600, rating: 5, discount: "-25%", slug: "4k-led-tv" },
-                { id: 32, name: "Bluetooth Speaker", image: "/electronic-4.jpg", price: 80, oldPrice: 100, rating: 4, discount: "-20%", slug: "bluetooth-speaker" },
-            ],
-        },
-        "home-lifestyle": {
-            title: "Home & Lifestyle",
-            products: [
-                { id: 33, name: "Wooden Table Lamp", image: "/home-1.webp", price: 45, oldPrice: 60, rating: 4, discount: "-25%", slug: "wooden-table-lamp" },
-                { id: 34, name: "Cotton Bed Sheet", image: "/home-2.webp", price: 70, oldPrice: 85, rating: 5, discount: "-18%", slug: "cotton-bed-sheet" },
-                { id: 35, name: "Wall Clock", image: "/home-3.webp", price: 30, oldPrice: 45, rating: 4, discount: "-33%", slug: "wall-clock" },
-                { id: 36, name: "Indoor Plant Set", image: "/home-4.avif", price: 55, oldPrice: 70, rating: 5, discount: "-21%", slug: "indoor-plant-set" },
-            ],
-        },
-        medicine: {
-            title: "Medicine",
-            products: [
-                { id: 37, name: "Vitamin C Tablets", image: "/medicine-1.jpg", price: 20, oldPrice: 30, rating: 4, discount: "-33%", slug: "vitamin-c-tablets" },
-                { id: 38, name: "Pain Relief Spray", image: "/medicine-2.jpg", price: 10, oldPrice: 15, rating: 5, discount: "-30%", slug: "pain-relief-spray" },
-                { id: 39, name: "Digital Thermometer", image: "/medicine-3.jpg", price: 25, oldPrice: 35, rating: 4, discount: "-28%", slug: "digital-thermometer" },
-                { id: 40, name: "First Aid Kit", image: "/medicine-4.jpg", price: 35, oldPrice: 45, rating: 4, discount: "-22%", slug: "first-aid-kit" },
-            ],
-        },
-        "sports-outdoor": {
-            title: "Sports & Outdoor",
-            products: [
-                { id: 41, name: "Football", image: "/sports-1.jpg", price: 40, oldPrice: 55, rating: 5, discount: "-27%", slug: "football" },
-                { id: 42, name: "Yoga Mat", image: "/sports-2.jpg", price: 25, oldPrice: 35, rating: 4, discount: "-29%", slug: "yoga-mat" },
-                { id: 43, name: "Camping Tent", image: "/sports-3.jpg", price: 120, oldPrice: 150, rating: 5, discount: "-20%", slug: "camping-tent" },
-                { id: 44, name: "Tennis Racket", image: "/sports-4.jpg", price: 85, oldPrice: 100, rating: 4, discount: "-15%", slug: "tennis-racket" },
-            ],
-        },
-        "babys-toys": {
-            title: "Baby's & Toys",
-            products: [
-                { id: 45, name: "Soft Teddy Bear", image: "/toy-1.jpg", price: 25, oldPrice: 35, rating: 5, discount: "-28%", slug: "soft-teddy-bear" },
-                { id: 46, name: "Baby Stroller", image: "/toy-2.jpg", price: 150, oldPrice: 200, rating: 5, discount: "-25%", slug: "baby-stroller" },
-                { id: 47, name: "Lego Building Set", image: "/toy-3.jpg", price: 60, oldPrice: 80, rating: 4, discount: "-25%", slug: "lego-building-set" },
-                { id: 48, name: "Toy Car", image: "/toy-4.jpg", price: 30, oldPrice: 40, rating: 4, discount: "-25%", slug: "toy-car" },
-            ],
-        },
-        "groceries-pets": {
-            title: "Groceries & Pets",
-            products: [
-                { id: 49, name: "Organic Rice 1kg", image: "/groceries-1.jpg", price: 15, oldPrice: 20, rating: 5, discount: "-25%", slug: "organic-rice" },
-                { id: 50, name: "Pet Dog Food 2kg", image: "/groceries-2.jpg", price: 35, oldPrice: 45, rating: 4, discount: "-22%", slug: "pet-dog-food" },
-                { id: 51, name: "Cooking Oil 1L", image: "/groceries-3.jpg", price: 10, oldPrice: 15, rating: 4, discount: "-33%", slug: "cooking-oil" },
-                { id: 52, name: "Fresh Apples 1kg", image: "/groceries-4.jpg", price: 8, oldPrice: 12, rating: 5, discount: "-33%", slug: "fresh-apples" },
-            ],
-        },
-        "health-beauty": {
-            title: "Health & Beauty",
-            products: [
-                { id: 53, name: "Face Moisturizer", image: "/beauty-1.jpg", price: 25, oldPrice: 35, rating: 4, discount: "-29%", slug: "face-moisturizer" },
-                { id: 54, name: "Hair Serum", image: "/beauty-2.jpg", price: 18, oldPrice: 25, rating: 5, discount: "-28%", slug: "hair-serum" },
-                { id: 55, name: "Makeup Kit", image: "/beauty-3.jpg", price: 50, oldPrice: 65, rating: 5, discount: "-23%", slug: "makeup-kit" },
-                { id: 56, name: "Body Lotion", image: "/beauty-4.jpg", price: 20, oldPrice: 28, rating: 4, discount: "-29%", slug: "body-lotion" },
-            ],
-        },
-    };
+  "womans-fashion": {
+    title: "Women’s Fashion",
+    products: [
+      { id: 21, title: "Floral Print Kurta Set", img: "/women-1.jpg", price: 120, oldPrice: 160, rating: 4, discount: "-25%", slug: "floral-print-kurta-set" },
+      { id: 22, title: "Checkered Top & Pants", img: "/women-2.jpg", price: 90, oldPrice: 110, rating: 4, discount: "-20%", slug: "checkered-top-pants" },
+      { id: 23, title: "Blue Tunic", img: "/women-3.jpg", price: 80, oldPrice: 100, rating: 5, discount: "-15%", slug: "blue-tunic" },
+      { id: 24, title: "Embroidered Saree", img: "/women-4.jpg", price: 150, oldPrice: 180, rating: 5, discount: "-30%", slug: "embroidered-saree" },
+    ],
+  },
+  "mens-fashion": {
+    title: "Men’s Fashion",
+    products: [
+      { id: 25, title: "Casual Cotton Shirt", img: "/men-1.jpg", price: 60, oldPrice: 80, rating: 4, discount: "-25%", slug: "casual-cotton-shirt" },
+      { id: 26, title: "Denim Jacket", img: "/men-2.jpg", price: 100, oldPrice: 120, rating: 5, discount: "-15%", slug: "denim-jacket" },
+      { id: 27, title: "Slim Fit Jeans", img: "/men-3.jpg", price: 70, oldPrice: 90, rating: 4, discount: "-22%", slug: "slim-fit-jeans" },
+      { id: 28, title: "Formal Suit", img: "/men-4.jpg", price: 180, oldPrice: 220, rating: 5, discount: "-18%", slug: "formal-suit" },
+    ],
+  },
+  electronics: {
+    title: "Electronics",
+    products: [
+      { id: 29, title: "Smartphone Pro X", img: "/electronic-1.webp", price: 799, oldPrice: 999, rating: 5, discount: "-20%", slug: "smartphone-pro-x" },
+      { id: 30, title: "Wireless Headphones", img: "/electronic-2.webp", price: 120, oldPrice: 150, rating: 4, discount: "-15%", slug: "wireless-headphones" },
+      { id: 31, title: "4K LED TV", img: "/electronic-3.webp", price: 450, oldPrice: 600, rating: 5, discount: "-25%", slug: "4k-led-tv" },
+      { id: 32, title: "Bluetooth Speaker", img: "/electronic-4.jpg", price: 80, oldPrice: 100, rating: 4, discount: "-20%", slug: "bluetooth-speaker" },
+    ],
+  },
+  "home-lifestyle": {
+    title: "Home & Lifestyle",
+    products: [
+      { id: 33, title: "Wooden Table Lamp", img: "/home-1.webp", price: 45, oldPrice: 60, rating: 4, discount: "-25%", slug: "wooden-table-lamp" },
+      { id: 34, title: "Cotton Bed Sheet", img: "/home-2.webp", price: 70, oldPrice: 85, rating: 5, discount: "-18%", slug: "cotton-bed-sheet" },
+      { id: 35, title: "Wall Clock", img: "/home-3.webp", price: 30, oldPrice: 45, rating: 4, discount: "-33%", slug: "wall-clock" },
+      { id: 36, title: "Indoor Plant Set", img: "/home-4.avif", price: 55, oldPrice: 70, rating: 5, discount: "-21%", slug: "indoor-plant-set" },
+    ],
+  },
+  medicine: {
+    title: "Medicine",
+    products: [
+      { id: 37, title: "Vitamin C Tablets", img: "/medicine-1.jpg", price: 20, oldPrice: 30, rating: 4, discount: "-33%", slug: "vitamin-c-tablets" },
+      { id: 38, title: "Pain Relief Spray", img: "/medicine-2.jpg", price: 10, oldPrice: 15, rating: 5, discount: "-30%", slug: "pain-relief-spray" },
+      { id: 39, title: "Digital Thermometer", img: "/medicine-3.jpg", price: 25, oldPrice: 35, rating: 4, discount: "-28%", slug: "digital-thermometer" },
+      { id: 40, title: "First Aid Kit", img: "/medicine-4.jpg", price: 35, oldPrice: 45, rating: 4, discount: "-22%", slug: "first-aid-kit" },
+    ],
+  },
+  "sports-outdoor": {
+    title: "Sports & Outdoor",
+    products: [
+      { id: 41, title: "Football", img: "/sports-1.jpg", price: 40, oldPrice: 55, rating: 5, discount: "-27%", slug: "football" },
+      { id: 42, title: "Yoga Mat", img: "/sports-2.jpg", price: 25, oldPrice: 35, rating: 4, discount: "-29%", slug: "yoga-mat" },
+      { id: 43, title: "Camping Tent", img: "/sports-3.jpg", price: 120, oldPrice: 150, rating: 5, discount: "-20%", slug: "camping-tent" },
+      { id: 44, title: "Tennis Racket", img: "/sports-4.jpg", price: 85, oldPrice: 100, rating: 4, discount: "-15%", slug: "tennis-racket" },
+    ],
+  },
+  "babys-toys": {
+    title: "Baby's & Toys",
+    products: [
+      { id: 45, title: "Soft Teddy Bear", img: "/toy-1.jpg", price: 25, oldPrice: 35, rating: 5, discount: "-28%", slug: "soft-teddy-bear" },
+      { id: 46, title: "Baby Stroller", img: "/toy-2.jpg", price: 150, oldPrice: 200, rating: 5, discount: "-25%", slug: "baby-stroller" },
+      { id: 47, title: "Lego Building Set", img: "/toy-3.jpg", price: 60, oldPrice: 80, rating: 4, discount: "-25%", slug: "lego-building-set" },
+      { id: 48, title: "Toy Car", img: "/toy-4.jpg", price: 30, oldPrice: 40, rating: 4, discount: "-25%", slug: "toy-car" },
+    ],
+  },
+  "groceries-pets": {
+    title: "Groceries & Pets",
+    products: [
+      { id: 49, title: "Organic Rice 1kg", img: "/groceries-1.jpg", price: 15, oldPrice: 20, rating: 5, discount: "-25%", slug: "organic-rice" },
+      { id: 50, title: "Pet Dog Food 2kg", img: "/groceries-2.jpg", price: 35, oldPrice: 45, rating: 4, discount: "-22%", slug: "pet-dog-food" },
+      { id: 51, title: "Cooking Oil 1L", img: "/groceries-3.jpg", price: 10, oldPrice: 15, rating: 4, discount: "-33%", slug: "cooking-oil" },
+      { id: 52, title: "Fresh Apples 1kg", img: "/groceries-4.jpg", price: 8, oldPrice: 12, rating: 5, discount: "-33%", slug: "fresh-apples" },
+    ],
+  },
+  "health-beauty": {
+    title: "Health & Beauty",
+    products: [
+      { id: 53, title: "Face Moisturizer", img: "/beauty-1.jpg", price: 25, oldPrice: 35, rating: 4, discount: "-29%", slug: "face-moisturizer" },
+      { id: 54, title: "Hair Serum", img: "/beauty-2.jpg", price: 18, oldPrice: 25, rating: 5, discount: "-28%", slug: "hair-serum" },
+      { id: 55, title: "Makeup Kit", img: "/beauty-3.jpg", price: 50, oldPrice: 65, rating: 5, discount: "-23%", slug: "makeup-kit" },
+      { id: 56, title: "Body Lotion", img: "/beauty-4.jpg", price: 20, oldPrice: 28, rating: 4, discount: "-29%", slug: "body-lotion" },
+    ],
+  },
+};
+
 
     const category = categoryData[slug] || { title: "Category", products: [] };
 
@@ -163,10 +164,10 @@ export default function CategoryPage() {
                                     </div>
                                     <div className="flex justify-center items-center h-[220px] ">
                                         <Image
-                                            src={p.image}
-                                            alt={p.name}
-                                            width={200}
-                                            height={200}
+                                            src={p.img}
+                                            alt={p.title}
+                                            width={180}
+                                            height={180}
                                             className="object-cover transition-transform duration-300"
                                         />
                                     </div>
